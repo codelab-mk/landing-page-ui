@@ -1,11 +1,11 @@
 import { CallToAction1 } from "@/components/CallToAction";
 import PageBanner from "@/components/PageBanner";
-import EdunaLayout from "@/layout/EdunaLayout";
+import CodeLabLayout from "@/layout/CodeLabLayout";
 import Image from "next/image";
 import Link from "next/link";
 const page = () => {
   return (
-    <EdunaLayout>
+    <CodeLabLayout>
       <PageBanner pageName="Blog Details" />
       <section className="ed-blog__details section-gap position-relative">
         <div className="container ed-container">
@@ -239,7 +239,7 @@ const page = () => {
                     </div>
                     <div className="ed-contact__info-content">
                       <span>Send Message</span>
-                      <a href="mailto:contact@codelab.com.mk">contact@codelab.com.mk3</a>
+                      <a href="mailto:contact@CodeLab.com.mk">contact@CodeLab.com.mk3</a>
                     </div>
                   </div>
                   {/* Sigle Info  */}
@@ -282,7 +282,7 @@ const page = () => {
         </div>
       </section>
       <CallToAction1 />
-    </EdunaLayout>
+    </CodeLabLayout>
   );
 };
 export default page;

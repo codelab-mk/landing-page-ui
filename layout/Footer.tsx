@@ -53,8 +53,8 @@ const FooterContent = () => {
     {
       icon: "assets/images/icons/icon-envelope-blue.svg",
       title: "Send Message",
-      email: "contact@codelab.com.mk",
-      link: "mailto:contact@codelab.com.mk",
+      email: "contact@CodeLab.com.mk",
+      link: "mailto:contact@CodeLab.com.mk",
     },
     {
       icon: "assets/images/icons/icon-location-blue.svg",
@@ -77,7 +77,7 @@ const FooterContent = () => {
             <div className="col-lg-4 col-md-6 col-12">
               <div className="ed-footer__widget ed-footer__about">
                 <Link href="/" className="ed-footer__logo">
-                  <Image width={140} height={34} src="/assets/images/logo.svg" alt="footer-logo" />
+                  <Image width={200} height={40} src="/assets/images/logo.svg" alt="footer-logo" />
                 </Link>
                 <p className="ed-footer__about-text">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit.</p>
                 <ul className="ed-footer__about-social">
@@ -170,7 +170,7 @@ const FooterContent = () => {
           <div className="row">
             <div className="col-12">
               <p className="ed-footer__copyright-text">
-                Copyright {new Date().getFullYear()} Eduna | Developed By{" "}
+                Copyright {new Date().getFullYear()} CodeLab | Developed By{" "}
                 <a href="https://themeforest.net/user/bizantheme" target="_blank">
                   BizanTheme
                 </a>

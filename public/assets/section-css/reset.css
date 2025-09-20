@@ -1,5 +1,5 @@
 /*============================================================================================
-	* Project Name :  Eduna - Online Education Courses HTML5 Template.
+	* Project Name :  CodeLab - Online Education Courses HTML5 Template.
   * File         :  CSS Base
   * Version      :  1.0.0
   * Author       :  BizanTheme (https://themeforest.net/user/bizantheme)
@@ -801,10 +801,13 @@ p {
 }
 
 /* Colors  */
-.bg-primary-color {
-  background: var(--ed-primary-color) !important;
+:root {
+  --ed-primary-color: #ffd32c;
 }
 
+.bg-primary-color {
+  background-color: var(--ed-primary-color) !important;
+}
 /* Display Flex End Between  */
 .d-flex-end-between {
   display: flex;

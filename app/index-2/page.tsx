@@ -10,11 +10,11 @@ import { Team1 } from "@/components/Team";
 import { Testimonial2 } from "@/components/Testimonial";
 import VideoSection1 from "@/components/VideoSection";
 import { WhyChooseArea2 } from "@/components/WhyChooseArea";
-import EdunaLayout from "@/layout/EdunaLayout";
+import CodeLabLayout from "@/layout/CodeLabLayout";
 import Image from "next/image";
 const page = () => {
   return (
-    <EdunaLayout header={2} footer={2}>
+    <CodeLabLayout header={2} footer={2}>
       <Hero2 />
       <Partner1 />
       <div className="section-bg background-image section-bg-5">
@@ -28,14 +28,7 @@ const page = () => {
       <Course2 />
       <div className="section-bg position-relative">
         <div className="section-bg__img">
-          <Image
-            width={0}
-            height={0}
-            sizes="100vw"
-            style={{ width: "100%", height: "auto" }}
-            src="/assets/images/section-bg-6.png"
-            alt="bg-img"
-          />
+          <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src="/assets/images/section-bg-6.png" alt="bg-img" />
         </div>
         {/* Start Video Area */}
         <VideoSection1 />
@@ -47,19 +40,12 @@ const page = () => {
       <Testimonial2 />
       <div className="section-bg position-relative">
         <div className="section-bg__img style-2">
-          <Image
-            width={0}
-            height={0}
-            sizes="100vw"
-            style={{ width: "100%", height: "auto" }}
-            src="/assets/images/section-bg-6.png"
-            alt="bg-img"
-          />
+          <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src="/assets/images/section-bg-6.png" alt="bg-img" />
         </div>
         <Faq1 />
         <Blog1 pt="pt-0" />
       </div>
-    </EdunaLayout>
+    </CodeLabLayout>
   );
 };
 export default page;

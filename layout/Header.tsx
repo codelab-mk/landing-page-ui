@@ -1,5 +1,5 @@
 "use client";
-import { eduna_config } from "@/utilities";
+import { Eduna_config } from "@/utilities";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
@@ -8,7 +8,7 @@ import Modal from "react-bootstrap/Modal";
 const Header = ({ header }: { header: number }) => {
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
   useEffect(() => {
-    eduna_config.sticky_header();
+    Eduna_config.sticky_header();
   }, []);
 
   const HeaderComponent = header === 1 ? Header1 : header === 2 ? Header2 : header === 3 ? Header3 : header === 4 ? Header4 : Header1;
@@ -32,7 +32,7 @@ const Header1 = ({ showMobileMenu, setShowMobileMenu }: { showMobileMenu: boolea
             {/* Logo  */}
             <div className="ed-topbar__logo">
               <Link href="/">
-                <Image width={140} height={34} src="/assets/images/logo.svg" alt="logo" />
+                <Image width={200} height={50} src="/assets/images/logo.svg" alt="logo" />
               </Link>
             </div>
             {/* Category Dropdown */}
@@ -96,7 +96,7 @@ const Header1 = ({ showMobileMenu, setShowMobileMenu }: { showMobileMenu: boolea
                       <a href="tel:+389 ‭72 278 786‬">+389 ‭72 278 786‬</a>
                     </li>
                     <li>
-                      <a href="mailto:contact@codelab.com.mk">contact@codelab.com.mk</a>
+                      <a href="mailto:contact@CodeLab.com.mk">contact@CodeLab.com.mk</a>
                     </li>
                   </ul>
                   <div className="ed-header__action">
@@ -591,7 +591,7 @@ const Sidebar = ({ close, open }: { close: () => void; open: boolean }) => {
       id: 2,
       title: "Send Message",
       content: "Send Message",
-      link: "mailto:contact@codelab.com.mk",
+      link: "mailto:contact@CodeLab.com.mk",
       icon: "/assets/images/icons/icon-envelope-blue.svg",
     },
     {

@@ -5,7 +5,7 @@ import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-export const eduna_config = {
+export const Eduna_config = {
   sticky_header() {
     window.addEventListener("scroll", function (event) {
       var scroll = window.pageYOffset;
@@ -92,15 +92,11 @@ export const eduna_config = {
 
       elementMove.forEach((image, index) => {
         const offset = index + 1;
-        (image as HTMLElement).style.transform = `translate(${
-          offsetX * offset
-        }px, ${offsetY * offset}px)`;
+        (image as HTMLElement).style.transform = `translate(${offsetX * offset}px, ${offsetY * offset}px)`;
       });
       elementMoveX.forEach((image, index) => {
         const offset = index + 2;
-        (image as HTMLElement).style.transform = `translate(${
-          offsetX * offset
-        }px)`;
+        (image as HTMLElement).style.transform = `translate(${offsetX * offset}px)`;
       });
     });
   },

@@ -1,7 +1,7 @@
 import { CallToAction1 } from "@/components/CallToAction";
 import { Contact2 } from "@/components/Contact";
 import PageBanner from "@/components/PageBanner";
-import EdunaLayout from "@/layout/EdunaLayout";
+import CodeLabLayout from "@/layout/CodeLabLayout";
 import Image from "next/image";
 const page = () => {
   const contact = [
@@ -10,7 +10,7 @@ const page = () => {
       icon: "icon-white-phone.svg",
       title: "Phone",
       type: "tel",
-      info: ["+64 939-39-0239", "+54 939-739-02399"],
+      info: ["(+389) 72/278-786", "(+389) 78/298-116"],
       extraLink: "",
     },
     {
@@ -18,7 +18,7 @@ const page = () => {
       icon: "icon-white-message.svg",
       title: "Email",
       type: "email",
-      info: ["contact@codelab.com.mk", "contact@codelab.com.mk"],
+      info: ["contact@CodeLab.com.mk"],
       extraLink: "",
     },
     {
@@ -26,12 +26,12 @@ const page = () => {
       icon: "icon-white-map.svg",
       title: "Address",
       type: "address",
-      info: ["1234 East 27th Street, New York, NY 101010"],
+      info: ["16та Македонска Бригада 2/2/локал 9, 1000 Скопје"],
       extraLink: "#",
     },
   ];
   return (
-    <EdunaLayout>
+    <CodeLabLayout>
       <PageBanner pageName="Contact With Us" />
       <div className="ed-contact__card section-gap">
         <div className="container ed-container">
@@ -58,7 +58,7 @@ const page = () => {
       </div>
       <Contact2 />
       <CallToAction1 />
-    </EdunaLayout>
+    </CodeLabLayout>
   );
 };
 export default page;

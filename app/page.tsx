@@ -9,10 +9,10 @@ import { Hero1 } from "@/components/Hero";
 import { Partner1 } from "@/components/Partner";
 import { Testimonial1 } from "@/components/Testimonial";
 import { WhyChooseArea1 } from "@/components/WhyChooseArea";
-import EdunaLayout from "@/layout/EdunaLayout";
+import CodeLabLayout from "@/layout/CodeLabLayout";
 const page = () => {
   return (
-    <EdunaLayout>
+    <CodeLabLayout>
       <Hero1 />
       <div className="section-bg background-image section-bg-1">
         <About1 />
@@ -28,7 +28,7 @@ const page = () => {
         <Blog1 />
         <CallToAction1 />
       </div>
-    </EdunaLayout>
+    </CodeLabLayout>
   );
 };
 export default page;

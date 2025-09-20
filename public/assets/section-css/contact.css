@@ -195,8 +195,10 @@
 .ed-contact__card-item {
   border-radius: 8px;
   background: var(--ed-offwhite-color);
-  padding: 44px 35px;
+  padding: 15px;
   margin-top: 40px;
+  min-height: 250px;
+  max-height: 500px;
 }
 
 .ed-contact__card-icon img {

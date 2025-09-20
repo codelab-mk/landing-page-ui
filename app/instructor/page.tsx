@@ -1,6 +1,6 @@
 import { CallToAction1 } from "@/components/CallToAction";
 import PageBanner from "@/components/PageBanner";
-import EdunaLayout from "@/layout/EdunaLayout";
+import CodeLabLayout from "@/layout/CodeLabLayout";
 import Image from "next/image";
 import Link from "next/link";
 const page = () => {
@@ -145,49 +145,30 @@ const page = () => {
     },
   ];
   return (
-    <EdunaLayout>
+    <CodeLabLayout>
       <PageBanner pageName="Our Instructors" />
       <section className="ed-team ed-team__page position-relative section-gap">
         <div className="container ed-container">
           <div className="row">
             {instructors.map((instructor, index) => (
               <div className="col-lg-4 col-md-6 col-12" key={index}>
-                <div
-                  className="ed-team__card wow fadeInUp"
-                  data-wow-duration="1s"
-                >
+                <div className="ed-team__card wow fadeInUp" data-wow-duration="1s">
                   <div className="ed-team__cover">
                     <div className="ed-team__img">
-                      <Image
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                        src={instructor.image}
-                        alt="team-img"
-                      />
+                      <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src={instructor.image} alt="team-img" />
                     </div>
                     <ul className="ed-team__social">
                       {instructor.social.map((social, index) => (
                         <li key={index}>
                           <a href={social.url} target="_blank">
-                            <Image
-                              width={20}
-                              height={20}
-                              sizes="100vw"
-                              style={{ width: "20px", height: "20px" }}
-                              src={social.icon}
-                              alt={social.icon}
-                            />
+                            <Image width={20} height={20} sizes="100vw" style={{ width: "20px", height: "20px" }} src={social.icon} alt={social.icon} />
                           </a>
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div className="ed-team__info">
-                    <p className="ed-team__designation">
-                      {instructor.designation}
-                    </p>
+                    <p className="ed-team__designation">{instructor.designation}</p>
                     <Link className="ed-team__name" href="/instructor-details">
                       {instructor.name}
                     </Link>
@@ -218,7 +199,7 @@ const page = () => {
         </div>
       </section>
       <CallToAction1 />
-    </EdunaLayout>
+    </CodeLabLayout>
   );
 };
 export default page;

@@ -7,10 +7,10 @@ import { Course4 } from "@/components/Course";
 import { Features1 } from "@/components/Features";
 import PageBanner from "@/components/PageBanner";
 import { Partner2 } from "@/components/Partner";
-import EdunaLayout from "@/layout/EdunaLayout";
+import CodeLabLayout from "@/layout/CodeLabLayout";
 const page = () => {
   return (
-    <EdunaLayout>
+    <CodeLabLayout>
       <PageBanner pageName="About Us" />
       <About1 />
       <Features1 />
@@ -20,7 +20,7 @@ const page = () => {
       <Contact />
       <Blog1 />
       <CallToAction1 />
-    </EdunaLayout>
+    </CodeLabLayout>
   );
 };
 export default page;

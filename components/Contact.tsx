@@ -33,7 +33,7 @@ const Contact = () => {
                 </div>
                 <div className="ed-contact__info-content">
                   <span>Send Message</span>
-                  <a href="mailto:contact@codelab.com.mk">contact@codelab.com.mk3</a>
+                  <a href="mailto:contact@CodeLab.com.mk">contact@CodeLab.com.mk3</a>
                 </div>
               </div>
               {/* Sigle Info  */}
@@ -52,7 +52,7 @@ const Contact = () => {
             <div className="ed-contact__form wow fadeInUp" data-wow-duration="1s">
               <div className="ed-contact__form-head">
                 <span className="ed-contact__form-sm-title">GET IN TOUCH</span>
-                <h3 className="ed-contact__form-big-title">Have Any Questions About Eduna? Contact With Us Today</h3>
+                <h3 className="ed-contact__form-big-title">Have Any Questions About CodeLab? Contact With Us Today</h3>
               </div>
               <form action="#" method="post" className="ed-contact__form-main">
                 <div className="row">

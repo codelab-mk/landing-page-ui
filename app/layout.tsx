@@ -6,7 +6,7 @@ import "@plugin_css/maginific-popup.min.css";
 import "@plugin_css/nice-select.min.css";
 import "@plugin_css/swiper-bundle.min.css";
 import "@plugin_css/uicons.css";
-import "@css/style.css"
+import "@css/style.css";
 import "./globals.css";
 import Preloader from "@/components/Preloader";
 import { Poppins } from "next/font/google";
@@ -18,8 +18,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Eduna - Online Education Courses React NextJS Template",
-  description: "Eduna - Online Education Courses React NextJS Template",
+  title: "CodeLab - Online Education Courses React NextJS Template",
+  description: "CodeLab - Online Education Courses React NextJS Template",
 };
 
 export default function RootLayout({

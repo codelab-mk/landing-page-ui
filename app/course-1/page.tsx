@@ -1,14 +1,14 @@
 import { CallToAction1 } from "@/components/CallToAction";
 import { Course3 } from "@/components/Course";
 import PageBanner from "@/components/PageBanner";
-import EdunaLayout from "@/layout/EdunaLayout";
+import CodeLabLayout from "@/layout/CodeLabLayout";
 const page = () => {
   return (
-    <EdunaLayout>
+    <CodeLabLayout>
       <PageBanner />
       <Course3 />
       <CallToAction1 />
-    </EdunaLayout>
+    </CodeLabLayout>
   );
 };
 export default page;

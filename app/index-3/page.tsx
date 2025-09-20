@@ -8,33 +8,24 @@ import { Funfact2 } from "@/components/Funfact";
 import { Partner1 } from "@/components/Partner";
 import { Testimonial3 } from "@/components/Testimonial";
 import { WhyChooseArea3, WhyChooseArea5 } from "@/components/WhyChooseArea";
-import EdunaLayout from "@/layout/EdunaLayout";
+import CodeLabLayout from "@/layout/CodeLabLayout";
 import Link from "next/link";
 const page = () => {
   return (
-    <EdunaLayout header={3} footer={2}>
+    <CodeLabLayout header={3} footer={2}>
       <section className="ed-hero ed-hero--style3">
         <div className="owl-carousel ed-hero__slider">
           {/* Single Slider  */}
           <div className="ed-hero__slider-item">
-            <img
-              src="assets/images/hero/home-3/hero-img-1.jpg"
-              alt="hero-img-1"
-            />
+            <img src="assets/images/hero/home-3/hero-img-1.jpg" alt="hero-img-1" />
           </div>
           {/* Single Slider  */}
           <div className="ed-hero__slider-item">
-            <img
-              src="assets/images/hero/home-3/hero-img-2.jpg"
-              alt="hero-img-2"
-            />
+            <img src="assets/images/hero/home-3/hero-img-2.jpg" alt="hero-img-2" />
           </div>
           {/* Single Slider  */}
           <div className="ed-hero__slider-item">
-            <img
-              src="assets/images/hero/home-3/hero-img-3.jpg"
-              alt="hero-img-3"
-            />
+            <img src="assets/images/hero/home-3/hero-img-3.jpg" alt="hero-img-3" />
           </div>
         </div>
         <div className="container ed-container-expand">
@@ -47,17 +38,8 @@ const page = () => {
                   Journey Now
                 </h1>
                 <div className="ed-hero__search p-0">
-                  <form
-                    action="#"
-                    method="post"
-                    className="ed-hero__search-form"
-                  >
-                    <input
-                      type="search"
-                      name="search"
-                      placeholder="Search your courses"
-                      required={true}
-                    />
+                  <form action="#" method="post" className="ed-hero__search-form">
+                    <input type="search" name="search" placeholder="Search your courses" required={true} />
                     <button type="submit">
                       Search
                       <i className="fi-rr-search" />
@@ -91,7 +73,7 @@ const page = () => {
       <Testimonial3 />
       <Contact />
       <Blog1 />
-    </EdunaLayout>
+    </CodeLabLayout>
   );
 };
 export default page;

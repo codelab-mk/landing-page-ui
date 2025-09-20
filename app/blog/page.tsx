@@ -1,12 +1,12 @@
 import { Blog2 } from "@/components/Blog";
 import PageBanner from "@/components/PageBanner";
-import EdunaLayout from "@/layout/EdunaLayout";
+import CodeLabLayout from "@/layout/CodeLabLayout";
 const page = () => {
   return (
-    <EdunaLayout>
+    <CodeLabLayout>
       <PageBanner pageTitle="Latest Blog & News" pageName="Latest Blog" />
       <Blog2 />
-    </EdunaLayout>
+    </CodeLabLayout>
   );
 };
 export default page;

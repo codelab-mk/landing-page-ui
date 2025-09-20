@@ -1,7 +1,8 @@
 import { CallToAction1 } from "@/components/CallToAction";
 import Image from "next/image";
 import Link from "next/link";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Footer = ({ footer }: { footer: number }) => {
   switch (footer) {
@@ -90,7 +91,8 @@ const FooterContent = () => {
                     <a href="https://www.instagram.com/codelab_mk/" target="_blank">
                       <Image width={25} height={25} src="/assets/images/icons/icon-dark-instagram.svg" alt="icon-dark-instagram" />
                     </a>
-                  </li>
+                  </li>{" "}
+                  <LanguageSwitcher />
                 </ul>
               </div>
             </div>
@@ -171,5 +173,84 @@ const FooterContent = () => {
         </div>
       </div> */}
     </Fragment>
+  );
+};
+const LanguageSwitcher = () => {
+  const { i18n } = useTranslation();
+  const [open, setOpen] = useState(false);
+
+  const toggleLanguageMenu = () => setOpen(!open);
+
+  const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
+    setOpen(false);
+  };
+
+  return (
+    <div className="language-switcher" style={{ position: "relative" }}>
+      <button
+        type="button"
+        onClick={toggleLanguageMenu}
+        className="language-btn"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "5px",
+          padding: "5px 10px",
+          border: "1px solid #ccc",
+          borderRadius: "5px",
+          background: "transparent",
+          cursor: "pointer",
+        }}>
+        🌐 {i18n.language.toUpperCase()}
+      </button>
+
+      {open && (
+        <ul
+          className="language-menu"
+          style={{
+            position: "absolute",
+            top: "110%",
+            left: 0,
+            background: "#fff",
+            border: "1px solid #ccc",
+            borderRadius: "5px",
+            listStyle: "none",
+            padding: "5px 0",
+            margin: 0,
+            width: "100%",
+            zIndex: 1000,
+          }}>
+          <li>
+            <button
+              onClick={() => changeLanguage("en")}
+              style={{
+                width: "100%",
+                padding: "5px 10px",
+                background: "transparent",
+                border: "none",
+                textAlign: "left",
+                cursor: "pointer",
+              }}>
+              EN
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={() => changeLanguage("mk")}
+              style={{
+                width: "100%",
+                padding: "5px 10px",
+                background: "transparent",
+                border: "none",
+                textAlign: "left",
+                cursor: "pointer",
+              }}>
+              MK
+            </button>
+          </li>
+        </ul>
+      )}
+    </div>
   );
 };

@@ -21,9 +21,6 @@ const page = () => {
       <Features1 />
       <Course1 />
       <WhyChooseArea1 />
-      {/* <Funfact1 /> */}
-      {/* <Partner1 /> */}
-      {/* <Testimonial1 /> */}
       <div className="section-bg background-image section-bg-3">
         <Blog1 />
         <CallToAction1 />

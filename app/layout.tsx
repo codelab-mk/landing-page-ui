@@ -10,6 +10,9 @@ import "@css/style.css";
 import "./globals.css";
 import Preloader from "@/components/Preloader";
 import { Poppins } from "next/font/google";
+import { I18nextProvider } from "react-i18next";
+import i18n from "@/app/i18n/i18n";
+import I18nProvider from "@/app/i18n/I18nProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,9 +20,9 @@ const poppins = Poppins({
   variable: "--ed-font-family",
 });
 
-export const metadata: Metadata = {
-  title: "CodeLab - Online Education Courses React NextJS Template",
-  description: "CodeLab - Online Education Courses React NextJS Template",
+export const metadata = {
+  title: "My App",
+  description: "CodeLab App",
 };
 
 export default function RootLayout({
@@ -31,7 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.variable}>
         <Preloader />
-        {children}
+        <I18nProvider>{children}</I18nProvider>
       </body>
     </html>
   );

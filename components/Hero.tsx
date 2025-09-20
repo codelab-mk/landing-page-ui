@@ -1,7 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export const Hero1 = () => {
+  const { t } = useTranslation();
+
   return (
     <div
       className="section-bg hero-bg background-image"
@@ -14,27 +19,27 @@ export const Hero1 = () => {
           {/* Hero Element Shape */}
           <div className="ed-hero__elements">
             <Image width={46} height={32} sizes="46px" style={{ width: "46px", height: "32px" }} className="element-move ed-hero__shape-1" src="/assets/images/hero/home-1/shape-1.svg" alt="shape-1" />
-            <Image width={49} height={79} sizes="49px" style={{ width: "49px", height: "79px" }} className="element-move ed-hero__shape-2" src="/assets/images/hero/home-1/shape-2.svg" alt="shape-1" />
-            <Image width={49} height={94} sizes="49px" style={{ width: "49px", height: "94px" }} className="element-move ed-hero__shape-3" src="/assets/images/hero/home-1/shape-3.svg" alt="shape-1" />
-            <Image width={49} height={94} sizes="49px" style={{ width: "49px", height: "94px" }} className="element-move ed-hero__shape-4" src="/assets/images/hero/home-1/shape-4.svg" alt="shape-1" />
+            <Image width={49} height={79} sizes="49px" style={{ width: "49px", height: "79px" }} className="element-move ed-hero__shape-2" src="/assets/images/hero/home-1/shape-2.svg" alt="shape-2" />
+            <Image width={49} height={94} sizes="49px" style={{ width: "49px", height: "94px" }} className="element-move ed-hero__shape-3" src="/assets/images/hero/home-1/shape-3.svg" alt="shape-3" />
+            <Image width={49} height={94} sizes="49px" style={{ width: "49px", height: "94px" }} className="element-move ed-hero__shape-4" src="/assets/images/hero/home-1/shape-4.svg" alt="shape-4" />
             <Image width={70} height={55} sizes="70px" style={{ width: "70px", height: "55px", objectFit: "cover" }} className="element-move ed-hero__shape-5" src="/assets/images/hero/home-1/shape-5.png" alt="shape-5" />
           </div>
+
           <div className="row align-items-center">
             <div className="col-lg-6 col-12">
               {/* Hero Content */}
               <div className="ed-hero__content">
-                <h1 className="ed-hero__content-title ed-split-text left">
-                  Best <span>Online</span> Platform to Learn Everything
-                </h1>
-                <p className="ed-hero__content-text">Excedteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit.</p>
+                <h1 className="ed-hero__content-title ed-split-text left" dangerouslySetInnerHTML={{ __html: t("hero.title") }} />
+                <p className="ed-hero__content-text">{t("hero.description")}</p>
                 <div className="ed-hero__btn">
                   <Link href="/course-1" className="ed-btn">
-                    Find Courses
+                    {t("hero.button")}
                     <i className="fi fi-rr-arrow-small-right" />
                   </Link>
                 </div>
               </div>
             </div>
+
             <div className="col-lg-6 col-12">
               {/* Hero Image */}
               <div className="ed-hero__image">

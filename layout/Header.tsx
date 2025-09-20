@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 import Modal from "react-bootstrap/Modal";
+import { useTranslation } from "react-i18next";
 
 const Header = ({ header }: { header: number }) => {
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
@@ -58,17 +59,18 @@ const Header1 = ({ showMobileMenu, setShowMobileMenu }: { showMobileMenu: boolea
                   </button>
                 </form>
               </div>
+
             </div> */}
+
             {/* Topbar Info */}
             <div className="ed-topbar__info">
               {/* Topbar Social */}
               <ul className="ed-topbar__info-social">
                 <Social />
               </ul>
+              <LanguageSwitcher />
               {/* Topbar Button */}
-              {/* <div className="ed-topbar__info-buttons">
-                <LoginRegisterButton />
-              </div> */}
+              {/* <div className="ed-topbar__info-buttons"></div> */}
               {/* Mobile Menu Button */}
               <button type="button" className="mobile-menu-offcanvas-toggler" onClick={() => setShowMobileMenu(true)}>
                 <span className="line" />
@@ -218,16 +220,6 @@ const Header3 = ({ showMobileMenu, setShowMobileMenu }: { showMobileMenu: boolea
                   <li>
                     <a href="https://www.facebook.com/profile.php?id=61555618741877" target="_blank">
                       <img src="assets/images/icons/icon-white-facebook.svg" alt="icon-white-facebook" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.twitter.com/" target="_blank">
-                      <img src="assets/images/icons/icon-white-twitter.svg" alt="icon-white-twitter" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.dribbble.com/" target="_blank">
-                      <img src="assets/images/icons/icon-white-dribbble.svg" alt="icon-white-dribbble" />
                     </a>
                   </li>
                   <li>
@@ -840,5 +832,85 @@ const LoginModal = ({ show, onHide }: { show: boolean; onHide: () => void }) => 
         </div>
       </div>
     </Modal>
+  );
+};
+
+const LanguageSwitcher = () => {
+  const { i18n } = useTranslation();
+  const [open, setOpen] = useState(false);
+
+  const toggleLanguageMenu = () => setOpen(!open);
+
+  const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
+    setOpen(false);
+  };
+
+  return (
+    <div className="language-switcher" style={{ position: "relative" }}>
+      <button
+        type="button"
+        onClick={toggleLanguageMenu}
+        className="language-btn"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "5px",
+          padding: "5px 10px",
+          border: "1px solid #ccc",
+          borderRadius: "5px",
+          background: "transparent",
+          cursor: "pointer",
+        }}>
+        🌐 {i18n.language.toUpperCase()}
+      </button>
+
+      {open && (
+        <ul
+          className="language-menu"
+          style={{
+            position: "absolute",
+            top: "110%",
+            left: 0,
+            background: "#fff",
+            border: "1px solid #ccc",
+            borderRadius: "5px",
+            listStyle: "none",
+            padding: "5px 0",
+            margin: 0,
+            width: "100%",
+            zIndex: 1000,
+          }}>
+          <li>
+            <button
+              onClick={() => changeLanguage("en")}
+              style={{
+                width: "100%",
+                padding: "5px 10px",
+                background: "transparent",
+                border: "none",
+                textAlign: "left",
+                cursor: "pointer",
+              }}>
+              EN
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={() => changeLanguage("mk")}
+              style={{
+                width: "100%",
+                padding: "5px 10px",
+                background: "transparent",
+                border: "none",
+                textAlign: "left",
+                cursor: "pointer",
+              }}>
+              MK
+            </button>
+          </li>
+        </ul>
+      )}
+    </div>
   );
 };

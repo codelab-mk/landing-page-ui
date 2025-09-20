@@ -5,7 +5,7 @@ import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-export const Eduna_config = {
+export const _config = {
   sticky_header() {
     window.addEventListener("scroll", function (event) {
       var scroll = window.pageYOffset;

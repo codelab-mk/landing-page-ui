@@ -22,7 +22,6 @@ const Contact = () => {
                   <Image width={30} height={30} sizes="100vw" style={{ width: "30px", height: "30px" }} src="/assets/images/icons/icon-phone-blue.svg" alt="icon-phone-blue" />
                 </div>
                 <div className="ed-contact__info-content">
-                  <span>24/7 Support</span>
                   <a href="tel:+389 ‭72 278 786‬">+389 ‭72 278 786‬</a>
                 </div>
               </div>
@@ -33,7 +32,7 @@ const Contact = () => {
                 </div>
                 <div className="ed-contact__info-content">
                   <span>Send Message</span>
-                  <a href="mailto:contact@CodeLab.com.mk">contact@CodeLab.com.mk3</a>
+                  <a href="mailto:contact@codelab.com.mk">contact@codelab.com.mk</a>
                 </div>
               </div>
               {/* Sigle Info  */}
@@ -42,8 +41,8 @@ const Contact = () => {
                   <Image width={30} height={30} sizes="100vw" style={{ width: "30px", height: "30px" }} src="/assets/images/icons/icon-location-blue.svg" alt="icon-location-blue" />
                 </div>
                 <div className="ed-contact__info-content">
-                  <span>Our Locati0n</span>
-                  <a href="#">32/Jenin, London</a>
+                  <span>Our Location</span>
+                  <a href="#">16та Македонска Бригада 2, Скопје</a>
                 </div>
               </div>
             </div>

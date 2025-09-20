@@ -7,6 +7,7 @@ import { Course4 } from "@/components/Course";
 import { Features1 } from "@/components/Features";
 import PageBanner from "@/components/PageBanner";
 import { Partner2 } from "@/components/Partner";
+import { Team1 } from "@/components/Team";
 import CodeLabLayout from "@/layout/CodeLabLayout";
 const page = () => {
   return (
@@ -15,7 +16,6 @@ const page = () => {
       <About1 />
       <Features1 />
       <Category2 />
-      <Partner2 />
       <Course4 />
       <Contact />
       <Blog1 />

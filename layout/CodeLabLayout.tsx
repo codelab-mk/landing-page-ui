@@ -2,7 +2,7 @@
 import ImageView from "@/components/ImageView";
 import ScrollTop from "@/components/ScrollTop";
 import VideoPopup from "@/components/VideoPopup";
-import { Eduna_config } from "@/utilities";
+import { _config } from "@/utilities";
 import { Fragment, useEffect } from "react";
 // @ts-ignore
 import niceSelect from "react-nice-select";
@@ -10,10 +10,10 @@ import Footer from "./Footer";
 import Header from "./Header";
 const CodeLabLayout = ({ children, header, footer }: { children: React.ReactNode; header?: number | 1; footer?: number | 1 }) => {
   useEffect(() => {
-    Eduna_config.animation();
-    Eduna_config.movie_animation();
-    Eduna_config.smooth_scroll();
-    Eduna_config.scroll_animation();
+    _config.animation();
+    _config.movie_animation();
+    _config.smooth_scroll();
+    _config.scroll_animation();
     niceSelect();
   }, []);
   return (

@@ -46,20 +46,20 @@ const FooterContent = () => {
   const contact = [
     {
       icon: "assets/images/icons/icon-phone-blue.svg",
-      title: "24/7 Support",
+      title: "Contact",
       phone: "+389 ‭72 278 786‬",
       link: "tel:+389 ‭72 278 786‬",
     },
     {
       icon: "assets/images/icons/icon-envelope-blue.svg",
       title: "Send Message",
-      email: "contact@CodeLab.com.mk",
-      link: "mailto:contact@CodeLab.com.mk",
+      email: "contact@codelab.com.mk",
+      link: "mailto:contact@codelab.com.mk",
     },
     {
       icon: "assets/images/icons/icon-location-blue.svg",
-      title: "Our Locati0n",
-      address: "32/Jenin, London",
+      title: "Our Location",
+      address: "16та Македонска Бригада 2, Скопје",
       link: "#",
     },
   ];
@@ -77,27 +77,17 @@ const FooterContent = () => {
             <div className="col-lg-4 col-md-6 col-12">
               <div className="ed-footer__widget ed-footer__about">
                 <Link href="/" className="ed-footer__logo">
-                  <Image width={200} height={40} src="/assets/images/logo.svg" alt="footer-logo" />
+                  <Image width={250} height={100} src="/assets/codelab/logo/zolto.svg" alt="footer-logo" />
                 </Link>
                 <p className="ed-footer__about-text">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit.</p>
                 <ul className="ed-footer__about-social">
                   <li>
-                    <a href="https://www.facebook.com/" target="_blank">
+                    <a href="https://www.facebook.com/profile.php?id=61555618741877" target="_blank">
                       <Image width={25} height={25} src="/assets/images/icons/icon-dark-facebook.svg" alt="icon-dark-facebook" />
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.twitter.com/" target="_blank">
-                      <Image width={25} height={25} src="/assets/images/icons/icon-dark-twitter.svg" alt="icon-dark-twitter" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.dribbble.com/" target="_blank">
-                      <Image width={25} height={25} src="/assets/images/icons/icon-dark-dribbble.svg" alt="icon-dark-dribbble" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.instagram.com/" target="_blank">
+                    <a href="https://www.instagram.com/codelab_mk/" target="_blank">
                       <Image width={25} height={25} src="/assets/images/icons/icon-dark-instagram.svg" alt="icon-dark-instagram" />
                     </a>
                   </li>
@@ -146,7 +136,7 @@ const FooterContent = () => {
                 ))}
               </div>
             </div>
-            <div className="col-lg-3 col-md-6 col-12">
+            {/* <div className="col-lg-3 col-md-6 col-12">
               <div className="ed-footer__widget newsletter-widget">
                 <h4 className="ed-footer__widget-title">Subscribe</h4>
                 <div className="ed-footer__newsletter">
@@ -160,12 +150,12 @@ const FooterContent = () => {
                   </form>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
       {/* Footer Bottom */}
-      <div className="ed-footer__bottom">
+      {/* <div className="ed-footer__bottom">
         <div className="container ed-container">
           <div className="row">
             <div className="col-12">
@@ -179,7 +169,7 @@ const FooterContent = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </Fragment>
   );
 };

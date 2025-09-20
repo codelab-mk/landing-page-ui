@@ -11,7 +11,7 @@ const page = () => {
       image: "/assets/images/team/team-1/1.png",
       social: [
         {
-          url: "https://www.facebook.com/",
+          url: "https://www.facebook.com/profile.php?id=61555618741877",
           icon: "/assets/images/icons/icon-white-facebook.svg",
         },
         {
@@ -23,7 +23,7 @@ const page = () => {
           icon: "/assets/images/icons/icon-white-dribbble.svg",
         },
         {
-          url: "https://www.instagram.com/",
+          url: "https://www.instagram.com/codelab_mk/",
           icon: "/assets/images/icons/icon-white-instagram.svg",
         },
       ],
@@ -34,7 +34,7 @@ const page = () => {
       image: "/assets/images/team/team-1/2.png",
       social: [
         {
-          url: "https://www.facebook.com/",
+          url: "https://www.facebook.com/profile.php?id=61555618741877",
           icon: "/assets/images/icons/icon-white-facebook.svg",
         },
         {
@@ -46,7 +46,7 @@ const page = () => {
           icon: "/assets/images/icons/icon-white-dribbble.svg",
         },
         {
-          url: "https://www.instagram.com/",
+          url: "https://www.instagram.com/codelab_mk/",
           icon: "/assets/images/icons/icon-white-instagram.svg",
         },
       ],
@@ -57,7 +57,7 @@ const page = () => {
       image: "/assets/images/team/team-1/3.png",
       social: [
         {
-          url: "https://www.facebook.com/",
+          url: "https://www.facebook.com/profile.php?id=61555618741877",
           icon: "/assets/images/icons/icon-white-facebook.svg",
         },
         {
@@ -69,7 +69,7 @@ const page = () => {
           icon: "/assets/images/icons/icon-white-dribbble.svg",
         },
         {
-          url: "https://www.instagram.com/",
+          url: "https://www.instagram.com/codelab_mk/",
           icon: "/assets/images/icons/icon-white-instagram.svg",
         },
       ],
@@ -80,7 +80,7 @@ const page = () => {
       image: "/assets/images/team/team-1/4.jpg",
       social: [
         {
-          url: "https://www.facebook.com/",
+          url: "https://www.facebook.com/profile.php?id=61555618741877",
           icon: "/assets/images/icons/icon-white-facebook.svg",
         },
         {
@@ -92,7 +92,7 @@ const page = () => {
           icon: "/assets/images/icons/icon-white-dribbble.svg",
         },
         {
-          url: "https://www.instagram.com/",
+          url: "https://www.instagram.com/codelab_mk/",
           icon: "/assets/images/icons/icon-white-instagram.svg",
         },
       ],
@@ -103,7 +103,7 @@ const page = () => {
       image: "/assets/images/team/team-1/5.jpg",
       social: [
         {
-          url: "https://www.facebook.com/",
+          url: "https://www.facebook.com/profile.php?id=61555618741877",
           icon: "/assets/images/icons/icon-white-facebook.svg",
         },
         {
@@ -115,7 +115,7 @@ const page = () => {
           icon: "/assets/images/icons/icon-white-dribbble.svg",
         },
         {
-          url: "https://www.instagram.com/",
+          url: "https://www.instagram.com/codelab_mk/",
           icon: "/assets/images/icons/icon-white-instagram.svg",
         },
       ],
@@ -126,7 +126,7 @@ const page = () => {
       image: "/assets/images/team/team-1/6.jpg",
       social: [
         {
-          url: "https://www.facebook.com/",
+          url: "https://www.facebook.com/profile.php?id=61555618741877",
           icon: "/assets/images/icons/icon-white-facebook.svg",
         },
         {
@@ -138,7 +138,7 @@ const page = () => {
           icon: "/assets/images/icons/icon-white-dribbble.svg",
         },
         {
-          url: "https://www.instagram.com/",
+          url: "https://www.instagram.com/codelab_mk/",
           icon: "/assets/images/icons/icon-white-instagram.svg",
         },
       ],

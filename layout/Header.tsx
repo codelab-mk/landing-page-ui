@@ -1,5 +1,5 @@
 "use client";
-import { Eduna_config } from "@/utilities";
+import { _config } from "@/utilities";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
@@ -8,7 +8,7 @@ import Modal from "react-bootstrap/Modal";
 const Header = ({ header }: { header: number }) => {
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
   useEffect(() => {
-    Eduna_config.sticky_header();
+    _config.sticky_header();
   }, []);
 
   const HeaderComponent = header === 1 ? Header1 : header === 2 ? Header2 : header === 3 ? Header3 : header === 4 ? Header4 : Header1;
@@ -32,12 +32,12 @@ const Header1 = ({ showMobileMenu, setShowMobileMenu }: { showMobileMenu: boolea
             {/* Logo  */}
             <div className="ed-topbar__logo">
               <Link href="/">
-                <Image width={200} height={50} src="/assets/images/logo.svg" alt="logo" />
+                <Image width={300} height={100} src="/assets/codelab/logo/zolto.svg" alt="logo" />
               </Link>
             </div>
             {/* Category Dropdown */}
-            <div className="ed-topbar__search-widget">
-              {/* <div className="ed-topbar__category">
+            {/* <div className="ed-topbar__search-widget"> */}
+            {/* <div className="ed-topbar__category">
                 <select className="nice-select">
                   <option data-display="All Categories">All Categories</option>
                   <option value={1}>Business</option>
@@ -49,7 +49,7 @@ const Header1 = ({ showMobileMenu, setShowMobileMenu }: { showMobileMenu: boolea
                   <option value={7}>Photography</option>
                 </select>
               </div> */}
-              <div className="ed-topbar__search">
+            {/* <div className="ed-topbar__search">
                 <form action="#" method="post">
                   <input type="search" name="search" placeholder="Search your courses..." required />
                   <button type="submit">
@@ -58,7 +58,7 @@ const Header1 = ({ showMobileMenu, setShowMobileMenu }: { showMobileMenu: boolea
                   </button>
                 </form>
               </div>
-            </div>
+            </div> */}
             {/* Topbar Info */}
             <div className="ed-topbar__info">
               {/* Topbar Social */}
@@ -96,7 +96,10 @@ const Header1 = ({ showMobileMenu, setShowMobileMenu }: { showMobileMenu: boolea
                       <a href="tel:+389 ‭72 278 786‬">+389 ‭72 278 786‬</a>
                     </li>
                     <li>
-                      <a href="mailto:contact@CodeLab.com.mk">contact@CodeLab.com.mk</a>
+                      <a href="tel:+389 ‭78 298 116‬">+389 ‭78 298 116‬</a>
+                    </li>
+                    <li>
+                      <a href="mailto:contact@codelab.com.mk">contact@codelab.com.mk</a>
                     </li>
                   </ul>
                   <div className="ed-header__action">
@@ -135,7 +138,7 @@ const Header2 = ({ showMobileMenu, setShowMobileMenu }: { showMobileMenu: boolea
                   {/* Logo  */}
                   <div className="ed-topbar__logo">
                     <Link href="/">
-                      <Image width={140} height={34} src="/assets/images/logo.svg" alt="logo" />
+                      <Image width={140} height={34} src="/assets/codelab/logo/zolto.svg" alt="logo" />
                     </Link>
                   </div>
                   {/* Category Dropdown */}
@@ -213,7 +216,7 @@ const Header3 = ({ showMobileMenu, setShowMobileMenu }: { showMobileMenu: boolea
               <div className="ed-header__right">
                 <ul className="ed-topbar__info-social">
                   <li>
-                    <a href="https://www.facebook.com/" target="_blank">
+                    <a href="https://www.facebook.com/profile.php?id=61555618741877" target="_blank">
                       <img src="assets/images/icons/icon-white-facebook.svg" alt="icon-white-facebook" />
                     </a>
                   </li>
@@ -228,7 +231,7 @@ const Header3 = ({ showMobileMenu, setShowMobileMenu }: { showMobileMenu: boolea
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/" target="_blank">
+                    <a href="https://www.instagram.com/codelab_mk/" target="_blank">
                       <img src="assets/images/icons/icon-white-instagram.svg" alt="icon-white-instagram" />
                     </a>
                   </li>
@@ -391,21 +394,34 @@ const Nav = () => {
           </ul>
         </li> */}
         <li>
-          <a href="javascript:void(0)">
+          <Link href="/blog">News</Link>
+          {/* <a href="javascript:void(0)">
             News
             <i className="fi fi-ss-angle-small-down" />
-          </a>
-          <ul className="sub-menu">
+          </a> */}
+          {/* <ul className="sub-menu">
             <li>
               <Link href="/blog">Blog </Link>
             </li>
             <li>
               <Link href="/blog-details">Blog Details</Link>
             </li>
-          </ul>
+          </ul> */}
         </li>
         <li>
-          <Link href="/about-1">About</Link>
+          <a href="javascript:void(0)">
+            About
+            <i className="fi fi-ss-angle-small-down" />
+          </a>
+          <ul className="sub-menu">
+            <li>
+              <Link href="/about-1">About Us</Link>
+            </li>
+            <li>
+              <Link href="/instructor">Our Team</Link>
+            </li>
+          </ul>
+          {/* <Link href="/about-1">About</Link> */}
         </li>
         <li>
           <Link href="/contact">Contact</Link>
@@ -428,7 +444,7 @@ const MobileMenu = ({ show, onHide }: { show: boolean; onHide: () => void }) => 
         {/* Mobile Menu Logo */}
         <div className="offcanvas-logo">
           <Link href="/">
-            <Image width={140} height={34} src="/assets/images/logo.svg" alt="logo" />
+            <Image width={140} height={34} src="/assets/codelab/logo/zolto.svg" alt="logo" />
           </Link>
         </div>
         <button type="button" className="btn-close" onClick={onHide}>
@@ -551,12 +567,12 @@ const Social = () => {
     {
       id: 1,
       icon: "/assets/images/icons/icon-dark-facebook.svg",
-      link: "https://www.facebook.com/",
+      link: "https://www.facebook.com/profile.php?id=61555618741877",
     },
     {
       id: 4,
       icon: "/assets/images/icons/icon-dark-instagram.svg",
-      link: "https://www.instagram.com/",
+      link: "https://www.instagram.com/codelab_mk/",
     },
   ];
   return (
@@ -582,8 +598,8 @@ const Sidebar = ({ close, open }: { close: () => void; open: boolean }) => {
   }[] = [
     {
       id: 1,
-      title: "24/7 Support",
-      content: "24/7 Support",
+      title: "Contact",
+      content: "Phone number",
       link: "tel:+389 ‭72 278 786‬",
       icon: "/assets/images/icons/icon-phone-blue.svg",
     },
@@ -591,7 +607,7 @@ const Sidebar = ({ close, open }: { close: () => void; open: boolean }) => {
       id: 2,
       title: "Send Message",
       content: "Send Message",
-      link: "mailto:contact@CodeLab.com.mk",
+      link: "mailto:contact@codelab.com.mk",
       icon: "/assets/images/icons/icon-envelope-blue.svg",
     },
     {
@@ -615,7 +631,7 @@ const Sidebar = ({ close, open }: { close: () => void; open: boolean }) => {
       <div className={`offcanvas offcanvas-end ed-sidebar ${beforeClose ? "hiding" : open ? "show" : ""}`}>
         <div className="ed-sidebar-header">
           <Link href="/" className="ed-sidebar-logo">
-            <Image width={140} height={34} src="/assets/images/logo.svg" alt="logo" />
+            <Image width={200} height={100} src="/assets/codelab/logo/zolto.svg" alt="logo" />
           </Link>
           <button type="button" className="text-reset" data-bs-dismiss="offcanvas" aria-label="Close" onClick={handleClose}>
             <i className="fi fi-rr-cross" />
@@ -646,7 +662,7 @@ const Sidebar = ({ close, open }: { close: () => void; open: boolean }) => {
             </ul>
           </div>
           {/* Single Widget  */}
-          <div className="ed-sidebar-widget">
+          {/* <div className="ed-sidebar-widget">
             <h3 className="ed-sidebar-widget-title">Subscribe Now:</h3>
             <form action="#" method="post" className="ed-sidebar-subscribe">
               <input type="email" name="email-address" placeholder="Enter email" required />
@@ -655,7 +671,7 @@ const Sidebar = ({ close, open }: { close: () => void; open: boolean }) => {
                 <i className="fi fi-rr-arrow-small-right" />
               </button>
             </form>
-          </div>
+          </div> */}
         </div>
       </div>
       {open && <div className={`offcanvas-backdrop fade ${beforeClose ? "show" : ""}`} onClick={handleClose} />}
@@ -690,7 +706,7 @@ const RegisterModal = ({ show, onHide }: { show: boolean; onHide: () => void }) 
         {/* Auth Head  */}
         <div className="ed-auth__modal-head">
           <Link href="/" className="ed-auth__modal-logo">
-            <Image width={140} height={34} src="/assets/images/logo.svg" alt="logo" />
+            <Image width={140} height={34} src="/assets/codelab/logo/zolto.svg" alt="logo" />
           </Link>
           <h3 className="ed-auth__modal-title">Sign Up Now</h3>
           <p className="ed-auth__modal-text">
@@ -766,7 +782,7 @@ const LoginModal = ({ show, onHide }: { show: boolean; onHide: () => void }) => 
         {/* Auth Head  */}
         <div className="ed-auth__modal-head">
           <Link href="/" className="ed-auth__modal-logo">
-            <Image width={140} height={34} src="/assets/images/logo.svg" alt="logo" />
+            <Image width={140} height={34} src="/assets/codelab/logo/zolto.svg" alt="logo" />
           </Link>
           <h3 className="ed-auth__modal-title">Sign In Now</h3>
           <p className="ed-auth__modal-text">

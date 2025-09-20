@@ -83,42 +83,16 @@ const Course1 = () => {
   return (
     <section className="ed-course section-gap section-bg-1 position-relative">
       <div className="ed-course__shapes">
-        <Image
-          width={37}
-          height={41}
-          sizes="100vw"
-          style={{ width: "37px", height: "41px" }}
-          className="ed-course__shape-1 rotate-ani"
-          src="/assets/images/course/course-1/shape-1.svg"
-          alt="shape-1"
-        />
-        <Image
-          width={133}
-          height={154}
-          sizes="133x154"
-          style={{ width: "133px", height: "154px" }}
-          className="ed-course__shape-2 updown-ani"
-          src="/assets/images/abstracts/abstract-element-regular.svg"
-          alt="shape-2"
-        />
-        <Image
-          width={101}
-          height={92}
-          sizes="101x92"
-          style={{ width: "101px", height: "92px" }}
-          className="ed-course__shape-3 updown-ani"
-          src="/assets/images/course/course-1/shape-3.svg"
-          alt="shape-3"
-        />
+        <Image width={37} height={41} sizes="100vw" style={{ width: "37px", height: "41px" }} className="ed-course__shape-1 rotate-ani" src="/assets/images/course/course-1/shape-1.svg" alt="shape-1" />
+        <Image width={133} height={154} sizes="133x154" style={{ width: "133px", height: "154px" }} className="ed-course__shape-2 updown-ani" src="/assets/images/abstracts/abstract-element-regular.svg" alt="shape-2" />
+        <Image width={101} height={92} sizes="101x92" style={{ width: "101px", height: "92px" }} className="ed-course__shape-3 updown-ani" src="/assets/images/course/course-1/shape-3.svg" alt="shape-3" />
       </div>
       <div className="container ed-container">
         <div className="row justify-content-center">
           <div className="col-lg-6 col-md-8 col-12">
             <div className="ed-section-head text-center">
               <span className="ed-section-head__sm-title">ONLINE COURSES</span>
-              <h3 className="ed-section-head__title ed-split-text left">
-                Get Your Course With Us
-              </h3>
+              <h3 className="ed-section-head__title ed-split-text left">Get Your Course With Us</h3>
             </div>
           </div>
         </div>
@@ -198,9 +172,7 @@ export const Course2 = () => {
           <div className="col-lg-6 col-md-8 col-12">
             <div className="ed-section-head text-center">
               <span className="ed-section-head__sm-title">ONLINE COURSES</span>
-              <h3 className="ed-section-head__title ed-split-text left">
-                Get Your Course With Us
-              </h3>
+              <h3 className="ed-section-head__title ed-split-text left">Get Your Course With Us</h3>
             </div>
           </div>
         </div>
@@ -343,10 +315,8 @@ export const Course3 = () => {
         <div className="row">
           <div className="col-12">
             <div className="ed-course__filter">
-              <p className="ed-course__filter-text">
-                Showing&nbsp;1-6&nbsp;Of&nbsp;15&nbsp;Results
-              </p>
-              <div className="ed-course__filter-search">
+              <p className="ed-course__filter-text">Showing&nbsp;1-6&nbsp;Of&nbsp;15&nbsp;Results</p>
+              {/* <div className="ed-course__filter-search">
                 <form action="#" method="post" className="ed-hero__search-form">
                   <input
                     type="search"
@@ -359,18 +329,14 @@ export const Course3 = () => {
                     <i className="fi-rr-search" />
                   </button>
                 </form>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
         <div className="row">
           {/* Single Course Card */}
           {courses.map((course) => (
-            <CourseItem
-              course={course}
-              containerClass="col-lg-6 col-xl-4 col-md-6 col-12"
-              key={course.id}
-            />
+            <CourseItem course={course} containerClass="col-lg-6 col-xl-4 col-md-6 col-12" key={course.id} />
           ))}
         </div>
         <div className="row">
@@ -439,20 +405,14 @@ export const Course4 = () => {
           <div className="col-lg-6 col-md-8 col-12">
             <div className="ed-section-head text-center">
               <span className="ed-section-head__sm-title">BEST SELLER</span>
-              <h3 className="ed-section-head__title">
-                Our Best Selling Courses
-              </h3>
+              <h3 className="ed-section-head__title">Our Best Selling Courses</h3>
             </div>
           </div>
         </div>
         <div className="row">
           {/* Single Course Card */}
           {courses.map((course) => (
-            <CourseItem2
-              course={course}
-              containerClass="col-lg-6 col-xl-6 col-md-6 col-12"
-              key={course.id}
-            />
+            <CourseItem2 course={course} containerClass="col-lg-6 col-xl-6 col-md-6 col-12" key={course.id} />
           ))}
         </div>
       </div>
@@ -460,25 +420,12 @@ export const Course4 = () => {
   );
 };
 
-const CourseItem = ({
-  course,
-  containerClass = "col-lg-6 col-xl-4 col-md-6 col-12",
-}: {
-  course: any;
-  containerClass?: string;
-}) => {
+const CourseItem = ({ course, containerClass = "col-lg-6 col-xl-4 col-md-6 col-12" }: { course: any; containerClass?: string }) => {
   return (
     <div className={containerClass}>
       <div className="ed-course__card wow fadeInUp" data-wow-duration="1s">
         <Link href="/course-details" className="ed-course__img">
-          <Image
-            width={0}
-            height={0}
-            sizes="100vw"
-            style={{ width: "100%", height: "auto" }}
-            src={course.image}
-            alt="course-img"
-          />
+          <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src={course.image} alt="course-img" />
         </Link>
         <Link href="/course-1" className="ed-course__tag">
           {course.name}
@@ -515,10 +462,7 @@ const CourseItem = ({
                 <i className="icofont-star" />
               </li>
               <li>
-                <span>
-                  ({course.reviews > 9 ? course.reviews : "0" + course.reviews}{" "}
-                  Reviews)
-                </span>
+                <span>({course.reviews > 9 ? course.reviews : "0" + course.reviews} Reviews)</span>
               </li>
             </ul>
           </div>
@@ -535,27 +479,13 @@ const CourseItem = ({
   );
 };
 
-const CourseItem2 = ({
-  course,
-  containerClass = "col-lg-6 col-xl-6 col-md-6 col-12",
-}: {
-  course: any;
-  containerClass?: string;
-}) => {
+const CourseItem2 = ({ course, containerClass = "col-lg-6 col-xl-6 col-md-6 col-12" }: { course: any; containerClass?: string }) => {
   return (
     <div className={`${containerClass}`}>
-      <div
-        className="ed-course__card ed-course__card--style2 wow fadeInUp"
-        data-wow-duration="1s"
-      >
+      <div className="ed-course__card ed-course__card--style2 wow fadeInUp" data-wow-duration="1s">
         <div className="ed-course__head position-relative">
           <Link href="/course-details" className="ed-course__img">
-            <Image
-              width={250}
-              height={222}
-              src={course.image}
-              alt="course-img"
-            />
+            <Image width={250} height={222} src={course.image} alt="course-img" />
           </Link>
           <Link href="/course-1" className="ed-course__tag">
             {course.name}
@@ -596,10 +526,7 @@ const CourseItem2 = ({
                 <i className="icofont-star" />
               </li>
               <li>
-                <span>
-                  ({course.reviews > 9 ? course.reviews : "0" + course.reviews}{" "}
-                  Reviews)
-                </span>
+                <span>({course.reviews > 9 ? course.reviews : "0" + course.reviews} Reviews)</span>
               </li>
             </ul>
           </div>
@@ -635,8 +562,7 @@ export const Course5 = () => {
       title: "Grow Personal Financial Security Thinking & Principles",
       lessons: 23,
       teacher: "Harrison Stone",
-      teacherImage:
-        "/assets/images/course/course-3/course-instructor-thumb-1.jpg",
+      teacherImage: "/assets/images/course/course-3/course-instructor-thumb-1.jpg",
       price: 674,
       students: 673,
       reviews: 9,
@@ -648,8 +574,7 @@ export const Course5 = () => {
       title: "Data Competitive Strategy law and Organization Course",
       lessons: 4,
       teacher: "Alexander Wells",
-      teacherImage:
-        "/assets/images/course/course-3/course-instructor-thumb-2.jpg",
+      teacherImage: "/assets/images/course/course-3/course-instructor-thumb-2.jpg",
       price: 633,
       students: 964,
       reviews: 67,
@@ -661,8 +586,7 @@ export const Course5 = () => {
       title: "The Complete Guide to Build RESTful API Application",
       lessons: 87,
       teacher: "John Smith",
-      teacherImage:
-        "/assets/images/course/course-3/course-instructor-thumb-3.jpg",
+      teacherImage: "/assets/images/course/course-3/course-instructor-thumb-3.jpg",
       price: 383,
       students: 316,
       reviews: 87,
@@ -674,8 +598,7 @@ export const Course5 = () => {
       title: "Exploring Learning Landscapes in Academic Business",
       lessons: 4,
       teacher: "Gabriel Cross",
-      teacherImage:
-        "/assets/images/course/course-3/course-instructor-thumb-4.jpg",
+      teacherImage: "/assets/images/course/course-3/course-instructor-thumb-4.jpg",
       price: 356,
       students: 352,
       reviews: 65,
@@ -687,8 +610,7 @@ export const Course5 = () => {
       title: "Voices from the Learning Manage Education Hub",
       lessons: 4,
       teacher: "Maxwell Ford",
-      teacherImage:
-        "/assets/images/course/course-3/course-instructor-thumb-5.jpg",
+      teacherImage: "/assets/images/course/course-3/course-instructor-thumb-5.jpg",
       price: 643,
       students: 553,
       reviews: 23,
@@ -700,8 +622,7 @@ export const Course5 = () => {
       title: "Voices from the Learning Manage Education Hub",
       lessons: 4,
       teacher: "Maxwell Ford",
-      teacherImage:
-        "/assets/images/course/course-3/course-instructor-thumb-6.jpg",
+      teacherImage: "/assets/images/course/course-3/course-instructor-thumb-6.jpg",
       price: 356,
       students: 352,
       reviews: 94,
@@ -709,21 +630,14 @@ export const Course5 = () => {
     },
   ];
   return (
-    <section
-      className="ed-course section-gap position-relative background-image"
-      style={{ backgroundImage: 'url("./assets/images/section-bg-9.png")' }}
-    >
+    <section className="ed-course section-gap position-relative background-image" style={{ backgroundImage: 'url("./assets/images/section-bg-9.png")' }}>
       <div className="container ed-container">
         <div className="row">
           <div className="col-12">
             <div className="ed-section-head d-flex-between">
               <div className="ed-section-head__info">
-                <span className="ed-section-head__sm-title">
-                  ONLINE COURSES
-                </span>
-                <h3 className="ed-section-head__title m-0 ed-split-text left">
-                  Get Your Course With Us
-                </h3>
+                <span className="ed-section-head__sm-title">ONLINE COURSES</span>
+                <h3 className="ed-section-head__title m-0 ed-split-text left">Get Your Course With Us</h3>
               </div>
               <div className="ed-section-head__btn">
                 <Link href="/course-1" className="ed-btn">
@@ -740,14 +654,7 @@ export const Course5 = () => {
               <div className="ed-course__card ed-course__card--style3 ed-course__card--style4 wow fadeInUp">
                 <div className="ed-course__cover">
                   <Link href="/course-details" className="ed-course__img">
-                    <Image
-                      width={250}
-                      height={222}
-                      sizes="100vw"
-                      style={{ width: "100%", height: "auto" }}
-                      src={course.image}
-                      alt="course-img"
-                    />
+                    <Image width={250} height={222} sizes="100vw" style={{ width: "100%", height: "auto" }} src={course.image} alt="course-img" />
                   </Link>
                 </div>
                 <div className="ed-course__body">
@@ -769,13 +676,7 @@ export const Course5 = () => {
                         <i className="icofont-star" />
                       </li>
                       <li>
-                        <span>
-                          (
-                          {course.reviews > 9
-                            ? course.reviews
-                            : "0" + course.reviews}{" "}
-                          Reviews)
-                        </span>
+                        <span>({course.reviews > 9 ? course.reviews : "0" + course.reviews} Reviews)</span>
                       </li>
                     </ul>
                   </div>
@@ -794,12 +695,7 @@ export const Course5 = () => {
                   </div>
                   <div className="ed-course__bottom">
                     <div className="ed-course__teacher">
-                      <Image
-                        width={28}
-                        height={28}
-                        src={course.teacherImage}
-                        alt="course-instructor-thumb"
-                      />
+                      <Image width={28} height={28} src={course.teacherImage} alt="course-instructor-thumb" />
                       <Link href="/course-1">{course.teacher}</Link>
                     </div>
                     <span className="ed-course__price">${course.price}</span>
@@ -834,8 +730,7 @@ export const Course6 = () => {
       title: "Data Competitive Strategy law and Organization Course",
       lessons: 23,
       teacher: "Harrison Stone",
-      teacherImage:
-        "/assets/images/course/course-3/course-instructor-thumb-1.jpg",
+      teacherImage: "/assets/images/course/course-3/course-instructor-thumb-1.jpg",
       description: "Data Competitive Strategy law and Organization Course",
       price: 674,
       students: 673,
@@ -848,8 +743,7 @@ export const Course6 = () => {
       title: "Grow Personal Financial Security Thinking & Principles",
       lessons: 4,
       teacher: "Alexander Wells",
-      teacherImage:
-        "/assets/images/course/course-3/course-instructor-thumb-2.jpg",
+      teacherImage: "/assets/images/course/course-3/course-instructor-thumb-2.jpg",
       description: "Grow Personal Financial Security Thinking & Principles",
       price: 633,
       students: 964,
@@ -862,8 +756,7 @@ export const Course6 = () => {
       title: "The Complete Guide to Build RESTful API Application",
       lessons: 87,
       teacher: "John Smith",
-      teacherImage:
-        "/assets/images/course/course-3/course-instructor-thumb-3.jpg",
+      teacherImage: "/assets/images/course/course-3/course-instructor-thumb-3.jpg",
       description: "The Complete Guide to Build RESTful API Application",
       price: 383,
       students: 316,
@@ -876,8 +769,7 @@ export const Course6 = () => {
       title: "Exploring Learning Landscapes in Academic Business",
       lessons: 4,
       teacher: "Gabriel Cross",
-      teacherImage:
-        "/assets/images/course/course-3/course-instructor-thumb-4.jpg",
+      teacherImage: "/assets/images/course/course-3/course-instructor-thumb-4.jpg",
       description: "Exploring Learning Landscapes in Academic Business",
       price: 356,
       students: 352,
@@ -890,8 +782,7 @@ export const Course6 = () => {
       title: "Voices from the Learning Manage Education Hub",
       lessons: 4,
       teacher: "Maxwell Ford",
-      teacherImage:
-        "/assets/images/course/course-3/course-instructor-thumb-5.jpg",
+      teacherImage: "/assets/images/course/course-3/course-instructor-thumb-5.jpg",
       description: "Voices from the Learning Manage Education Hub",
       price: 643,
       students: 553,
@@ -904,8 +795,7 @@ export const Course6 = () => {
       title: "Voices from the Learning Manage Education Hub",
       lessons: 4,
       teacher: "Maxwell Ford",
-      teacherImage:
-        "/assets/images/course/course-3/course-instructor-thumb-6.jpg",
+      teacherImage: "/assets/images/course/course-3/course-instructor-thumb-6.jpg",
       description: "Voices from the Learning Manage Education Hub",
       price: 356,
       students: 352,
@@ -920,19 +810,14 @@ export const Course6 = () => {
           <div className="col-lg-6 col-md-8 col-12">
             <div className="ed-section-head text-center">
               <span className="ed-section-head__sm-title">ONLINE COURSES</span>
-              <h3 className="ed-section-head__title ed-split-text left">
-                Get Your Course With Us
-              </h3>
+              <h3 className="ed-section-head__title ed-split-text left">Get Your Course With Us</h3>
             </div>
           </div>
         </div>
         <div className="row">
           {courses.map((course) => (
             <div className="col-lg-6 col-xl-4 col-md-6 col-12" key={course.id}>
-              <div
-                className="ed-course__card ed-course__card--style3 wow fadeInUp"
-                data-wow-duration="1s"
-              >
+              <div className="ed-course__card ed-course__card--style3 wow fadeInUp" data-wow-duration="1s">
                 <Link href="/course-details" className="ed-course__img">
                   <img src={course.image} alt="course-img" />
                 </Link>
@@ -964,10 +849,7 @@ export const Course6 = () => {
                   <p>{course.description}</p>
                   <div className="ed-course__bottom">
                     <div className="ed-course__teacher">
-                      <img
-                        src={course.teacherImage}
-                        alt="course-instructor-thumb"
-                      />
+                      <img src={course.teacherImage} alt="course-instructor-thumb" />
                       <Link href="/course-1">{course.teacher}</Link>
                     </div>
                     <span className="ed-course__price">${course.price}</span>
@@ -1099,17 +981,10 @@ export const Course7 = () => {
         <div className="row">
           <div className="col-12">
             <div className="ed-course__filter">
-              <p className="ed-course__filter-text">
-                Showing 1-6 Of 15 Results
-              </p>
+              <p className="ed-course__filter-text">Showing 1-6 Of 15 Results</p>
               <div className="ed-course__filter-search">
                 <form action="#" method="post" className="ed-hero__search-form">
-                  <input
-                    type="search"
-                    name="search"
-                    placeholder="Search your courses..."
-                    required={true}
-                  />
+                  <input type="search" name="search" placeholder="Search your courses..." required={true} />
                   <button type="submit">
                     Search
                     <i className="fi-rr-search" />
@@ -1122,11 +997,7 @@ export const Course7 = () => {
         <div className="row">
           {courses.map((course) => (
             <div className="col-lg-6 col-xl-6 col-md-6 col-12" key={course.id}>
-              <div
-                className="ed-course__card ed-course__card--style2 wow fadeInUp"
-                data-wow-delay=".3s"
-                data-wow-duration="1s"
-              >
+              <div className="ed-course__card ed-course__card--style2 wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
                 <div className="ed-course__head position-relative">
                   <Link href="/course-details" className="ed-course__img">
                     <img src={course.image} alt="course-img" />

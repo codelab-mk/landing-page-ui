@@ -1042,15 +1042,15 @@ p {
 .ed-preloader .animation-preloader::after {
   position: absolute;
   left: 50%;
-  top: 30px;
+  top: -27px;
   content: "";
-  height: 50px;
-  width: 50px;
-  background: url(../images/favicon.svg);
+  width: 180px; /* or auto */
+  height: 180px;
+  background: url(../codelab/logo/icona.svg);
   transform: translateX(-50%);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 }
 
 .ed-preloader .animation-preloader .spinner {
@@ -1167,7 +1167,7 @@ p {
   text-align: center;
   line-height: 46px;
   font-size: 26px;
-  color: var(--ed-primary-color);
+  color: #543ee8;
   left: 0;
   top: 0;
   height: 46px;
@@ -1182,7 +1182,7 @@ p {
   fill: none;
 }
 .progress-wrap svg.progress-circle path {
-  stroke: var(--ed-primary-color);
+  stroke: #543ee8;
   stroke-width: 4;
   box-sizing: border-box;
   -webkit-transition: all 200ms linear;

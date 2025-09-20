@@ -18,7 +18,7 @@ const page = () => {
       icon: "icon-white-message.svg",
       title: "Email",
       type: "email",
-      info: ["contact@CodeLab.com.mk"],
+      info: ["contact@codelab.com.mk"],
       extraLink: "",
     },
     {

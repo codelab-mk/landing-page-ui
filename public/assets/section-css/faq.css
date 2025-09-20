@@ -74,7 +74,6 @@
 .ed-faq__accordion-item .accordion-button:not(.collapsed) {
   box-shadow: none;
   border-bottom: none !important;
-  color: var(--ed-primary-color);
   background: var(--ed-white-color);
   border-radius: 8px 8px 0px 0px !important;
   padding-bottom: 24px;
@@ -105,7 +104,6 @@
 }
 .ed-faq__accordion-item .accordion-button:not(.collapsed)::after {
   background: var(--ed-white-color);
-  color: var(--ed-primary-color);
   content: "\f13d";
 }
 
@@ -130,9 +128,7 @@
   background: var(--ed-offwhite-color);
   border-top: 1px solid #b8bfbe !important;
 }
-.ed-faq--style2
-  .ed-faq__accordion-item
-  .accordion-button:not(.collapsed)::after {
+.ed-faq--style2 .ed-faq__accordion-item .accordion-button:not(.collapsed)::after {
   background: transparent;
 }
 

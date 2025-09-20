@@ -7,7 +7,7 @@ const page = () => {
     <CodeLabLayout>
       <PageBanner />
       <Course3 />
-      <CallToAction1 />
+      {/* <CallToAction1 /> */}
     </CodeLabLayout>
   );
 };

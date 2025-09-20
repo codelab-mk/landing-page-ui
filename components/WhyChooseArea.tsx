@@ -18,7 +18,7 @@ export const WhyChooseArea1 = () => {
     },
     {
       id: 2,
-      name: "24/7 Support Available",
+      name: "",
       icon: "/assets/images/why-choose/why-choose-1/icon-2.svg",
       bg: "bg-2",
       description: "Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia for this is a for that an deserunt mollit.",
@@ -107,7 +107,7 @@ export const WhyChooseArea2 = () => {
     },
     {
       id: 2,
-      name: "24/7 Support",
+      name: "",
       icon: "/assets/images/why-choose/why-choose-1/icon-2.svg",
       bg: "bg-2",
       description: "Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia for this is a for that an deserunt mollit.",
@@ -202,7 +202,6 @@ export const WhyChooseArea3 = () => {
                     <div className="ed-w-choose__info-icon bg-2">
                       <img src="assets/images/why-choose/why-choose-1/icon-2.svg" alt="icon" />
                     </div>
-                    <h5>24/7 Support Available</h5>
                   </div>
                   <div className="ed-w-choose__info-bottom">
                     <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia for this is a for that an deserunt mollit.</p>

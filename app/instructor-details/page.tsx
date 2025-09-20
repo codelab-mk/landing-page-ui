@@ -49,7 +49,6 @@ const page = () => {
                         <Image width={28} height={28} sizes="100vw" style={{ width: "28px", height: "28px" }} src="/assets/images/icons/icon-phone-blue.svg" alt="icon-phone-blue" />
                       </div>
                       <div className="ed-contact__info-content">
-                        <span>24/7 Support</span>
                         <a href="tel:+389 ‭72 278 786‬">+389 ‭72 278 786‬</a>
                       </div>
                     </div>
@@ -60,14 +59,14 @@ const page = () => {
                       </div>
                       <div className="ed-contact__info-content">
                         <span>Send Message</span>
-                        <a href="mailto:contact@CodeLab.com.mk">contact@CodeLab.com.mk3</a>
+                        <a href="mailto:contact@codelab.com.mk">contact@codelab.com.mk</a>
                       </div>
                     </div>
                   </div>
                   {/* Team Details Social */}
                   <ul className="ed-team__details-info-social">
                     <li>
-                      <a href="https://www.facebook.com/" target="_blank">
+                      <a href="https://www.facebook.com/profile.php?id=61555618741877" target="_blank">
                         <Image width={20} height={20} sizes="100vw" style={{ width: "20px", height: "20px" }} src="/assets/images/icons/icon-dark-facebook.svg" alt="icon-dark-facebook" />
                       </a>
                     </li>
@@ -82,7 +81,7 @@ const page = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.instagram.com/" target="_blank">
+                      <a href="https://www.instagram.com/codelab_mk/" target="_blank">
                         <Image width={20} height={20} sizes="100vw" style={{ width: "20px", height: "20px" }} src="/assets/images/icons/icon-dark-instagram.svg" alt="icon-dark-instagram" />
                       </a>
                     </li>

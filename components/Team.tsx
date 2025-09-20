@@ -18,7 +18,7 @@ export const Team1 = () => {
         {
           id: 1,
           icon: "/assets/images/icons/icon-white-facebook.svg",
-          url: "https://www.facebook.com/",
+          url: "https://www.facebook.com/profile.php?id=61555618741877",
         },
         {
           id: 2,
@@ -33,7 +33,7 @@ export const Team1 = () => {
         {
           id: 4,
           icon: "/assets/images/icons/icon-white-instagram.svg",
-          url: "https://www.instagram.com/",
+          url: "https://www.instagram.com/codelab_mk/",
         },
       ],
     },
@@ -46,7 +46,7 @@ export const Team1 = () => {
         {
           id: 1,
           icon: "/assets/images/icons/icon-white-facebook.svg",
-          url: "https://www.facebook.com/",
+          url: "https://www.facebook.com/profile.php?id=61555618741877",
         },
         {
           id: 2,
@@ -61,7 +61,7 @@ export const Team1 = () => {
         {
           id: 4,
           icon: "/assets/images/icons/icon-white-instagram.svg",
-          url: "https://www.instagram.com/",
+          url: "https://www.instagram.com/codelab_mk/",
         },
       ],
     },
@@ -74,7 +74,7 @@ export const Team1 = () => {
         {
           id: 1,
           icon: "/assets/images/icons/icon-white-facebook.svg",
-          url: "https://www.facebook.com/",
+          url: "https://www.facebook.com/profile.php?id=61555618741877",
         },
         {
           id: 2,
@@ -89,7 +89,7 @@ export const Team1 = () => {
         {
           id: 4,
           icon: "/assets/images/icons/icon-white-instagram.svg",
-          url: "https://www.instagram.com/",
+          url: "https://www.instagram.com/codelab_mk/",
         },
       ],
     },
@@ -101,9 +101,7 @@ export const Team1 = () => {
           <div className="col-lg-6 col-md-8 col-12">
             <div className="ed-section-head text-center">
               <span className="ed-section-head__sm-title">OUR INSTRUCTOR</span>
-              <h3 className="ed-section-head__title ed-split-text left">
-                Our Top Class &amp; Expert Instructors
-              </h3>
+              <h3 className="ed-section-head__title ed-split-text left">Our Top Class &amp; Expert Instructors</h3>
             </div>
           </div>
         </div>
@@ -135,7 +133,7 @@ const Team2 = () => {
         {
           id: 1,
           icon: "/assets/images/icons/icon-white-facebook.svg",
-          url: "https://www.facebook.com/",
+          url: "https://www.facebook.com/profile.php?id=61555618741877",
         },
         {
           id: 2,
@@ -150,7 +148,7 @@ const Team2 = () => {
         {
           id: 4,
           icon: "/assets/images/icons/icon-white-instagram.svg",
-          url: "https://www.instagram.com/",
+          url: "https://www.instagram.com/codelab_mk/",
         },
       ],
     },
@@ -163,7 +161,7 @@ const Team2 = () => {
         {
           id: 1,
           icon: "/assets/images/icons/icon-white-facebook.svg",
-          url: "https://www.facebook.com/",
+          url: "https://www.facebook.com/profile.php?id=61555618741877",
         },
         {
           id: 2,
@@ -178,7 +176,7 @@ const Team2 = () => {
         {
           id: 4,
           icon: "/assets/images/icons/icon-white-instagram.svg",
-          url: "https://www.instagram.com/",
+          url: "https://www.instagram.com/codelab_mk/",
         },
       ],
     },
@@ -191,7 +189,7 @@ const Team2 = () => {
         {
           id: 1,
           icon: "/assets/images/icons/icon-white-facebook.svg",
-          url: "https://www.facebook.com/",
+          url: "https://www.facebook.com/profile.php?id=61555618741877",
         },
         {
           id: 2,
@@ -206,7 +204,7 @@ const Team2 = () => {
         {
           id: 4,
           icon: "/assets/images/icons/icon-white-instagram.svg",
-          url: "https://www.instagram.com/",
+          url: "https://www.instagram.com/codelab_mk/",
         },
       ],
     },
@@ -219,7 +217,7 @@ const Team2 = () => {
         {
           id: 1,
           icon: "/assets/images/icons/icon-white-facebook.svg",
-          url: "https://www.facebook.com/",
+          url: "https://www.facebook.com/profile.php?id=61555618741877",
         },
         {
           id: 2,
@@ -234,7 +232,7 @@ const Team2 = () => {
         {
           id: 4,
           icon: "/assets/images/icons/icon-white-instagram.svg",
-          url: "https://www.instagram.com/",
+          url: "https://www.instagram.com/codelab_mk/",
         },
       ],
     },
@@ -247,7 +245,7 @@ const Team2 = () => {
         {
           id: 1,
           icon: "/assets/images/icons/icon-white-facebook.svg",
-          url: "https://www.facebook.com/",
+          url: "https://www.facebook.com/profile.php?id=61555618741877",
         },
         {
           id: 2,
@@ -262,7 +260,7 @@ const Team2 = () => {
         {
           id: 4,
           icon: "/assets/images/icons/icon-white-instagram.svg",
-          url: "https://www.instagram.com/",
+          url: "https://www.instagram.com/codelab_mk/",
         },
       ],
     },
@@ -275,7 +273,7 @@ const Team2 = () => {
         {
           id: 1,
           icon: "/assets/images/icons/icon-white-facebook.svg",
-          url: "https://www.facebook.com/",
+          url: "https://www.facebook.com/profile.php?id=61555618741877",
         },
         {
           id: 2,
@@ -290,7 +288,7 @@ const Team2 = () => {
         {
           id: 4,
           icon: "/assets/images/icons/icon-white-instagram.svg",
-          url: "https://www.instagram.com/",
+          url: "https://www.instagram.com/codelab_mk/",
         },
       ],
     },
@@ -334,27 +332,13 @@ const TeamItem = ({ team }: { team: any }) => {
       <div className="ed-team__card wow fadeInUp" data-wow-duration="1s">
         <div className="ed-team__cover">
           <div className="ed-team__img">
-            <Image
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: "100%", height: "auto" }}
-              src={team.image}
-              alt="team-img"
-            />
+            <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src={team.image} alt="team-img" />
           </div>
           <ul className="ed-team__social">
             {team.social.map((social: any) => (
               <li key={social.id}>
                 <a href={social.url} target="_blank">
-                  <Image
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: "100%", height: "auto" }}
-                    src={social.icon}
-                    alt={social.id}
-                  />
+                  <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src={social.icon} alt={social.id} />
                 </a>
               </li>
             ))}

@@ -26,7 +26,7 @@
 }
 
 .ed-call-action .ed-btn {
-  background: var(--ed-tertiary-color);
+  background: var(--ed-white-color);
   color: #263238;
 }
 .ed-call-action .ed-btn:hover {
@@ -127,8 +127,8 @@
   padding-top: 50px;
 }
 .ed-call-action--style2 .ed-call-action__content {
-	margin-top: 145px;
-	padding-left: 56px;
+  margin-top: 145px;
+  padding-left: 56px;
 }
 
 @media only screen and (min-width: 1201px) and (max-width: 1600px) {
@@ -231,8 +231,6 @@
   .ed-call-action--style2 .ed-call-action__content {
     padding-left: 0px;
   }
-  
-
 }
 /*================================================================================================
     End Call Action CSS

@@ -1,3 +1,5 @@
+"use client";
+
 import { CallToAction1 } from "@/components/CallToAction";
 import Image from "next/image";
 import Link from "next/link";
@@ -44,26 +46,29 @@ const Footer2 = () => {
 };
 
 const FooterContent = () => {
+  const { t } = useTranslation();
+
   const contact = [
     {
       icon: "assets/images/icons/icon-phone-blue.svg",
-      title: "Contact",
+      title: t("footer.contact"),
       phone: "+389 ‭72 278 786‬",
-      link: "tel:+389 ‭72 278 786‬",
+      link: "tel:+389721278786",
     },
     {
       icon: "assets/images/icons/icon-envelope-blue.svg",
-      title: "Send Message",
+      title: t("footer.sendMessage"),
       email: "contact@codelab.com.mk",
       link: "mailto:contact@codelab.com.mk",
     },
     {
       icon: "assets/images/icons/icon-location-blue.svg",
-      title: "Our Location",
+      title: t("footer.ourLocation"),
       address: "16та Македонска Бригада 2, Скопје",
       link: "#",
     },
   ];
+
   return (
     <Fragment>
       {/* Footer Top */}
@@ -75,56 +80,59 @@ const FooterContent = () => {
         </div>
         <div className="container ed-container">
           <div className="row g-0">
+            {/* About Section */}
             <div className="col-lg-4 col-md-6 col-12">
               <div className="ed-footer__widget ed-footer__about">
                 <Link href="/" className="ed-footer__logo">
                   <Image width={250} height={100} src="/assets/codelab/logo/zolto.svg" alt="footer-logo" />
                 </Link>
-                <p className="ed-footer__about-text">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit.</p>
+                <p className="ed-footer__about-text">{t("footer.aboutText")}</p>
                 <ul className="ed-footer__about-social">
                   <li>
                     <a href="https://www.facebook.com/profile.php?id=61555618741877" target="_blank">
-                      <Image width={25} height={25} src="/assets/images/icons/icon-dark-facebook.svg" alt="icon-dark-facebook" />
+                      <Image width={25} height={25} src="/assets/images/icons/icon-dark-facebook.svg" alt="facebook" />
                     </a>
                   </li>
                   <li>
                     <a href="https://www.instagram.com/codelab_mk/" target="_blank">
-                      <Image width={25} height={25} src="/assets/images/icons/icon-dark-instagram.svg" alt="icon-dark-instagram" />
+                      <Image width={25} height={25} src="/assets/images/icons/icon-dark-instagram.svg" alt="instagram" />
                     </a>
-                  </li>{" "}
-                  <LanguageSwitcher />
+                  </li>
+                  <li style={{ background: "transparent" }}>
+                    <LanguageSwitcher />
+                  </li>
                 </ul>
               </div>
             </div>
+
+            {/* Links */}
             <div className="col-lg-2 col-md-6 col-12">
               <div className="ed-footer__widget">
-                <h4 className="ed-footer__widget-title">Links</h4>
+                <h4 className="ed-footer__widget-title">{t("footer.linksTitle")}</h4>
                 <ul className="ed-footer__widget-links">
                   <li>
-                    <Link href="/about-1">About Us</Link>
+                    <Link href="/about-1">{t("footer.aboutUs")}</Link>
                   </li>
                   <li>
-                    <Link href="/course-1">Our Courses</Link>
+                    <Link href="/course-1">{t("footer.ourCourses")}</Link>
                   </li>
                   <li>
-                    <a href="#">Pricing Plan</a>
+                    <Link href="/contact">{t("footer.contactUs")}</Link>
                   </li>
                   <li>
-                    <Link href="/contact">Contact Us</Link>
+                    <Link href="/blog">{t("footer.ourNews")}</Link>
                   </li>
                   <li>
-                    <Link href="/blog">Our News</Link>
-                  </li>
-                  <li>
-                    <Link href="/faq">FAQ’s</Link>
+                    <Link href="/faq">{t("footer.faq")}</Link>
                   </li>
                 </ul>
               </div>
             </div>
+
+            {/* Contact */}
             <div className="col-lg-3 col-md-6 col-12">
               <div className="ed-footer__widget contact-widget">
-                <h4 className="ed-footer__widget-title">Contact</h4>
-                {/* Single Info  */}
+                <h4 className="ed-footer__widget-title">{t("footer.contactTitle")}</h4>
                 {contact.map((item, index) => (
                   <div className="ed-footer__contact" key={index}>
                     <div className="ed-footer__contact-icon">
@@ -138,67 +146,41 @@ const FooterContent = () => {
                 ))}
               </div>
             </div>
-            {/* <div className="col-lg-3 col-md-6 col-12">
-              <div className="ed-footer__widget newsletter-widget">
-                <h4 className="ed-footer__widget-title">Subscribe</h4>
-                <div className="ed-footer__newsletter">
-                  <p className="ed-footer__about-text">Enter your email address to register to our newsletter subscription</p>
-                  <form action="#" method="post" className="ed-footer__newsletter-form">
-                    <input type="email" name="email" placeholder="Enter email" required />
-                    <button type="submit" className="ed-btn">
-                      Subscribe Now
-                      <i className="fi fi-rr-arrow-small-right" />
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
-      {/* Footer Bottom */}
-      {/* <div className="ed-footer__bottom">
-        <div className="container ed-container">
-          <div className="row">
-            <div className="col-12">
-              <p className="ed-footer__copyright-text">
-                Copyright {new Date().getFullYear()} CodeLab | Developed By{" "}
-                <a href="https://themeforest.net/user/bizantheme" target="_blank">
-                  BizanTheme
-                </a>
-                . All Rights Reserved
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </Fragment>
   );
 };
+
+const LANGUAGES = [
+  { code: "en", label: "EN" },
+  { code: "mk", label: "MK" },
+];
+
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const [open, setOpen] = useState(false);
 
-  const toggleLanguageMenu = () => setOpen(!open);
+  const toggleMenu = () => setOpen((prev) => !prev);
 
-  const changeLanguage = (lang: string) => {
+  const handleChange = (lang: string) => {
     i18n.changeLanguage(lang);
     setOpen(false);
   };
 
   return (
-    <div className="language-switcher" style={{ position: "relative" }}>
+    <div style={{ position: "relative" }}>
       <button
         type="button"
-        onClick={toggleLanguageMenu}
-        className="language-btn"
+        onClick={toggleMenu}
         style={{
           display: "flex",
           alignItems: "center",
           gap: "5px",
-          padding: "5px 10px",
+          padding: "6px 12px",
           border: "1px solid #ccc",
-          borderRadius: "5px",
+          borderRadius: "6px",
           background: "transparent",
           cursor: "pointer",
         }}>
@@ -207,48 +189,35 @@ const LanguageSwitcher = () => {
 
       {open && (
         <ul
-          className="language-menu"
           style={{
             position: "absolute",
             top: "110%",
             left: 0,
             background: "#fff",
             border: "1px solid #ccc",
-            borderRadius: "5px",
+            borderRadius: "6px",
             listStyle: "none",
-            padding: "5px 0",
+            padding: "4px 0",
             margin: 0,
-            width: "100%",
+            minWidth: "100%",
             zIndex: 1000,
           }}>
-          <li>
-            <button
-              onClick={() => changeLanguage("en")}
-              style={{
-                width: "100%",
-                padding: "5px 10px",
-                background: "transparent",
-                border: "none",
-                textAlign: "left",
-                cursor: "pointer",
-              }}>
-              EN
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => changeLanguage("mk")}
-              style={{
-                width: "100%",
-                padding: "5px 10px",
-                background: "transparent",
-                border: "none",
-                textAlign: "left",
-                cursor: "pointer",
-              }}>
-              MK
-            </button>
-          </li>
+          {LANGUAGES.map(({ code, label }) => (
+            <li key={code}>
+              <button
+                onClick={() => handleChange(code)}
+                style={{
+                  width: "100%",
+                  padding: "6px 12px",
+                  background: i18n.language === code ? "rgba(0,0,0,0.05)" : "transparent",
+                  border: "none",
+                  textAlign: "left",
+                  cursor: "pointer",
+                }}>
+                {label}
+              </button>
+            </li>
+          ))}
         </ul>
       )}
     </div>

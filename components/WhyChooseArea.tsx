@@ -1,29 +1,26 @@
+"use client";
+
 import Image from "next/image";
 import Counter from "./Counter";
 
+import { useTranslation } from "react-i18next";
+
 export const WhyChooseArea1 = () => {
-  const whyChoose: {
+  const { t } = useTranslation();
+
+  const whyChoose = t("whyChoose.items", { returnObjects: true }) as {
     id: number;
     name: string;
     icon: string;
     bg: string;
     description: string;
-  }[] = [
-    {
-      id: 1,
-      name: "Face-to-face Teaching",
-      icon: "/assets/images/why-choose/why-choose-1/icon-1.svg",
-      bg: "bg-1",
-      description: "Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia for this is a for that an deserunt mollit.",
-    },
-    {
-      id: 2,
-      name: "",
-      icon: "/assets/images/why-choose/why-choose-1/icon-2.svg",
-      bg: "bg-2",
-      description: "Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia for this is a for that an deserunt mollit.",
-    },
-  ];
+  }[];
+
+  const counter = t("whyChoose.counter", { returnObjects: true }) as {
+    number: string;
+    text: string;
+  };
+
   return (
     <section className="ed-why-choose section-gap background-image position-relative section-bg-2">
       <Image width={49} height={80} className="ed-w-choose__pattern-1" src="/assets/images/why-choose/why-choose-1/pattern-1.svg" alt="pattern-1" />
@@ -32,17 +29,13 @@ export const WhyChooseArea1 = () => {
           <div className="col-lg-6 col-12">
             <div className="ed-w-choose__content">
               <div className="ed-section-head">
-                <span className="ed-section-head__sm-title">WHY CHOOSE US</span>
-                <h3 className="ed-section-head__title ed-split-text left">
-                  Transform Your Best Practice <br />
-                  with Our Online Course
-                </h3>
-                <p className="ed-section-head__text">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit. Excepteur sint occaecat.</p>
+                <span className="ed-section-head__sm-title">{t("whyChoose.title")}</span>
+                <h3 className="ed-section-head__title ed-split-text left">{t("whyChoose.subtitle")}</h3>
               </div>
               <div className="ed-w-choose__info">
-                {/* Single Info  */}
-                {whyChoose.map((why, index) => (
-                  <div className="ed-w-choose__info-single" key={index}>
+                {/* Single Info */}
+                {whyChoose.map((why) => (
+                  <div className="ed-w-choose__info-single" key={why.id}>
                     <div className="ed-w-choose__info-head">
                       <div className={`ed-w-choose__info-icon ${why.bg}`}>
                         <Image width={25} height={25} src={why.icon} alt="icon" />
@@ -57,12 +50,14 @@ export const WhyChooseArea1 = () => {
               </div>
             </div>
           </div>
+
+          {/* Images + Counter */}
           <div className="col-lg-6 col-12">
             <div className="ed-w-choose__images position-relative">
-              {/* Why Choose Image  */}
               <div className="ed-w-choose__main-img">
                 <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src="/assets/images/why-choose/why-choose-1/why-choose-img.png" alt="why-choose-img" />
               </div>
+
               {/* Counter Card */}
               <div className="counter-card updown-ani">
                 <div className="counter-card__icon">
@@ -71,16 +66,16 @@ export const WhyChooseArea1 = () => {
                 <div className="counter-card__info">
                   <h4>
                     <span className="counter">
-                      <Counter end={69} />
+                      <Counter end={50} />
                     </span>
-                    K+
+                    +
                   </h4>
-                  <p>Satisfied Students</p>
+                  <p>{counter.text}</p>
                 </div>
               </div>
-              {/* Shapes Elements */}
+
+              {/* Shapes */}
               <div className="ed-w-choose__shapes">
-                <Image width={70} height={55} className="ed-w-choose__shape-1 rotate-ani" src="/assets/images/why-choose/why-choose-1/shape-1.svg" alt="shape-1" />
                 <Image width={70} height={50} className="ed-w-choose__shape-2" src="/assets/images/why-choose/why-choose-1/pattern-2.svg" alt="pattern-2" />
               </div>
             </div>

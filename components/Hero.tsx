@@ -30,10 +30,10 @@ export const Hero1 = () => {
               {/* Hero Content */}
               <div className="ed-hero__content">
                 <h1 className="ed-hero__content-title ed-split-text left" dangerouslySetInnerHTML={{ __html: t("hero.title") }} />
-                <p className="ed-hero__content-text">{t("hero.description")}</p>
+                <p className="ed-hero__content-text">{t("hero.subtitle")}</p>
                 <div className="ed-hero__btn">
                   <Link href="/course-1" className="ed-btn">
-                    {t("hero.button")}
+                    {t("hero.btnText")}
                     <i className="fi fi-rr-arrow-small-right" />
                   </Link>
                 </div>

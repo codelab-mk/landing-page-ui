@@ -1,7 +1,90 @@
 {
   "hero": {
-    "title": "Best <span>Online</span> Platform to Learn Everything",
-    "description": "Excedteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit.",
-    "button": "Find Courses"
+    "title": "Create your world with the most powerful language – <span>code</span>!",
+    "subtitle": "CodeLab introduces young minds to the world of IT and coding through creative activities and inspiring mentors.",
+    "btnText": "Find Courses"
+  },
+  "about1": {
+    "title": "Where Creativity Meets Code",
+    "subtitle": "Engaging workshops and activities help children learn programming in a fun and inspiring environment.",
+    "features": ["Playful Learning Experiences", "Build Real Projects", "Boost Critical Thinking", "Prepare for Tomorrow’s Tech"]
+  },
+  "category1": {
+    "smallTitle": "COURSE CATEGORIES",
+    "title": "Top Categories You Want to Learn",
+    "button": "Find Courses",
+    "categories": [
+      { "name": "Development", "courses": "3 Courses", "bg": "bg-7" },
+      { "name": "Design", "courses": "1 Courses", "bg": "bg-3" }
+    ]
+  },
+  "features1": {
+    "items": [
+      {
+        "id": 1,
+        "name": "Educator Support",
+        "description": "We provide full support for learners and teachers with modern resources."
+      },
+      {
+        "id": 2,
+        "name": "Top Instructor",
+        "description": "Learn from highly skilled instructors with real-world experience."
+      },
+      {
+        "id": 3,
+        "name": "Interactive Classes",
+        "description": "Classes are dynamic and hands-on for better understanding and engagement."
+      }
+    ]
+  },
+  "whyChoose": {
+    "title": "Why Choose Our Course?",
+    "subtitle": "At CodeLab, we believe that introducing the next generation to technological skills is crucial for their future success.",
+    "items": [
+      {
+        "id": 1,
+        "name": "Hands-on Exercises",
+        "description": "Engage with concepts through practical exercises and projects that apply what you’ve learned.",
+        "bg": "bg-2",
+        "icon": "/assets/images/why-choose/why-choose-1/icon-1.svg"
+      },
+      {
+        "id": 2,
+        "name": "Interactive Sessions",
+        "description": "Interact with instructors and get the chance to ask questions.",
+        "bg": "bg-3",
+        "icon": "/assets/images/why-choose/why-choose-1/icon-2.svg"
+      },
+      {
+        "id": 3,
+        "name": "Certificate of Completion",
+        "description": "After finishing the course, you’ll receive a certificate validating your newly gained knowledge.",
+        "bg": "bg-4",
+        "icon": "/assets/images/why-choose/why-choose-1/icon-3.svg"
+      }
+    ],
+    "counter": {
+      "number": "69K+",
+      "text": "Satisfied Students"
+    }
+  },
+  "callToAction": {
+    "smTitle": "Започнете веднаш",
+    "title": "Достапни онлајн курсеви\nи можности за учење",
+    "text": "Во CodeLab+ нудиме практични и забавни курсеви што му овозможуваат на секое дете да учи со сопствено темпо.",
+    "button": "Започни со учење денес"
+  },
+  "footer": {
+    "aboutText": "CodeLab+ empowers young learners with digital skills for the future.",
+    "linksTitle": "Links",
+    "aboutUs": "About Us",
+    "ourCourses": "Our Courses",
+    "contactUs": "Contact Us",
+    "ourNews": "Our News",
+    "faq": "FAQ’s",
+    "contactTitle": "Contact",
+    "contact": "Contact",
+    "sendMessage": "Send Message",
+    "ourLocation": "Our Location"
   }
 }

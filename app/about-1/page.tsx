@@ -6,8 +6,6 @@ import Contact from "@/components/Contact";
 import { Course4 } from "@/components/Course";
 import { Features1 } from "@/components/Features";
 import PageBanner from "@/components/PageBanner";
-import { Partner2 } from "@/components/Partner";
-import { Team1 } from "@/components/Team";
 import CodeLabLayout from "@/layout/CodeLabLayout";
 const page = () => {
   return (

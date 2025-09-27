@@ -2,23 +2,25 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export const Hero1 = () => {
   const { t } = useTranslation();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
-    <div
-      className="section-bg hero-bg background-image"
-      style={{
-        backgroundImage: 'url("/assets/images/hero/home-1/hero-bg.png")',
-      }}>
-      {/* Start Hero Area */}
+    <div className="section-bg hero-bg background-image" style={{ backgroundImage: 'url("/assets/images/hero/home-1/hero-bg.png")' }}>
       <section className="ed-hero">
         <div className="container ed-container-expand">
           <div className="row align-items-center">
             <div className="col-lg-6 col-12">
-              {/* Hero Content */}
               <div className="ed-hero__content">
                 <h1 className="ed-hero__content-title ed-split-text left" dangerouslySetInnerHTML={{ __html: t("hero.title") }} />
                 <p className="ed-hero__content-text">{t("hero.subtitle")}</p>
@@ -32,7 +34,6 @@ export const Hero1 = () => {
             </div>
 
             <div className="col-lg-6 col-12">
-              {/* Hero Image */}
               <div className="ed-hero__image">
                 <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto", objectFit: "cover" }} src="/assets/codelab/images/home1.svg" alt="hero-img" />
               </div>
@@ -40,7 +41,6 @@ export const Hero1 = () => {
           </div>
         </div>
       </section>
-      {/* End Hero Area */}
     </div>
   );
 };

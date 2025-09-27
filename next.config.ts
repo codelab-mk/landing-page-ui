@@ -1,13 +1,8 @@
 import type { NextConfig } from "next";
 
-const nextConfig = {
+const nextConfig: NextConfig = {
   reactStrictMode: true,
-  devIndicators: {
-    buildActivity: false,
-  },
-  experimental: {
-    disableDraftMode: true,
-  },
+  disableDraftMode: true,
 };
 
 export default nextConfig;

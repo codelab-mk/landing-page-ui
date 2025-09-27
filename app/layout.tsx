@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+// app/layout.tsx
 import "@plugin_css/animate.min.css";
 import "@plugin_css/bootstrap.min.css";
 import "@plugin_css/icofont.css";
@@ -10,9 +10,6 @@ import "@css/style.css";
 import "./globals.css";
 import Preloader from "@/components/Preloader";
 import { Poppins } from "next/font/google";
-import { I18nextProvider } from "react-i18next";
-import i18n from "@/app/i18n/i18n";
-import I18nProvider from "@/app/i18n/I18nProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,20 +18,16 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "My App",
+  title: "CodeLab",
   description: "CodeLab App",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={poppins.variable}>
         <Preloader />
-        <I18nProvider>{children}</I18nProvider>
+        {children}
       </body>
     </html>
   );

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import CodeLabLayout from "@/layout/CodeLabLayout";
 import PageBanner from "@/components/PageBanner";
-import { instructors } from "../data/instructors";
+import { instructors } from "../../data/instructors";
 
 const InstructorsPage = () => {
   return (

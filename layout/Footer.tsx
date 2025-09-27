@@ -1,6 +1,7 @@
 "use client";
 
 import { CallToAction1 } from "@/components/CallToAction";
+import { LanguageSwitcher } from "@/components/LanguageSwithcer";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useState } from "react";
@@ -150,76 +151,5 @@ const FooterContent = () => {
         </div>
       </div>
     </Fragment>
-  );
-};
-
-const LANGUAGES = [
-  { code: "en", label: "EN" },
-  { code: "mk", label: "MK" },
-];
-
-const LanguageSwitcher = () => {
-  const { i18n } = useTranslation();
-  const [open, setOpen] = useState(false);
-
-  const toggleMenu = () => setOpen((prev) => !prev);
-
-  const handleChange = (lang: string) => {
-    i18n.changeLanguage(lang);
-    setOpen(false);
-  };
-
-  return (
-    <div style={{ position: "relative" }}>
-      <button
-        type="button"
-        onClick={toggleMenu}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "5px",
-          padding: "6px 12px",
-          border: "1px solid #ccc",
-          borderRadius: "6px",
-          background: "transparent",
-          cursor: "pointer",
-        }}>
-        🌐 {i18n.language.toUpperCase()}
-      </button>
-
-      {open && (
-        <ul
-          style={{
-            position: "absolute",
-            top: "110%",
-            left: 0,
-            background: "#fff",
-            border: "1px solid #ccc",
-            borderRadius: "6px",
-            listStyle: "none",
-            padding: "4px 0",
-            margin: 0,
-            minWidth: "100%",
-            zIndex: 1000,
-          }}>
-          {LANGUAGES.map(({ code, label }) => (
-            <li key={code}>
-              <button
-                onClick={() => handleChange(code)}
-                style={{
-                  width: "100%",
-                  padding: "6px 12px",
-                  background: i18n.language === code ? "rgba(0,0,0,0.05)" : "transparent",
-                  border: "none",
-                  textAlign: "left",
-                  cursor: "pointer",
-                }}>
-                {label}
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
   );
 };

@@ -116,7 +116,7 @@ export const Contact2 = () => {
             <div className="ed-contact__inner">
               {/* Contact Image  */}
               <div className="ed-contact__img">
-                <Image width={620} height={620} sizes="100vw" style={{ width: "620px", height: "620px" }} src="/assets/images/contact/contact-img.png" alt="contact-img" />
+                <Image width={620} height={620} sizes="100vw" style={{ width: "620px", height: "620px" }} src="/assets/codelab/images/contact2.svg" alt="contact-img" />
               </div>
               {/* Contact Form  */}
               <div className="ed-contact__form">

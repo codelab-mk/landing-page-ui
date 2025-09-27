@@ -16,15 +16,6 @@ export const Hero1 = () => {
       {/* Start Hero Area */}
       <section className="ed-hero">
         <div className="container ed-container-expand">
-          {/* Hero Element Shape */}
-          <div className="ed-hero__elements">
-            <Image width={46} height={32} sizes="46px" style={{ width: "46px", height: "32px" }} className="element-move ed-hero__shape-1" src="/assets/images/hero/home-1/shape-1.svg" alt="shape-1" />
-            <Image width={49} height={79} sizes="49px" style={{ width: "49px", height: "79px" }} className="element-move ed-hero__shape-2" src="/assets/images/hero/home-1/shape-2.svg" alt="shape-2" />
-            <Image width={49} height={94} sizes="49px" style={{ width: "49px", height: "94px" }} className="element-move ed-hero__shape-3" src="/assets/images/hero/home-1/shape-3.svg" alt="shape-3" />
-            <Image width={49} height={94} sizes="49px" style={{ width: "49px", height: "94px" }} className="element-move ed-hero__shape-4" src="/assets/images/hero/home-1/shape-4.svg" alt="shape-4" />
-            <Image width={70} height={55} sizes="70px" style={{ width: "70px", height: "55px", objectFit: "cover" }} className="element-move ed-hero__shape-5" src="/assets/images/hero/home-1/shape-5.png" alt="shape-5" />
-          </div>
-
           <div className="row align-items-center">
             <div className="col-lg-6 col-12">
               {/* Hero Content */}
@@ -43,7 +34,7 @@ export const Hero1 = () => {
             <div className="col-lg-6 col-12">
               {/* Hero Image */}
               <div className="ed-hero__image">
-                <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto", objectFit: "cover" }} src="/assets/images/hero/home-1/hero-img.png" alt="hero-img" />
+                <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto", objectFit: "cover" }} src="/assets/codelab/images/home1.svg" alt="hero-img" />
               </div>
             </div>
           </div>

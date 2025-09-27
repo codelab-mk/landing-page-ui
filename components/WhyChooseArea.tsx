@@ -23,7 +23,6 @@ export const WhyChooseArea1 = () => {
 
   return (
     <section className="ed-why-choose section-gap background-image position-relative section-bg-2">
-      <Image width={49} height={80} className="ed-w-choose__pattern-1" src="/assets/images/why-choose/why-choose-1/pattern-1.svg" alt="pattern-1" />
       <div className="container ed-container">
         <div className="row align-items-center">
           <div className="col-lg-6 col-12">
@@ -55,7 +54,7 @@ export const WhyChooseArea1 = () => {
           <div className="col-lg-6 col-12">
             <div className="ed-w-choose__images position-relative">
               <div className="ed-w-choose__main-img">
-                <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src="/assets/images/why-choose/why-choose-1/why-choose-img.png" alt="why-choose-img" />
+                <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src="/assets/codelab/images/whyChooseUs1.svg" alt="why-choose-img" />
               </div>
 
               {/* Counter Card */}
@@ -75,9 +74,6 @@ export const WhyChooseArea1 = () => {
               </div>
 
               {/* Shapes */}
-              <div className="ed-w-choose__shapes">
-                <Image width={70} height={50} className="ed-w-choose__shape-2" src="/assets/images/why-choose/why-choose-1/pattern-2.svg" alt="pattern-2" />
-              </div>
             </div>
           </div>
         </div>

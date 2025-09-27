@@ -17,12 +17,7 @@ export const About1 = () => {
             {/* About Images */}
             <div className="ed-about__images">
               <div className="ed-about__main-img">
-                <Image width={482} height={486} sizes="100vw" style={{ width: "482px", height: "486px" }} src="/assets/images/about/about-1/about-img.png" alt="about-img" />
-              </div>
-              <div className="ed-about__shapes">
-                <Image width={79} height={49} sizes="100vw" style={{ width: "79px", height: "49px" }} className="ed-about__shape-1" src="/assets/images/about/about-1/shape-1.svg" alt="shape-1" />
-                <Image width={135} height={134} sizes="100vw" style={{ width: "135px", height: "134px" }} className="ed-about__shape-2" src="/assets/images/about/about-1/shape-2.svg" alt="shape-2" />
-                <Image width={83} height={74} sizes="100vw" style={{ width: "83px", height: "74px" }} className="ed-about__shape-3 rotate-ani" src="/assets/images/about/about-1/shape-3.svg" alt="shape-3" />
+                <Image width={482} height={486} sizes="100vw" style={{ width: "482px", height: "486px" }} src="/assets/codelab/images/creativity1.svg" alt="about-img" />
               </div>
             </div>
           </div>
@@ -47,7 +42,6 @@ export const About1 = () => {
           </div>
         </div>
       </div>
-      <Image width={133} height={154} sizes="100vw" style={{ width: "100", height: "auto" }} className="ed-about__shape-4" src="/assets/images/abstracts/abstract-element-regular.svg" alt="shape-4" />
     </section>
   );
 };

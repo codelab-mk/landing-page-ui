@@ -5,7 +5,7 @@ import { Category1 } from "@/components/Category/Category";
 import { Features1 } from "@/components/Features/Features";
 import { Hero1 } from "@/components/Hero/Hero";
 import { Partner1 } from "@/components/Partner";
-import { WhyChooseArea1 } from "@/components/WhyChooseArea";
+import { WhyChooseArea1 } from "@/components/WhyChooseArea/WhyChooseArea";
 import CodeLabLayout from "@/layout/CodeLabLayout";
 
 export const metadata = {

@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { Fragment, useEffect, useState } from "react";
 import Modal from "react-bootstrap/Modal";

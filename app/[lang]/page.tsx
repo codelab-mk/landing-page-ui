@@ -1,11 +1,12 @@
-import { About1 } from "@/components/About";
+import { About1 } from "@/components/About/About";
 import { Blog1 } from "@/components/Blog";
 import { CallToAction1, CallToAction2 } from "@/components/CallToAction";
-import { Category1 } from "@/components/Category";
-import { Features1 } from "@/components/Features";
-import { Hero1 } from "@/components/Hero";
-import { WhyChooseArea1 } from "@/components/WhyChooseArea";
+import { Category1 } from "@/components/Category/Category";
+import { Features1 } from "@/components/Features/Features";
+import { Hero1 } from "@/components/Hero/Hero";
+import { WhyChooseArea1 } from "@/components/WhyChooseArea/WhyChooseArea";
 import CodeLabLayout from "@/layout/CodeLabLayout";
+
 const page = () => {
   return (
     <CodeLabLayout>

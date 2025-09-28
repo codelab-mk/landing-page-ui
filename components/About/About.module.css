@@ -1,0 +1,186 @@
+/*================================================================================================
+    About1 CSS
+===================================================================================================*/
+
+.ed-about {
+  z-index: 2;
+  overflow: hidden;
+}
+
+.ed-about__images {
+  position: relative;
+  z-index: 2;
+}
+
+.ed-about__main-img {
+  text-align: right;
+}
+
+.ed-about__main-img img {
+  width: 482px;
+  height: 486px;
+  border-radius: 8px 8px 140px 8px;
+  object-fit: cover;
+}
+
+.ed-about__shape-1,
+.ed-about__shape-2,
+.ed-about__shape-3,
+.ed-about__shape-4 {
+  position: absolute;
+}
+
+.ed-about__shape-1 {
+  top: 40%;
+  left: 4%;
+}
+
+.ed-about__shape-2 {
+  right: -12%;
+  bottom: 25%;
+  z-index: -1;
+}
+
+.ed-about__shape-3 {
+  right: 4%;
+  bottom: 0;
+}
+
+.ed-about__shape-4 {
+  right: 80px;
+  bottom: 16%;
+  z-index: -1;
+}
+
+.counter-card {
+  border-radius: 6px;
+  background: var(--ed-white-color);
+  box-shadow: 17px 18px 30px 16px rgba(7, 2, 41, 0.09);
+  padding: 12px 32px 12px 17px;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  bottom: 92px;
+  left: 0;
+}
+
+.counter-card__icon {
+  width: 64px;
+  height: 64px;
+  line-height: 70px;
+  border-radius: 100%;
+  background: #fceeee;
+  text-align: center;
+  font-size: 28px;
+  color: #df4343;
+}
+
+.counter-card__info h4 {
+  color: #df4343;
+  font-size: 28px;
+  letter-spacing: -0.28px;
+  margin-bottom: 8px;
+}
+
+.counter-card__info p {
+  line-height: 120%;
+}
+
+.ed-about__content {
+  padding-left: 72px;
+}
+
+.ed-about__feature {
+  margin-top: 14px;
+}
+
+.ed-about__features-list li {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ed-title-color);
+}
+
+.ed-about__features-list li:last-child {
+  margin: 0;
+}
+
+.ed-about__btn {
+  margin-top: 45px;
+}
+
+/* Responsive About1 */
+
+@media only screen and (max-width: 991px) {
+  .ed-about__main-img {
+    text-align: center;
+  }
+  .ed-about__images {
+    margin-top: 40px;
+  }
+  .ed-about__shape-2 {
+    right: 8%;
+  }
+  .ed-about__shape-4 {
+    display: none;
+  }
+  .counter-card {
+    bottom: 40px;
+    left: 10%;
+  }
+  .ed-about__shape-3 {
+    right: 20%;
+  }
+  .ed-about__shape-1 {
+    left: 10%;
+  }
+  .ed-about.ed-about__page {
+    padding: 40px 0px 80px;
+  }
+  .ed-about.ed-about__page .ed-about__content {
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ed-about__main-img img {
+    width: 100%;
+    height: 320px;
+  }
+  .ed-about__main-img {
+    text-align: center;
+  }
+  .ed-about__shape-1 {
+    top: -5%;
+  }
+  .counter-card {
+    bottom: 0;
+  }
+  .counter-card__info h4 {
+    font-size: 24px;
+  }
+  .counter-card__icon {
+    width: 56px;
+    height: 56px;
+    line-height: 63px;
+    font-size: 24px;
+  }
+  .ed-about__shape-3 {
+    right: -4%;
+    bottom: 23%;
+  }
+  .ed-about__content {
+    padding-left: 0;
+  }
+  .ed-about__shape-4 {
+    display: none;
+  }
+  .ed-about__features-list li {
+    margin-bottom: 16px;
+  }
+  .ed-about__images {
+    margin-top: 40px;
+  }
+}

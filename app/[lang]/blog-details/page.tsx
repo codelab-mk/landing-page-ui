@@ -1,25 +1,27 @@
-import { CallToAction1 } from "@/components/CallToAction";
+import { CallToAction1 } from "@/components/CallToAction/CallToAction";
 import PageBanner from "@/components/PageBanner";
 import CodeLabLayout from "@/layout/CodeLabLayout";
 import Image from "next/image";
 import Link from "next/link";
+import styles from "./BlogDetails.module.css";
+
 const page = () => {
   return (
     <CodeLabLayout>
       <PageBanner pageName="Blog Details" />
-      <section className="ed-blog__details section-gap position-relative">
+      <section className={`${styles.edBlogDetails} section-gap position-relative`}>
         <div className="container ed-container">
           <div className="row">
             <div className="col-lg-12 col-xl-8 col-12">
               {/* Blog Details Main */}
-              <div className="ed-blog__details-main">
+              <div className={styles.edBlogDetailsMain}>
                 <div className="ed-blog__details-top">
                   {/* Blog Details Cover */}
                   <div className="ed-blog__details-cover">
-                    <div className="ed-blog__details-cover-img">
+                    <div className={styles.edBlogDetailsCoverImg}>
                       <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src="/assets/images/blog/blog-details/b-details-img-1.png" alt="b-details-img-1" />
                     </div>
-                    <ul className="ed-blog__details-meta">
+                    <ul className={styles.edBlogDetailsMeta}>
                       <li>
                         <i className="fi fi-rr-calendar" />
                         30 April, 2024
@@ -33,7 +35,7 @@ const page = () => {
                       </li>
                     </ul>
                   </div>
-                  <h2 className="ed-blog__details-title">Fostering Student Growth through Mindful for Your Mentoring Students</h2>
+                  <h2 className={styles.edBlogDetailsTitle}>Fostering Student Growth through Mindful for Your Mentoring Students</h2>
                   <p className="ed-blog__details-text">
                     Lorem ipsum dolor sit amet consectur adipisicing elit, sed do eiusmod tempor inc idid unt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud exerec tation ullamco laboris nis aliquip commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse
                     cillum dolore eu fugiat nulla pariatur enim ipsam.
@@ -45,9 +47,9 @@ const page = () => {
                   </p>
                 </div>
                 {/* Blog Details Widget */}
-                <div className="ed-blog__details-widget">
-                  <h5 className="ed-blog__details-widget-title">Where Does it Come From Template</h5>
-                  <ul className="ed-blog__details-list">
+                <div className={styles.edBlogDetailsWidget}>
+                  <h5 className={styles.edBlogDetailsWidgetTitle}>Where Does it Come From Template</h5>
+                  <ul className={styles.edBlogDetailsList}>
                     <li>
                       <Image width={18} height={18} sizes="100vw" style={{ width: "18px", height: "18px" }} src="/assets/images/icons/icon-check-blue.svg" alt="icon-check-blue" />
                       Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis
@@ -67,55 +69,22 @@ const page = () => {
                   </ul>
                 </div>
                 {/* Blog Details Widget Image */}
-                <div className="ed-blog__details-widget-img">
+                <div className={styles.edBlogDetailsWidgetImg}>
                   <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src="/assets/images/blog/blog-details/b-details-img-2.png" alt="b-details-img-2" />
                   <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src="/assets/images/blog/blog-details/b-details-img-3.png" alt="b-details-img-3" />
                 </div>
                 {/* Blog Details Widget */}
-                <div className="ed-blog__details-widget">
-                  <h5 className="ed-blog__details-widget-title">Figma Template Design</h5>
+                <div className={styles.edBlogDetailsWidget}>
+                  <h5 className={styles.edBlogDetailsWidgetTitle}>Figma Template Design</h5>
                   <p className="ed-blog__details-text">
                     Lorem ipsum dolor sit amet consectur adipisicing elit, sed do eiusmod tempor inc idid unt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud exerec tation ullamco laboris nis aliquip commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse
                     cillum dolore eu fugiat nulla pariatur enim ipsam.
                   </p>
                 </div>
-                {/* Blog Details Comments */}
-                <div className="ed-blog__details-comment">
-                  <h3 className="ed-blog__comment-title">2 Comment</h3>
-                  {/* Single Comment */}
-                  <div className="ed-blog__comment-item">
-                    <div className="ed-blog__comment-img">
-                      <Image width={58} height={58} sizes="100vw" style={{ width: "58px", height: "58px" }} src="/assets/images/blog/blog-details/comment-1.png" alt="comment-1" />
-                    </div>
-                    <div className="ed-blog__comment-info">
-                      <div className="ed-blog__comment-info-head">
-                        <h6 className="ed-blog__comment-name">John Smith</h6>
-                        <a href="#" className="ed-blog__comment-reply">
-                          Reply
-                        </a>
-                      </div>
-                      <p className="ed-blog__comment-text">Fusce condimentum enim vestibulum libero gravida, ut accumsan quam bibendum. Curabitur gravida est sit amet cursus.</p>
-                    </div>
-                  </div>
-                  {/* Single Comment */}
-                  <div className="ed-blog__comment-item reply-comment">
-                    <div className="ed-blog__comment-img">
-                      <Image width={58} height={58} sizes="100vw" style={{ width: "58px", height: "58px" }} src="/assets/images/blog/blog-details/comment-2.png" alt="comment-2" />
-                    </div>
-                    <div className="ed-blog__comment-info">
-                      <div className="ed-blog__comment-info-head">
-                        <h6 className="ed-blog__comment-name">Franklin Chen</h6>
-                        <a href="#" className="ed-blog__comment-reply">
-                          Reply
-                        </a>
-                      </div>
-                      <p className="ed-blog__comment-text">Fusce condimentum enim vestibulum libero gravida, ut accumsan quam bibendum. Curabitur gravida est sit amet cursus.</p>
-                    </div>
-                  </div>
-                </div>
+
                 {/* Blog Details Form */}
-                <div className="ed-blog__details-form">
-                  <h3 className="ed-blog__details-form-title">Leave a Reply</h3>
+                {/* <div className={styles.edBlogDetailsForm}>
+                  <h3 className={styles.edBlogDetailsFormTitle}>Leave a Reply</h3>
                   <form action="#" method="post">
                     <div className="form-group">
                       <input type="text" name="your-name" placeholder="Enter your name*" required />
@@ -131,29 +100,29 @@ const page = () => {
                         <input className="form-check-input" type="checkbox" defaultValue="" id="flexCheckDefault" />I agree to the&nbsp;Privacy Policy.
                       </label>
                     </div>
-                    <div className="ed-blog__details-form-btn">
+                    <div className={styles.edBlogDetailsFormBtn}>
                       <button type="submit" className="ed-btn">
                         Post a Comment
                         <i className="fi fi-rr-arrow-small-right" />
                       </button>
                     </div>
                   </form>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-lg-6 col-xl-4 col-md-8 col-12">
               <div className="ed-blog__sidebar">
                 {/* Single Sidebar Widget */}
-                <div className="ed-blog__sidebar-widget">
-                  <h4 className="ed-blog__sidebar-title">Search Here</h4>
-                  <form action="#" method="post" className="ed-blog__sidebar-search">
+                {/* <div className={styles.edBlogSidebarWidget}>
+                  <h4 className={styles.edBlogSidebarTitle}>Search Here</h4>
+                  <form action="#" method="post" className={styles.edBlogSidebarSearch}>
                     <input type="search" name="search" placeholder="Search..." required />
                   </form>
-                </div>
+                </div> */}
                 {/* Single Sidebar Widget */}
-                <div className="ed-blog__sidebar-widget">
-                  <h4 className="ed-blog__sidebar-title">Categories</h4>
-                  <div className="ed-blog__sidebar-category">
+                {/* <div className={styles.edBlogSidebarWidget}>
+                  <h4 className={styles.edBlogSidebarTitle}>Categories</h4>
+                  <div className={styles.edBlogSidebarCategory}>
                     <ul>
                       <li>
                         <a href="#">
@@ -182,37 +151,37 @@ const page = () => {
                       </li>
                     </ul>
                   </div>
-                </div>
+                </div> */}
                 {/* Single Sidebar Widget */}
-                <div className="ed-blog__sidebar-widget">
-                  <h4 className="ed-blog__sidebar-title">Popular News</h4>
+                <div className={styles.edBlogSidebarWidget}>
+                  <h4 className={styles.edBlogSidebarTitle}>Popular News</h4>
                   <div className="ed-blog__latest">
                     {/* Single Latest */}
-                    <div className="ed-blog__latest-item">
-                      <div className="ed-blog__latest-img">
+                    <div className={styles.edBlogLatestItem}>
+                      <div className={styles.edBlogLatestImg}>
                         <Image width={80} height={80} sizes="100vw" style={{ width: "80px", height: "80px" }} src="/assets/images/blog/blog-details/latest-1.png" alt="latest-1" />
                       </div>
-                      <div className="ed-blog__latest-info">
+                      <div className={styles.edBlogLatestInfo}>
                         <Link href="/blog-details">How to Start a Blog Beginner Best Tooling</Link>
                         <span> Jan 10,2022 </span>
                       </div>
                     </div>
                     {/* Single Latest */}
-                    <div className="ed-blog__latest-item">
-                      <div className="ed-blog__latest-img">
+                    <div className={styles.edBlogLatestItem}>
+                      <div className={styles.edBlogLatestImg}>
                         <Image width={80} height={80} sizes="100vw" style={{ width: "80px", height: "80px" }} src="/assets/images/blog/blog-details/latest-2.png" alt="latest-2" />
                       </div>
-                      <div className="ed-blog__latest-info">
+                      <div className={styles.edBlogLatestInfo}>
                         <Link href="/blog-details">Start Your Career for Your Best Planning Days</Link>
                         <span> 30 April, 2024 </span>
                       </div>
                     </div>
                     {/* Single Latest */}
-                    <div className="ed-blog__latest-item">
-                      <div className="ed-blog__latest-img">
+                    <div className={styles.edBlogLatestItem}>
+                      <div className={styles.edBlogLatestImg}>
                         <Image width={80} height={80} sizes="100vw" style={{ width: "80px", height: "80px" }} src="/assets/images/blog/blog-details/latest-3.png" alt="latest-3" />
                       </div>
-                      <div className="ed-blog__latest-info">
+                      <div className={styles.edBlogLatestInfo}>
                         <Link href="/blog-details">How to Start a Blog Beginner Best Tooling</Link>
                         <span> 30 April, 2024 </span>
                       </div>
@@ -220,42 +189,42 @@ const page = () => {
                   </div>
                 </div>
                 {/* Single Sidebar Widget */}
-                <div className="ed-blog__sidebar-widget">
-                  <h4 className="ed-blog__sidebar-title">Contact Us</h4>
+                <div className={styles.edBlogSidebarWidget}>
+                  <h4 className={styles.edBlogSidebarTitle}>Contact Us</h4>
                   {/* Sigle Info  */}
-                  <div className="ed-contact__info-item">
-                    <div className="ed-contact__info-icon">
+                  <div className={styles.edContactInfoItem}>
+                    <div className={styles.edContactInfoIcon}>
                       <Image width={28} height={28} sizes="100vw" style={{ width: "28px", height: "28px" }} src="/assets/images/icons/icon-phone-blue.svg" alt="icon-phone-blue" />
                     </div>
-                    <div className="ed-contact__info-content">
+                    <div className={styles.edContactInfoContent}>
                       <a href="tel:+389 ‭72 278 786‬">+389 ‭72 278 786‬</a>
                     </div>
                   </div>
                   {/* Sigle Info  */}
-                  <div className="ed-contact__info-item">
-                    <div className="ed-contact__info-icon">
+                  <div className={styles.edContactInfoItem}>
+                    <div className={styles.edContactInfoIcon}>
                       <Image width={28} height={28} sizes="100vw" style={{ width: "28px", height: "28px" }} src="/assets/images/icons/icon-envelope-blue.svg" alt="icon-envelope-blue" />
                     </div>
-                    <div className="ed-contact__info-content">
+                    <div className={styles.edContactInfoContent}>
                       <span>Send Message</span>
                       <a href="mailto:contact@codelab.com.mk">contact@codelab.com.mk</a>
                     </div>
                   </div>
                   {/* Sigle Info  */}
-                  <div className="ed-contact__info-item">
-                    <div className="ed-contact__info-icon">
+                  <div className={styles.edContactInfoItem}>
+                    <div className={styles.edContactInfoIcon}>
                       <Image width={28} height={28} sizes="100vw" style={{ width: "28px", height: "28px" }} src="/assets/images/icons/icon-location-blue.svg" alt="icon-location-blue" />
                     </div>
-                    <div className="ed-contact__info-content">
+                    <div className={styles.edContactInfoContent}>
                       <span>Our Location</span>
                       <a href="#">16та Македонска Бригада 2, Скопје</a>
                     </div>
                   </div>
                 </div>
                 {/* Single Sidebar Widget */}
-                <div className="ed-blog__sidebar-widget">
-                  <h4 className="ed-blog__sidebar-title">Popular Tags</h4>
-                  <div className="ed-blog__tags">
+                {/* <div className={styles.edBlogSidebarWidget}>
+                  <h4 className={styles.edBlogSidebarTitle}>Popular Tags</h4>
+                  <div className={styles.edBlogTags}>
                     <ul>
                       <li>
                         <a href="#">Design</a>
@@ -274,7 +243,7 @@ const page = () => {
                       </li>
                     </ul>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

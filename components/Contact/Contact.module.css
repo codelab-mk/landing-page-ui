@@ -1,0 +1,211 @@
+/*----------------------------------------
+  Main Contact Section
+-----------------------------------------*/
+.edContact {
+  position: relative;
+  padding-bottom: 0;
+}
+
+/* Background */
+.edContact__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+:global(.edContact__bg img) {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/*----------------------------------------
+  Contact Form
+-----------------------------------------*/
+.edContactForm {
+  border-radius: 8px;
+  background: var(--ed-white-color);
+  box-shadow: 0px 0px 50px 42px rgba(14, 5, 72, 0.04);
+  padding: 60px;
+}
+
+.edContactFormHead {
+  margin-bottom: 50px;
+}
+
+.edContactFormSmTitle {
+  display: block;
+  margin-bottom: 32px;
+  line-height: 20px;
+}
+
+.edContactFormBigTitle {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 50px;
+  margin: 0;
+}
+
+.edContactFormMain .formGroup {
+  margin-bottom: 40px;
+}
+
+.edContactFormMain .formGroup input,
+.edContactFormMain .formGroup textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #bfc6c5;
+  padding: 20px 0 0 0;
+  border-radius: 0;
+}
+
+.edContactFormMain .formGroup input:focus,
+.edContactFormMain .formGroup textarea:focus {
+  border-bottom: 1px solid var(--ed-primary-color);
+}
+
+.edContactFormBtn {
+  margin-top: 40px;
+}
+
+/* Checkbox */
+.formCheckLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  line-height: 6px;
+}
+
+.formCheckInput {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  border: 1px solid rgba(1, 28, 26, 0.75);
+  margin-right: 10px !important;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.formCheckInput:checked {
+  background-color: var(--ed-primary-color);
+  border-color: transparent;
+}
+
+/*----------------------------------------
+  Contact Style 2
+-----------------------------------------*/
+.edContactStyle2Inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 90px;
+  flex-wrap: wrap;
+}
+
+.edContactStyle2Img {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+:global(.edContactStyle2Img img) {
+  width: 620px;
+  height: 620px;
+  object-fit: cover;
+}
+
+.edContactStyle2Form {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.edContactStyle2FormSmTitle {
+  margin-bottom: 18px;
+  line-height: 16px;
+}
+
+/*----------------------------------------
+  Contact Cards
+-----------------------------------------*/
+.edContactCardWrapper {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.edContactCard {
+  flex: 1 1 calc(33.333% - 30px);
+  min-width: 250px;
+  max-width: 400px;
+  border-radius: 8px;
+  background: var(--ed-offwhite-color);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.edContactCardIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  background: var(--ed-primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edContactCardInfo a {
+  color: var(--ed-title-color);
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.edContactCardInfo a:hover {
+  color: var(--ed-primary-color);
+}
+
+/*----------------------------------------
+  Responsive
+-----------------------------------------*/
+@media (max-width: 991.99px) {
+  .edContactStyle2Inner {
+    display: block;
+  }
+  .edContactStyle2Img img {
+    width: 100%;
+    height: 520px;
+  }
+  .edContactCardWrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .edContactFormBigTitle {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .edContactFormHead {
+    margin-bottom: 32px;
+  }
+  .edContactFormMain .formGroup {
+    margin-bottom: 24px;
+  }
+  .edContactForm {
+    padding: 32px;
+    margin-top: 0;
+  }
+  .edContactCard {
+    flex: 1 1 100%;
+  }
+  .edContactStyle2Img img {
+    height: 320px;
+  }
+}

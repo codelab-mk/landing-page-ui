@@ -1,4 +1,4 @@
-import { Blog2 } from "@/components/Blog";
+import { Blog2 } from "@/components/Blog/Blog";
 import PageBanner from "@/components/PageBanner";
 import CodeLabLayout from "@/layout/CodeLabLayout";
 const page = () => {

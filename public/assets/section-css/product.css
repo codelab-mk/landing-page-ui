@@ -1,7 +1,7 @@
 /*================================================================================================
     Start Product CSS
 ===================================================================================================*/
-.ed-product {
+/* .ed-product {
   padding-top: 60px;
 }
 .ed-product__card {
@@ -87,10 +87,10 @@
   color: rgba(134, 134, 134, 0.51);
   font-size: 20px;
   font-weight: 400;
-}
+} */
 
 /* Product Details  */
-.product__details-inner {
+/* .product__details-inner {
   padding-left: 90px;
 }
 .ed-shop-thumb img {
@@ -270,11 +270,11 @@
   color: var(--ed-title-color);
   font-size: 14px;
   line-height: 20px;
-}
+} */
 
 /* Cart Page  */
 
-.ed-cart__header {
+/* .ed-cart__header {
   background: var(--ed-offwhite-color);
   border-radius: 4px;
 }
@@ -574,7 +574,7 @@
   .ed-cart__checkout-button {
     margin: 24px 0px 32px 32px;
   }
-}
+} */
 
 /*================================================================================================
     End Product CSS

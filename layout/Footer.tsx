@@ -1,6 +1,6 @@
 "use client";
 
-import { CallToAction1 } from "@/components/CallToAction";
+import { CallToAction1 } from "@/components/CallToAction/CallToAction";
 import { LanguageSwitcher } from "@/components/LanguageSwithcer";
 import Image from "next/image";
 import Link from "next/link";
@@ -51,19 +51,19 @@ const FooterContent = () => {
 
   const contact = [
     {
-      icon: "assets/images/icons/icon-phone-blue.svg",
+      icon: "/assets/images/icons/icon-phone-blue.svg",
       title: t("footer.contact"),
       phone: "+389 ‭72 278 786‬",
       link: "tel:+389721278786",
     },
     {
-      icon: "assets/images/icons/icon-envelope-blue.svg",
+      icon: "/assets/images/icons/icon-envelope-blue.svg",
       title: t("footer.sendMessage"),
       email: "contact@codelab.com.mk",
       link: "mailto:contact@codelab.com.mk",
     },
     {
-      icon: "assets/images/icons/icon-location-blue.svg",
+      icon: "/assets/images/icons/icon-location-blue.svg",
       title: t("footer.ourLocation"),
       address: "16та Македонска Бригада 2, Скопје",
       link: "#",

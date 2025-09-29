@@ -1,7 +1,7 @@
 /*================================================================================================
     Start Funfact CSS
 ===================================================================================================*/
-.ed-funfact {
+/* .ed-funfact {
   margin-top: -178px;
   position: relative;
 }
@@ -48,10 +48,10 @@
   left: 50%;
   bottom: 0;
   z-index: 2;
-}
+} */
 
 /* Funfact Style 2 */
-.ed-funfact.ed-funfact--style2 {
+/* .ed-funfact.ed-funfact--style2 {
   margin-top: 0;
 }
 .ed-funfact--style2 .ed-funfact__inner {
@@ -169,7 +169,7 @@
   .ed-funfact--style2 .ed-funfact__counter {
     margin-top: 20px;
   }
-}
+} */
 
 /*================================================================================================
     End Funfact CSS

@@ -30,7 +30,7 @@ const InstructorsPage = () => {
                   </div>
                   <div className="ed-team__info">
                     <p className="ed-team__designation">{instructor.designation}</p>
-                    <Link className="ed-team__name" href={`/instructor-details/${instructor.id}`}>
+                    <Link className="ed-team__name" href={`/instructors/${instructor.id}`}>
                       {instructor.name}
                     </Link>
                   </div>

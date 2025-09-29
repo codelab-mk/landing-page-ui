@@ -1,0 +1,68 @@
+/*================================================================================================
+    CallToAction1 Module CSS
+    → Keep global classes, add module-specific helpers
+===================================================================================================*/
+
+.wrapper {
+  margin-bottom: -216px;
+  z-index: 2;
+}
+
+.inner {
+  background: var(--ed-white-color);
+  border-radius: 8px;
+  border: 1px solid;
+  overflow: hidden;
+  padding: 30px 80px 0px 0px;
+  position: relative;
+}
+
+.content {
+  margin-top: 60px;
+}
+
+.imgWrapper {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.imgWrapper img {
+  width: 332px;
+  height: 448px;
+  object-fit: cover;
+}
+
+.imgWrapper::before {
+  position: absolute;
+  content: "";
+  width: 536px;
+  height: 537px;
+  border-radius: 537px;
+  background: linear-gradient(180deg, #fff 0%, #d7e1d8 100%);
+  left: -40px;
+  bottom: -148px;
+  z-index: -1;
+}
+
+/* Shapes */
+.shape1 {
+  position: absolute;
+  left: 24px;
+  top: 60px;
+  z-index: 22;
+}
+
+.shape2 {
+  position: absolute;
+  top: 78px;
+  left: 35%;
+  z-index: 22;
+}
+
+.shape3 {
+  position: absolute;
+  right: 0;
+  bottom: -16px;
+  z-index: 22;
+}

@@ -1,8 +1,8 @@
 import { About1 } from "@/components/About/About";
-import { Blog1 } from "@/components/Blog";
-import { CallToAction1 } from "@/components/CallToAction";
+import { Blog1 } from "@/components/Blog/Blog";
+import { CallToAction1 } from "@/components/CallToAction/CallToAction";
 import { Category1 } from "@/components/Category/Category";
-import Contact from "@/components/Contact";
+import Contact from "@/components/Contact/Contact";
 import { Course4 } from "@/components/Course";
 import { Features1 } from "@/components/Features/Features";
 import PageBanner from "@/components/PageBanner";

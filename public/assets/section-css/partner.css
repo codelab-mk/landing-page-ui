@@ -1,7 +1,7 @@
 /*================================================================================================
     Start Partner CSS
 ===================================================================================================*/
-.ed-partner__section-head-title {
+/* .ed-partner__section-head-title {
   margin: 0;
   font-size: 18px;
   line-height: 22px;
@@ -28,10 +28,10 @@
   height: 40px !important;
   object-fit: contain !important;
   display: inline-block !important;
-}
+} */
 
 /* Partner Style 2 */
-.ed-partner__slider--style2 .swiper-wrapper {
+/* .ed-partner__slider--style2 .swiper-wrapper {
   transition-timing-function: linear;
 }
 .ed-partner__slider--style2 .swiper-slide {
@@ -48,7 +48,7 @@
   .ed-partner__section-head-title {
     line-height: 24px;
   }
-}
+} */
 
 /*================================================================================================
     End Partner CSS

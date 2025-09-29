@@ -7,7 +7,7 @@ import { _config } from "@/utilities";
 import Link from "next/link";
 
 interface HeaderProps {
-  header?: number; // optional now, only Header1
+  header?: number;
 }
 
 export const Header = ({ header }: HeaderProps) => {

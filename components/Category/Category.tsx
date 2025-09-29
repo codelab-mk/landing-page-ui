@@ -40,7 +40,7 @@ export const Category1 = ({ pt = "pt-0", titleCenter = false, findCourses = true
   };
 
   return (
-    <section className={`ed-category section-gap ${pt}`}>
+    <section className={`ed-category section-gap ${pt}`} style={{ marginTop: 50 }}>
       <div className="container ed-container">
         <div className="row">
           <div className="col-12">
@@ -51,7 +51,7 @@ export const Category1 = ({ pt = "pt-0", titleCenter = false, findCourses = true
               </div>
               {findCourses && (
                 <div className="ed-section-head__btn">
-                  <Link href="/course-1" className="ed-btn">
+                  <Link href="/courses" className="ed-btn">
                     {t("category1.button")}
                     <i className="fi fi-rr-arrow-small-right" />
                   </Link>
@@ -65,7 +65,7 @@ export const Category1 = ({ pt = "pt-0", titleCenter = false, findCourses = true
           <div className="col-12">
             <div className={styles.wrapperGrid}>
               {categories.map((category, index) => (
-                <Link href="/course-1" key={index} className={`${styles.card} wow fadeInUp`} data-wow-duration="1s">
+                <Link href="/courses" key={index} className={`${styles.card} wow fadeInUp`} data-wow-duration="1s">
                   <div className={`${styles.icon} ${getBgClass(category.bg)}`}>
                     <Image width={30} height={30} sizes="100vw" className={styles.iconImg} style={{ width: "30px", height: "30px" }} src={`/assets/images/category/category-1/${index + 1}.svg`} alt={category.name} />
                   </div>

@@ -1,13 +1,11 @@
-"use client";
-
 import Image from "next/image";
-import styles from "./Contact.module.css"; // CSS module import
+import styles from "./Contact.module.css";
 
 const Contact = () => {
   return (
     <section className={`${styles["ed-contact"]}  position-relative pb-0`}>
       <div className={styles["ed-contact__bg"]}>
-        <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src="/assets/images/contact/contact-bg.png" alt="contact-bg" />
+        <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src="/assets/codelab/images/contact22.svg" alt="contact-bg" />
       </div>
     </section>
   );

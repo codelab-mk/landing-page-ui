@@ -3,7 +3,6 @@ import { Blog1 } from "@/components/Blog/Blog";
 import { CallToAction1 } from "@/components/CallToAction/CallToAction";
 import { Category1 } from "@/components/Category/Category";
 import Contact from "@/components/Contact/Contact";
-import { Course4 } from "@/components/Course";
 import { Features1 } from "@/components/Features/Features";
 import PageBanner from "@/components/PageBanner";
 import CodeLabLayout from "@/layout/CodeLabLayout";
@@ -12,9 +11,8 @@ const page = () => {
     <CodeLabLayout>
       <PageBanner pageName="About Us" />
       <About1 />
-      <Features1 />
       <Category1 />
-      <Course4 />
+      <Features1 />
       <Contact />
       <Blog1 />
       <CallToAction1 />

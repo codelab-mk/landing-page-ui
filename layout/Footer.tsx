@@ -115,7 +115,7 @@ const FooterContent = () => {
                     <Link href="/about-1">{t("footer.aboutUs")}</Link>
                   </li>
                   <li>
-                    <Link href="/course-1">{t("footer.ourCourses")}</Link>
+                    <Link href="/courses">{t("footer.ourCourses")}</Link>
                   </li>
                   <li>
                     <Link href="/contact">{t("footer.contactUs")}</Link>

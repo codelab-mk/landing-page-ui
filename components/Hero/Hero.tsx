@@ -26,7 +26,7 @@ export const Hero1 = () => {
                 <h1 className={`${styles["ed-hero__content-title"]} ed-split-text left`} dangerouslySetInnerHTML={{ __html: t("hero.title") }} />
                 <p className={styles["ed-hero__content-text"]}>{t("hero.subtitle")}</p>
                 <div className={styles["ed-hero__btn"]}>
-                  <Link href="/course-1" className="ed-btn">
+                  <Link href="/courses" className="ed-btn">
                     {t("hero.btnText")}
                     <i className="fi fi-rr-arrow-small-right" />
                   </Link>

@@ -14,8 +14,13 @@ const page = () => {
               <div className="ed-course__details-content">
                 {/* Course Details Image */}
                 <div className="ed-course__details-img">
-                  <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src="/assets/images/course/course-details/details-img-1.png" alt="course-details-img-1" />
+                  {/* <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src="/assets/images/course/course-details/details-img-1.png" alt="course-details-img-1" /> */}
+                  <video controls autoPlay style={{ width: "100%", height: "400px", objectFit: "cover" }}>
+                    <source src="/assets/codelab/videos/video.mov" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
+
                 <h3>Starting SEO as your Home Based Business Online Courses</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectur adipisicing elit, sed do eiusmod tempor inc idid unt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud exerec tation ullamco laboris nis aliquip commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -113,7 +118,10 @@ const page = () => {
                       <Image width={28} height={28} sizes="100vw" style={{ width: "28px", height: "28px" }} src="/assets/images/icons/icon-phone-blue.svg" alt="icon-phone-blue" />
                     </div>
                     <div className="ed-contact__info-content">
+                      <span>Phone</span> <br />
                       <a href="tel:+389 ‭72 278 786‬">+389 ‭72 278 786‬</a>
+                      <br />
+                      <a href="tel:+389 ‭78 298 116‬">+389 ‭78 298 116‬</a>
                     </div>
                   </div>
                   {/* Sigle Info  */}

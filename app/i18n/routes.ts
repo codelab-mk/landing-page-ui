@@ -2,7 +2,7 @@
 export const routeMap = {
   en: {
     home: "",
-    about: "about-us",
+    about: "about",
     blog: "blog",
     "blog-details": "blog-details",
     contact: "contact",
@@ -10,11 +10,11 @@ export const routeMap = {
     "course-details": "course-details",
     faq: "faq",
     instructors: "instructors",
-    "instructor-details": "instructor-details",
+    "instructor-details": "instructors",
   },
   mk: {
     home: "",
-    about: "about-us",
+    about: "about",
     blog: "blog",
     "blog-details": "blog-details",
     contact: "contact",
@@ -22,6 +22,6 @@ export const routeMap = {
     "course-details": "course-details",
     faq: "faq",
     instructors: "instructors",
-    "instructor-details": "instructor-details",
+    "instructor-details": "instructors",
   },
 };

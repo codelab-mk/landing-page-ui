@@ -1,4 +1,4 @@
-import { CallToAction1 } from "@/components/CallToAction";
+import { CallToAction1 } from "@/components/CallToAction/CallToAction";
 import PageBanner from "@/components/PageBanner";
 import CodeLabLayout from "@/layout/CodeLabLayout";
 import Image from "next/image";

@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { Fragment, useEffect, useState } from "react";
 import Modal from "react-bootstrap/Modal";
@@ -9,7 +7,7 @@ import { _config } from "@/utilities";
 import Link from "next/link";
 
 interface HeaderProps {
-  header?: number; // optional now, only Header1
+  header?: number;
 }
 
 export const Header = ({ header }: HeaderProps) => {

@@ -1,11 +1,11 @@
-import { About1 } from "@/components/About";
-import { Blog1 } from "@/components/Blog";
-import { CallToAction1, CallToAction2 } from "@/components/CallToAction";
-import { Category1 } from "@/components/Category";
-import { Features1 } from "@/components/Features";
-import { Hero1 } from "@/components/Hero";
+import { About1 } from "@/components/About/About";
+import { Blog1 } from "@/components/Blog/Blog";
+import { CallToAction1 } from "@/components/CallToAction/CallToAction";
+import { Category1 } from "@/components/Category/Category";
+import { Features1 } from "@/components/Features/Features";
+import { Hero1 } from "@/components/Hero/Hero";
 import { Partner1 } from "@/components/Partner";
-import { WhyChooseArea1 } from "@/components/WhyChooseArea";
+import { WhyChooseArea1 } from "@/components/WhyChooseArea/WhyChooseArea";
 import CodeLabLayout from "@/layout/CodeLabLayout";
 
 export const metadata = {

@@ -1,0 +1,93 @@
+/*================================================================================================
+    Category Module CSS
+===================================================================================================*/
+
+.wrapperGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px 30px;
+  margin-top: 30px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-radius: 100px;
+  background: var(--ed-white-color);
+  padding: 10px;
+  transition: all 0.4s ease;
+}
+
+.cardHover {
+  transform: translateY(-2px);
+  box-shadow: 0px 12px 24px 0px rgba(44, 44, 84, 0.08);
+}
+
+.icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 72px;
+}
+
+.iconBg1,
+.iconBg7 {
+  background: #fcebfe;
+}
+.iconBg2,
+.iconBg8 {
+  background: #eef7f6;
+}
+.iconBg3,
+.iconBg6 {
+  background: #fceeee;
+}
+.iconBg4,
+.iconBg5 {
+  background: #f0eefd;
+}
+
+.iconImg {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.info h4 {
+  font-size: 20px;
+  line-height: 18px;
+  margin-bottom: 16px;
+}
+
+.cardHoverInfo {
+  color: var(--ed-primary-color);
+}
+
+.info p {
+  line-height: 18px;
+  letter-spacing: -0.28px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1200px) {
+  .wrapperGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 991.99px) {
+  .wrapperGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .wrapperGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .info h4 {
+    margin-bottom: 12px;
+  }
+}

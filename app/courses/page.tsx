@@ -4,7 +4,7 @@ import CodeLabLayout from "@/layout/CodeLabLayout";
 const page = () => {
   return (
     <CodeLabLayout>
-      <PageBanner />
+      <PageBanner pageName="Курсеви" pageTitle="Курсеви" />
       <Course3 />
     </CodeLabLayout>
   );

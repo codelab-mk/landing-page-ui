@@ -1,12 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
 import styles from "./About.module.css";
 
 export const About1 = () => {
-  const { t } = useTranslation();
-  const features: string[] = t("about1.features", { returnObjects: true }) as string[];
+  const features: string[] = ["Забавно учење", "Интерактивни и реални апликации", "Јакне критичкото размислување", "Подготвува за технологијата на утре"];
 
   return (
     <section className={`${styles["ed-about"]} section-gap position-relative`}>
@@ -25,8 +23,8 @@ export const About1 = () => {
           <div className="col-lg-6 col-12 order-class">
             <div className={styles["ed-about__content"]}>
               <div className="ed-section-head">
-                <h3 className="ed-section-head__title ed-split-text left">{t("about1.title")}</h3>
-                <p className="ed-section-head__text">{t("about1.subtitle")}</p>
+                <h3 className="ed-section-head__title ed-split-text left">Каде креативноста се сретнува со кодот</h3>
+                <p className="ed-section-head__text">Забавни работилници и активности кои им помагаат на децата да учат програмирање на интересен и инспиративен начин.</p>
               </div>
 
               <div className={styles["ed-about__feature"]}>
@@ -59,7 +57,7 @@ export const AboutCodelab = () => {
               {/* Наслов и воведен текст */}
               <div className="ed-section-head text-center mb-4">
                 <h3 className="ed-section-head__title ed-split-text">За CodeLab</h3>
-                <p className="ed-section-head__text">CodeLab е основано во 2024 година со јасна визија - Да ја приближи информатиката на децата преку учење кое инспирира. Нашата цел е секое дете да ја развие љубовта кон технологијата, да размислува креативно и да стане ресурс за иднината.</p>
+                <p className="ed-section-head__text">CodeLab е основано во 2024 година со јасна визија – да ја приближи информатиката на децата преку учење кое инспирира. Нашата цел е секое дете да ја развие љубовта кон технологијата, да размислува креативно и да стане ресурс за иднината.</p>
               </div>
 
               {/* Поделба на секции со наслови */}
@@ -72,10 +70,7 @@ export const AboutCodelab = () => {
                 <h4>Нашиот пристап</h4>
                 <ul className={styles["ed-about__features-list"]}>
                   {features.map((feature, index) => (
-                    <li key={index}>
-                      {/* можеш да ставиш икона тука ако сакаш */}
-                      {feature}
-                    </li>
+                    <li key={index}>{feature}</li>
                   ))}
                 </ul>
               </div>
@@ -83,8 +78,8 @@ export const AboutCodelab = () => {
               <div>
                 <h4>Визија и мисија</h4>
                 <p>
-                  Нашата мисија е да ги поттикнеме младите да создаваат, не само да користат технологии да станат решавачи на проблеми, тимски играчи и автори на идеи. Визијата ни е CodeLab да биде препознатливо место каде креативноста и технологијата се спојуваат, и каде секое дете ја врши својата
-                  дигитална приказна.
+                  Нашата мисија е да ги поттикнеме младите да создаваат, не само да користат технологии. Тие стануваат решавачи на проблеми, тимски играчи и автори на идеи. Визијата ни е CodeLab да биде препознатливо место каде креативноста и технологијата се спојуваат, и каде секое дете ја врши
+                  својата дигитална приказна.
                 </p>
               </div>
             </div>

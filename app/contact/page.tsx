@@ -1,5 +1,4 @@
 import { CallToAction1 } from "@/components/CallToAction/CallToAction";
-import { Contact2 } from "@/components/Contact/Contact";
 import PageBanner from "@/components/PageBanner";
 import CodeLabLayout from "@/layout/CodeLabLayout";
 import Image from "next/image";
@@ -26,13 +25,13 @@ const page = () => {
       icon: "icon-white-map.svg",
       title: "Address",
       type: "address",
-      info: ["16та Македонска Бригада 2/2/локал 9, 1000 Скопје"],
-      extraLink: "#",
+      info: ["16-та Македонска Бригада 2/2, Скопје"],
+      extraLink: "https://maps.app.goo.gl/5mmaySuGb6DB12Z79",
     },
   ];
   return (
     <CodeLabLayout>
-      <PageBanner pageName="Contact With Us" />
+      <PageBanner pageName="Контакт" />
       <div className="ed-contact__card section-gap">
         <div className="container ed-container">
           <div className="row">
@@ -56,7 +55,6 @@ const page = () => {
           </div>
         </div>
       </div>
-      <Contact2 />
       <CallToAction1 />
     </CodeLabLayout>
   );

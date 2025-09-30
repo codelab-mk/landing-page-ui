@@ -3,11 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
-import styles from "./Hero.module.css"; // import module CSS
+import styles from "./Hero.module.css";
 
 export const Hero1 = () => {
-  const { t } = useTranslation();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -23,11 +21,16 @@ export const Hero1 = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 col-12">
               <div className={styles["ed-hero__content"]}>
-                <h1 className={`${styles["ed-hero__content-title"]} ed-split-text left`} dangerouslySetInnerHTML={{ __html: t("hero.title") }} />
-                <p className={styles["ed-hero__content-text"]}>{t("hero.subtitle")}</p>
+                <h1
+                  className={`${styles["ed-hero__content-title"]} ed-split-text left`}
+                  dangerouslySetInnerHTML={{
+                    __html: "Креирај го својот свет со најмоќниот јазик - <span>кодот</span> !",
+                  }}
+                />
+                <p className={styles["ed-hero__content-text"]}>CodeLab ги воведува младите во светот на IT и кодирањето со креативни активности и инспиративен кадар.</p>
                 <div className={styles["ed-hero__btn"]}>
                   <Link href="/courses" className="ed-btn">
-                    {t("hero.btnText")}
+                    Прегледај курсеви
                     <i className="fi fi-rr-arrow-small-right" />
                   </Link>
                 </div>

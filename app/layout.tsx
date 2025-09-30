@@ -1,4 +1,3 @@
-// app/layout.tsx
 import "@plugin_css/animate.min.css";
 import "@plugin_css/bootstrap.min.css";
 import "@plugin_css/icofont.css";
@@ -21,7 +20,6 @@ export const metadata = {
   title: "CodeLab",
   description: "CodeLab App",
 };
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">

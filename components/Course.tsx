@@ -1,39 +1,34 @@
+import { ERouteMap } from "@/constants/routes";
+import { ECourseCategory, ICourse } from "@/types/course";
+import { EEmployee } from "@/types/teacher";
 import Image from "next/image";
 import Link from "next/link";
 
 export const Course3 = () => {
-  const courses: {
-    id: number;
-    name: string;
-    title: string;
-    lessons: number;
-    teacher: string;
-    price: number;
-    students: number;
-    reviews: number;
-    image: string;
-  }[] = [
+  const courses: ICourse[] = [
     {
       id: 1,
-      name: "Data Science",
-      title: "Grow Personal Financial Security Thinking & Principles",
-      lessons: 23,
-      teacher: "Harrison Stone",
-      price: 674,
-      students: 673,
-      reviews: 9,
-      image: "/assets/codelab/images/courseThumbnail.svg",
+      category: ECourseCategory.PROGRAMMING,
+      title: "Програмирање за Деца",
+      lessons: 64,
+      teacher: EEmployee.HRISTINA_TRAJCEVSKA,
+      price: 1800,
+      minAge: 7,
+      maxAge: 10,
+      image: "/assets/codelab/images/1.svg",
+      duration: 8,
     },
     {
       id: 2,
-      name: "Business",
-      title: "Data Competitive Strategy law and Organization Course",
-      lessons: 4,
-      teacher: "Alexander Wells",
-      price: 633,
-      students: 964,
-      reviews: 67,
-      image: "/assets/images/course/course-1/2.png",
+      category: ECourseCategory.PROGRAMMING,
+      title: "Основи на Програмирање",
+      lessons: 64,
+      teacher: EEmployee.GORAN_BLAZHEVSKI,
+      price: 2000,
+      minAge: 11,
+      maxAge: 14,
+      image: "/assets/codelab/images/2.svg",
+      duration: 8,
     },
   ];
   return (
@@ -43,7 +38,7 @@ export const Course3 = () => {
           <div className="col-12">
             <div className="ed-course__filter">
               <p className="ed-course__filter-text">
-                Showing&nbsp;1-{courses.length}&nbsp;Of&nbsp;{courses.length}&nbsp;Results
+                Прикажани&nbsp;1-{courses.length}&nbsp;од&nbsp;{courses.length}&nbsp;резултати
               </p>
             </div>
           </div>
@@ -59,58 +54,46 @@ export const Course3 = () => {
   );
 };
 
-const CourseItem = ({ course, containerClass = "col-lg-6 col-xl-4 col-md-6 col-12" }: { course: any; containerClass?: string }) => {
+const CourseItem = ({ course, containerClass = "col-lg-6 col-xl-4 col-md-6 col-12" }: { course: ICourse; containerClass?: string }) => {
   return (
     <div className={containerClass}>
       <div className="ed-course__card wow fadeInUp" data-wow-duration="1s">
-        <Link href="/course-details" className="ed-course__img">
-          <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src={course.image} alt="course-img" />
+        <Link href={`/${ERouteMap.Courses}/${course.id}`} className="ed-course__img">
+          <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src={course.image} alt="слика-курс" />
         </Link>
         <Link href="/courses" className="ed-course__tag">
-          {course.name}
+          {course.category}
         </Link>
         <div className="ed-course__body">
-          <div className="ed-course__lesson">
+          <Link href={`/${ERouteMap.Courses}/${course.id}`} className="ed-course__title">
+            <h5>{course.title}</h5>
+          </Link>
+          <div className="ed-course__lesson" style={{ display: "flex", justifyContent: "space-between" }}>
             <div className="ed-course__part">
               <i className="fi-rr-book" />
-              <p>{course.lessons} Lessons</p>
+              <p>{course.lessons} Часови</p>
             </div>
             <div className="ed-course__teacher">
               <i className="fi-rr-user" />
               <p>{course.teacher}</p>
             </div>
           </div>
-          <Link href="/course-details" className="ed-course__title">
-            <h5>{course.title}</h5>
-          </Link>
-          <div className="ed-course__rattings">
-            <ul>
-              <li>
-                <i className="icofont-star" />
-              </li>
-              <li>
-                <i className="icofont-star" />
-              </li>
-              <li>
-                <i className="icofont-star" />
-              </li>
-              <li>
-                <i className="icofont-star" />
-              </li>
-              <li>
-                <i className="icofont-star" />
-              </li>
-              <li>
-                <span>({course.reviews > 9 ? course.reviews : "0" + course.reviews} Reviews)</span>
-              </li>
-            </ul>
-          </div>
-          <div className="ed-course__bottom">
-            <span className="ed-course__price">${course.price}</span>
+
+          <div className="ed-course__lesson" style={{ display: "flex", justifyContent: "space-between" }}>
             <div className="ed-course__students">
-              <i className="fi fi-rr-graduation-cap" />
-              <p>{course.students} Students</p>
+              <i className="fi fi-rr-cake-birthday"></i>
+              <p>
+                Возраст: {course.minAge}-{course.maxAge}
+              </p>
             </div>
+            <div className="ed-course__students">
+              <i className="fi fi-rr-clock" />
+              <p> {course.duration} месеци</p>
+            </div>
+          </div>
+
+          <div className="ed-course__bottom">
+            <span className="ed-course__price">{course.price} мкд / месечно</span>
           </div>
         </div>
       </div>

@@ -4,26 +4,26 @@ import CodeLabLayout from "@/layout/CodeLabLayout";
 const page = () => {
   return (
     <CodeLabLayout>
-      <PageBanner pageTitle="Policy" pageName="Policy" />
+      <PageBanner pageTitle="Политика За Приватност" pageName="Политика За Приватност" />
       <main className="container section-gap">
         <div style={{ padding: 10 }}>
-          <h4>Политика за приватност</h4>
           <div style={{ display: "flex", flexDirection: "column", gap: 30 }}>
-            <p>
+            <div>
               <h6>Лични податоци</h6>
               <p>Во моментов, нашата веб-страница не собира, не чува и не обработува лични податоци од посетителите.</p>
-            </p>
-            <p>
+            </div>
+
+            <div>
               <h6>Трети страни</h6>
               <p>Ако нашата веб-страница користи услуги од трети страни (на пример: Google Fonts, YouTube видеа), тие можат да собираат информации за посетителите. Ве советуваме да се запознаете со политиките за приватност на тие услуги.</p>
-            </p>
+            </div>
 
-            <p>
+            <div>
               <h6>Cookies</h6>
               <p>Нашата веб-страница не користи cookies за собирање лични податоци.</p>
-            </p>
+            </div>
 
-            <p>
+            <div>
               <h6>Контакт</h6>
               <p>
                 Ако имате прашања во врска со приватноста, можете да не контактирате на{" "}
@@ -31,7 +31,7 @@ const page = () => {
                   <strong>contact@codelab.com.mk</strong>
                 </a>
               </p>
-            </p>
+            </div>
           </div>
         </div>
       </main>

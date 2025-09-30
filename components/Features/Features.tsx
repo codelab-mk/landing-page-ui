@@ -1,12 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
 import styles from "./Features.module.css";
 
 export const Features1 = () => {
-  const { t } = useTranslation();
-
   const features: {
     id: number;
     name: string;
@@ -16,24 +13,24 @@ export const Features1 = () => {
   }[] = [
     {
       id: 1,
-      name: t("features1.items.0.name"),
+      name: "Поддршка за едукатори",
       bg: "bg-1",
       icon: "/assets/images/features/features-1/1.svg",
-      description: t("features1.items.0.description"),
+      description: "Нудиме целосна поддршка за ученици и наставници со современи ресурси.",
     },
     {
       id: 2,
-      name: t("features1.items.1.name"),
+      name: "Врвни инструктори",
       bg: "bg-2",
       icon: "/assets/images/features/features-1/2.svg",
-      description: t("features1.items.1.description"),
+      description: "Учете од искусни инструктори со реално работно искуство.",
     },
     {
       id: 3,
-      name: t("features1.items.2.name"),
+      name: "Интерактивни часови",
       bg: "bg-3",
       icon: "/assets/images/features/features-1/3.svg",
-      description: t("features1.items.2.description"),
+      description: "Часовите се динамични и практични за подобро разбирање и вклученост.",
     },
   ];
 

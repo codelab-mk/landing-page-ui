@@ -1,22 +1,27 @@
-import { RouteKey } from "@/components/LangLink";
+import { ERouteMap } from "@/constants/routes";
 
 export const menuItems: {
-  key: RouteKey;
+  key: ERouteMap;
   label: string;
-  subMenu?: { key: RouteKey; label: string }[];
+  url: string;
+  subMenu?: { key: string; label: string; url: string }[];
 }[] = [
-  { key: "home", label: "Home" },
+  { key: ERouteMap.Home, label: "Почетна", url: `/${ERouteMap.Home}` },
   {
-    key: "courses",
-    label: "Courses",
+    key: ERouteMap.Courses,
+    label: "Курсеви",
+    url: `/${ERouteMap.Courses}`,
   },
   {
-    key: "about",
-    label: "About",
+    key: ERouteMap.About,
+    label: "За Нас",
+    url: `/${ERouteMap.About}`,
     subMenu: [
-      { key: "about", label: "About Us" },
-      { key: "instructors", label: "Our Team" },
+      { key: ERouteMap.About, label: "За CodeLab", url: `/${ERouteMap.About}` },
+      { key: ERouteMap.Instructors, label: "Нашииот Тим", url: `/${ERouteMap.Instructors}` },
+      { key: ERouteMap.FAQ, label: "ЧПП", url: `/${ERouteMap.FAQ}` },
+      { key: ERouteMap.Policy, label: "Политика за приватност", url: `/${ERouteMap.Policy}` },
     ],
   },
-  { key: "contact", label: "Contact" },
+  { key: ERouteMap.Contact, label: "Контакт", url: `/${ERouteMap.Contact}` },
 ];

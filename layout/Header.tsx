@@ -1,11 +1,10 @@
 import Image from "next/image";
 import { Fragment, useEffect, useState } from "react";
 import Modal from "react-bootstrap/Modal";
-import { LangLink, RouteKey } from "@/components/LangLink";
-import { LanguageSwitcher } from "@/components/LanguageSwithcer";
 import { _config } from "@/utilities";
 import Link from "next/link";
 import { menuItems } from "@/constants/header";
+import { div } from "framer-motion/client";
 
 interface HeaderProps {
   header?: number;
@@ -44,15 +43,14 @@ const Header1 = ({ showMobileMenu, setShowMobileMenu }: { showMobileMenu: boolea
         <div className="container ed-container-expand">
           <div className="ed-topbar__inner">
             <div className="ed-topbar__logo">
-              <LangLink to="home">
+              <Link href="/">
                 <Image width={300} height={100} src="/assets/codelab/logo/zolto.svg" alt="logo" />
-              </LangLink>
+              </Link>
             </div>
             <div className="ed-topbar__info">
               <ul className="ed-topbar__info-social">
                 <Social />
               </ul>
-              <LanguageSwitcher />
               <button type="button" className="mobile-menu-offcanvas-toggler" onClick={() => setShowMobileMenu(true)}>
                 <span className="line" />
                 <span className="line" />
@@ -113,20 +111,20 @@ const Nav = () => {
           <li key={item.key}>
             {item.subMenu ? (
               <>
-                <a href="javascript:void(0)">
+                <a>
                   {item.label}
                   <i className="fi fi-ss-angle-small-down" />
                 </a>
                 <ul className="sub-menu">
                   {item.subMenu.map((sub) => (
                     <li key={sub.key}>
-                      <LangLink to={sub.key}>{sub.label}</LangLink>
+                      <Link href={sub.key}>{sub.label}</Link>
                     </li>
                   ))}
                 </ul>
               </>
             ) : (
-              <LangLink to={item.key}>{item.label}</LangLink>
+              <Link href={item.key}>{item.label}</Link>
             )}
           </li>
         ))}
@@ -147,9 +145,9 @@ const MobileMenu = ({ show, onHide }: { show: boolean; onHide: () => void }) => 
     <Modal className="modal mobile-menu-modal offcanvas-modal fade" show={show} onHide={onHide}>
       <div className="modal-header offcanvas-header">
         <div className="offcanvas-logo">
-          <LangLink to="home">
+          <Link href="/">
             <Image width={200} height={100} src="/assets/codelab/logo/zolto.svg" alt="logo" />
-          </LangLink>
+          </Link>
         </div>
         <button type="button" className="btn-close" onClick={onHide}>
           <i className="fi fi-ss-cross" />
@@ -169,17 +167,17 @@ const MobileMenu = ({ show, onHide }: { show: boolean; onHide: () => void }) => 
                     <ul className="offcanvas__sub_menu" style={{ display: activeMenu === item.key ? "block" : "none" }}>
                       {item.subMenu.map((sub) => (
                         <li key={sub.key} className="offcanvas__sub_menu_li">
-                          <LangLink to={sub.key} className="offcanvas__sub_menu_item">
+                          <Link href={sub.key} className="offcanvas__sub_menu_item">
                             {sub.label}
-                          </LangLink>
+                          </Link>
                         </li>
                       ))}
                     </ul>
                   </>
                 ) : (
-                  <LangLink to={item.key} className="offcanvas__menu_item">
+                  <Link href={item.key} className="offcanvas__menu_item">
                     {item.label}
-                  </LangLink>
+                  </Link>
                 )}
               </li>
             ))}
@@ -204,7 +202,7 @@ const Social = () => {
       {social.map((item) => (
         <li key={item.id}>
           <a href={item.link} target="_blank">
-            <Image width={25} height={25} src={item.icon} alt="social-icon" />
+            <Image width={35} height={35} src={item.icon} alt="social-icon" />
           </a>
         </li>
       ))}
@@ -242,16 +240,16 @@ const Sidebar = ({ close, open }: { close: () => void; open: boolean }) => {
     <Fragment>
       <div className={`offcanvas offcanvas-end ed-sidebar ${beforeClose ? "hiding" : open ? "show" : ""}`}>
         <div className="ed-sidebar-header">
-          <LangLink to="home" className="ed-sidebar-logo">
+          <Link href="/" className="ed-sidebar-logo">
             <Image width={200} height={100} src="/assets/codelab/logo/zolto.svg" alt="logo" />
-          </LangLink>
+          </Link>
           <button type="button" className="text-reset" onClick={handleClose}>
             <i className="fi fi-rr-cross" />
           </button>
         </div>
         <div className="ed-sidebar-body m-0">
           <div className="ed-sidebar-widget">
-            <h3 className="ed-sidebar-widget-title">Contacts Us:</h3>
+            <h3 className="ed-sidebar-widget-title">Контакти:</h3>
             {content.map((item) => (
               <div className="ed-contact__info-item" key={item.id}>
                 <div className="ed-contact__info-icon" style={{ gap: 10, display: "flex" }}>
@@ -265,7 +263,7 @@ const Sidebar = ({ close, open }: { close: () => void; open: boolean }) => {
             ))}
           </div>
           <div className="ed-sidebar-widget">
-            <h3 className="ed-sidebar-widget-title">Follow Us:</h3>
+            <h3 className="ed-sidebar-widget-title">Заследете не:</h3>
             <ul className="ed-sidebar-social">
               <Social />
             </ul>

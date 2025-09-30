@@ -1,11 +1,9 @@
 "use client";
 
 import { CallToAction1 } from "@/components/CallToAction/CallToAction";
-import { LanguageSwitcher } from "@/components/LanguageSwithcer";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useState } from "react";
-import { useTranslation } from "react-i18next";
 
 const Footer = ({ footer }: { footer: number }) => {
   switch (footer) {
@@ -47,24 +45,22 @@ const Footer2 = () => {
 };
 
 const FooterContent = () => {
-  const { t } = useTranslation();
-
   const contact = [
     {
       icon: "/assets/images/icons/icon-phone-blue.svg",
-      title: t("footer.contact"),
+      title: "Телефон",
       phone: ["+389 ‭72 278 786‬", "+389 ‭78 298 116‬"],
       link: "tel:+389721278786",
     },
     {
       icon: "/assets/images/icons/icon-envelope-blue.svg",
-      title: t("footer.sendMessage"),
+      title: "Испрати Порака",
       email: "contact@codelab.com.mk",
       link: "mailto:contact@codelab.com.mk",
     },
     {
       icon: "/assets/images/icons/icon-location-blue.svg",
-      title: t("footer.ourLocation"),
+      title: "Локација",
       address: "16-та Македонска Бригада 2/2, Скопје",
       link: "https://maps.app.goo.gl/5mmaySuGb6DB12Z79",
     },
@@ -86,7 +82,7 @@ const FooterContent = () => {
                 <Link href="/" className="ed-footer__logo">
                   <Image width={250} height={100} src="/assets/codelab/logo/zolto.svg" alt="footer-logo" />
                 </Link>
-                <p className="ed-footer__about-text">{t("footer.aboutText")}</p>
+                <p className="ed-footer__about-text">CodeLab ги подготвува младите со дигитални вештини за иднината.</p>
                 <ul className="ed-footer__about-social">
                   <li>
                     <a href="https://www.facebook.com/profile.php?id=61555618741877" target="_blank">
@@ -98,9 +94,6 @@ const FooterContent = () => {
                       <Image width={25} height={25} src="/assets/images/icons/icon-dark-instagram.svg" alt="instagram" />
                     </a>
                   </li>
-                  <li style={{ background: "transparent" }}>
-                    <LanguageSwitcher />
-                  </li>
                 </ul>
               </div>
             </div>
@@ -108,19 +101,19 @@ const FooterContent = () => {
             {/* Links */}
             <div className="col-lg-2 col-md-6 col-12">
               <div className="ed-footer__widget">
-                <h4 className="ed-footer__widget-title">{t("footer.linksTitle")}</h4>
+                <h4 className="ed-footer__widget-title">Линкови</h4>
                 <ul className="ed-footer__widget-links">
                   <li>
-                    <Link href="/about">{t("footer.aboutUs")}</Link>
+                    <Link href="/about">За Нас</Link>
                   </li>
                   <li>
-                    <Link href="/courses">{t("footer.ourCourses")}</Link>
+                    <Link href="/courses">Курсеви</Link>
                   </li>
                   <li>
-                    <Link href="/contact">{t("footer.contactUs")}</Link>
+                    <Link href="/contact">Контакт</Link>
                   </li>
                   <li>
-                    <Link href="/faq">{t("footer.faq")}</Link>
+                    <Link href="/faq">Прашања</Link>
                   </li>
                   <li>
                     <Link href="/policy">Политика на приватност</Link>
@@ -132,7 +125,7 @@ const FooterContent = () => {
             {/* Contact */}
             <div className="col-lg-3 col-md-6 col-12">
               <div className="ed-footer__widget contact-widget">
-                <h4 className="ed-footer__widget-title">{t("footer.contactTitle")}</h4>
+                <h4 className="ed-footer__widget-title">Контакт</h4>
                 {contact.map((item, index) => (
                   <div className="ed-footer__contact" key={index}>
                     <div className="ed-footer__contact-icon">
@@ -149,7 +142,7 @@ const FooterContent = () => {
                       ) : item.email ? (
                         <a href={`mailto:${item.email}`}>{item.email}</a>
                       ) : item.address ? (
-                        <span>{item.address}</span>
+                        <a href={item.link}>{item.address}</a>
                       ) : null}
                     </div>
                   </div>

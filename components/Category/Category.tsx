@@ -1,20 +1,9 @@
-"use client";
-
-import { sliderProps } from "@/utilities/sliderProps";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslation } from "react-i18next";
-import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./Category.module.css";
 
 export const Category1 = ({ pt = "pt-0", titleCenter = false, findCourses = true }: { pt?: string; titleCenter?: boolean; findCourses?: boolean }) => {
-  const { t } = useTranslation();
-
-  const categories = t("category1.categories", { returnObjects: true }) as {
-    name: string;
-    courses: string;
-    bg: string;
-  }[];
+  const categories = [{ name: "Програмирање", courses: "2 курсеви", bg: "bg-7" }];
 
   const getBgClass = (bg: string) => {
     switch (bg) {
@@ -46,13 +35,13 @@ export const Category1 = ({ pt = "pt-0", titleCenter = false, findCourses = true
           <div className="col-12">
             <div className={`ed-section-head ${titleCenter ? "text-center" : "text-left"} ${findCourses ? "d-flex-between" : ""}`}>
               <div className="ed-section-head__info">
-                <span className="ed-section-head__sm-title">{t("category1.smallTitle")}</span>
-                <h3 className="ed-section-head__title m-0 ed-split-text">{t("category1.title")}</h3>
+                <span className="ed-section-head__sm-title">КАТЕГОРИИ НА КУРСЕВИ</span>
+                <h3 className="ed-section-head__title m-0 ed-split-text">Топ категории кои сакате да ги научите</h3>
               </div>
               {findCourses && (
                 <div className="ed-section-head__btn">
                   <Link href="/courses" className="ed-btn">
-                    {t("category1.button")}
+                    Пронајди курсеви
                     <i className="fi fi-rr-arrow-small-right" />
                   </Link>
                 </div>

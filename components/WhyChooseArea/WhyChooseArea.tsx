@@ -2,23 +2,36 @@
 
 import Image from "next/image";
 import Counter from "../Counter";
-import { useTranslation } from "react-i18next";
 import styles from "./WhyChooseArea.module.css";
 
 export const WhyChooseArea1 = () => {
-  const { t } = useTranslation();
+  const whyChoose = [
+    {
+      id: 1,
+      name: "Практични Вежби",
+      icon: "/assets/images/why-choose/why-choose-1/icon-1.svg",
+      bg: "bg-2",
+      description: "Запознајте се со концептите преку практични вежби и проекти што ги имплементираат наученото.",
+    },
+    {
+      id: 2,
+      name: "Интерактивни Сесии",
+      icon: "/assets/images/why-choose/why-choose-1/icon-2.svg",
+      bg: "bg-3",
+      description: "Интеракција со инструкторите и можност за поставување на прашања.",
+    },
+    {
+      id: 3,
+      name: "Сертификат за Успешно Завршување",
+      icon: "/assets/images/why-choose/why-choose-1/icon-3.svg",
+      bg: "bg-4",
+      description: "По завршувањето на курсот, добивате сертификат што го потврдува вашето ново стекнато знаење.",
+    },
+  ];
 
-  const whyChoose = t("whyChoose.items", { returnObjects: true }) as {
-    id: number;
-    name: string;
-    icon: string;
-    bg: string;
-    description: string;
-  }[];
-
-  const counter = t("whyChoose.counter", { returnObjects: true }) as {
-    number: string;
-    text: string;
+  const counter = {
+    number: "69K+",
+    text: "Задоволни студенти",
   };
 
   return (
@@ -28,8 +41,8 @@ export const WhyChooseArea1 = () => {
           <div className="col-lg-6 col-12">
             <div className={styles.edWChooseContent}>
               <div className="ed-section-head">
-                <span className="ed-section-head__sm-title">{t("whyChoose.title")}</span>
-                <h3 className="ed-section-head__title ed-split-text left">{t("whyChoose.subtitle")}</h3>
+                <span className="ed-section-head__sm-title">Зошто да го изберете нашиот курс?</span>
+                <h3 className="ed-section-head__title ed-split-text left">Во CodeLab, веруваме дека запознавањето на идната генерација со технолошки вештини е од особена важност за нивниот иден успех.</h3>
               </div>
               <div className={styles.edWChooseInfo}>
                 {whyChoose.map((why) => (

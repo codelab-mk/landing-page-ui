@@ -3,7 +3,7 @@ import CodeLabLayout from "@/layout/CodeLabLayout";
 import PageBanner from "@/components/PageBanner";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import { instructors } from "@/app/data/instructors";
+import { instructors } from "@/data/instructors";
 
 const InstructorDetailsPage = () => {
   const params = useParams();

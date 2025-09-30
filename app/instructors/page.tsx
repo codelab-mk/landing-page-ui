@@ -7,7 +7,7 @@ import { instructors } from "../../data/instructors";
 const InstructorsPage = () => {
   return (
     <CodeLabLayout>
-      <PageBanner pageName="Our Team" />
+      <PageBanner pageTitle="Нашиот Тим" pageName="Нашиот Тим" />
       <section className="ed-team ed-team__page position-relative section-gap">
         <div className="container ed-container">
           <div className="row">

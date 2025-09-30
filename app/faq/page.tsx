@@ -6,7 +6,7 @@ import CodeLabLayout from "@/layout/CodeLabLayout";
 const page = () => {
   return (
     <CodeLabLayout>
-      <PageBanner pageName="FAQ Page" />
+      <PageBanner pageName="ЧПП" pageTitle="Често Поставувани Прашања" />
       <Faq2 />
       <Contact2 />
       <CallToAction1 />

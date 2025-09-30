@@ -53,7 +53,7 @@ const FooterContent = () => {
     {
       icon: "/assets/images/icons/icon-phone-blue.svg",
       title: t("footer.contact"),
-      phone: "+389 ‭72 278 786‬",
+      phone: ["+389 ‭72 278 786‬", "+389 ‭78 298 116‬"],
       link: "tel:+389721278786",
     },
     {
@@ -65,8 +65,8 @@ const FooterContent = () => {
     {
       icon: "/assets/images/icons/icon-location-blue.svg",
       title: t("footer.ourLocation"),
-      address: "16та Македонска Бригада 2, Скопје",
-      link: "#",
+      address: "16-та Македонска Бригада 2/2, Скопје",
+      link: "https://maps.app.goo.gl/5mmaySuGb6DB12Z79",
     },
   ];
 
@@ -76,7 +76,6 @@ const FooterContent = () => {
       <div className="ed-footer__top position-relative">
         <div className="ed-footer__shapes">
           <Image width={95} height={154} className="ed-footer__shape-1" src="/assets/images/footer/footer-1/shape-1.svg" alt="shape-1" />
-          <Image width={101} height={92} className="ed-footer__shape-2 rotate-ani" src="/assets/images/footer/footer-1/shape-2.svg" alt="shape-2" />
           <Image width={119} height={121} className="ed-footer__shape-3" src="/assets/images/footer/footer-1/shape-3.svg" alt="shape-3" />
         </div>
         <div className="container ed-container">
@@ -112,7 +111,7 @@ const FooterContent = () => {
                 <h4 className="ed-footer__widget-title">{t("footer.linksTitle")}</h4>
                 <ul className="ed-footer__widget-links">
                   <li>
-                    <Link href="/about-1">{t("footer.aboutUs")}</Link>
+                    <Link href="/about">{t("footer.aboutUs")}</Link>
                   </li>
                   <li>
                     <Link href="/courses">{t("footer.ourCourses")}</Link>
@@ -121,10 +120,10 @@ const FooterContent = () => {
                     <Link href="/contact">{t("footer.contactUs")}</Link>
                   </li>
                   <li>
-                    <Link href="/blog">{t("footer.ourNews")}</Link>
+                    <Link href="/faq">{t("footer.faq")}</Link>
                   </li>
                   <li>
-                    <Link href="/faq">{t("footer.faq")}</Link>
+                    <Link href="/policy">Политика на приватност</Link>
                   </li>
                 </ul>
               </div>
@@ -141,7 +140,17 @@ const FooterContent = () => {
                     </div>
                     <div className="ed-footer__contact-info">
                       <span>{item.title}</span>
-                      <a href={item.link}>{item.phone || item.email || item.address}</a>
+                      {item?.phone?.length && item?.phone?.length > 0 ? (
+                        item?.phone?.map((phone, index) => (
+                          <a key={index} href={`tel:${phone}`} style={{ display: "block", paddingBottom: 5 }}>
+                            {phone}
+                          </a>
+                        ))
+                      ) : item.email ? (
+                        <a href={`mailto:${item.email}`}>{item.email}</a>
+                      ) : item.address ? (
+                        <span>{item.address}</span>
+                      ) : null}
                     </div>
                   </div>
                 ))}

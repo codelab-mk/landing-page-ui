@@ -141,7 +141,7 @@ const page = () => {
                     </div>
                     <div className="ed-contact__info-content">
                       <span>Our Location</span>
-                      <a href="#">16та Македонска Бригада 2, Скопје</a>
+                      <a href="https://maps.app.goo.gl/5mmaySuGb6DB12Z79">16-та Македонска Бригада 2/2, Скопје</a>
                     </div>
                   </div>
                 </div>

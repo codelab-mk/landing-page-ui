@@ -9,9 +9,9 @@ export const CallToAction1 = () => {
   const { t } = useTranslation();
 
   return (
-    <section className={`ed-call-action position-relative ${styles.wrapper}`}>
-      <div className="container ed-container">
-        <div className={`ed-call-action__inner position-relative ${styles.inner}`}>
+    <section className={`ed-call-action position-a= ${styles.wrapper}`}>
+      <div>
+        <div className={`ed-call-action__inner position-relative ${styles.inner}`} style={{ padding: 20 }}>
           <div className="row">
             <div className="col-lg-6 col-12">
               <div className={`ed-call-action__img ${styles.imgWrapper}`}>

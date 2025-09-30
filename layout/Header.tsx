@@ -5,6 +5,7 @@ import { LangLink, RouteKey } from "@/components/LangLink";
 import { LanguageSwitcher } from "@/components/LanguageSwithcer";
 import { _config } from "@/utilities";
 import Link from "next/link";
+import { menuItems } from "@/constants/header";
 
 interface HeaderProps {
   header?: number;
@@ -30,38 +31,6 @@ export default Header;
 // -----------------------------------
 // Menu Configuration
 // -----------------------------------
-const menuItems: {
-  key: RouteKey;
-  label: string;
-  subMenu?: { key: RouteKey; label: string }[];
-}[] = [
-  { key: "home", label: "Home" },
-  {
-    key: "courses",
-    label: "Courses",
-    subMenu: [
-      { key: "courses", label: "Courses" },
-      { key: "course-details", label: "Course Details" },
-    ],
-  },
-  {
-    key: "blog",
-    label: "News",
-    subMenu: [
-      { key: "blog", label: "Blog" },
-      { key: "blog-details", label: "Blog Details" },
-    ],
-  },
-  {
-    key: "about",
-    label: "About",
-    subMenu: [
-      { key: "about", label: "About Us" },
-      { key: "instructor-details", label: "Our Team" },
-    ],
-  },
-  { key: "contact", label: "Contact" },
-];
 
 // -----------------------------------
 // Header1 Component
@@ -94,7 +63,7 @@ const Header1 = ({ showMobileMenu, setShowMobileMenu }: { showMobileMenu: boolea
         </div>
       </div>
 
-      <header className="ed-header">
+      <header className="ed-header hide-on-mobile">
         <div className="container ed-container-expand">
           <div className="ed-header__inner">
             <div className="row align-items-center">
@@ -179,7 +148,7 @@ const MobileMenu = ({ show, onHide }: { show: boolean; onHide: () => void }) => 
       <div className="modal-header offcanvas-header">
         <div className="offcanvas-logo">
           <LangLink to="home">
-            <Image width={140} height={34} src="/assets/codelab/logo/zolto.svg" alt="logo" />
+            <Image width={200} height={100} src="/assets/codelab/logo/zolto.svg" alt="logo" />
           </LangLink>
         </div>
         <button type="button" className="btn-close" onClick={onHide}>
@@ -248,9 +217,15 @@ const Social = () => {
 // -----------------------------------
 const Sidebar = ({ close, open }: { close: () => void; open: boolean }) => {
   const content = [
-    { id: 1, title: "Contact", content: "Phone number", link: "tel:+38972278786", icon: "/assets/images/icons/icon-phone-blue.svg" },
-    { id: 2, title: "Send Message", content: "Send Message", link: "mailto:contact@codelab.com.mk", icon: "/assets/images/icons/icon-envelope-blue.svg" },
-    { id: 3, title: "Our Location", content: "Our Location", link: "https://www.google.com/maps/place/32/Jenin,+London", icon: "/assets/images/icons/icon-location-blue.svg" },
+    { id: 1, title: "Телефон", content: "+38972278786", link: "tel:+38972278786", icon: "/assets/images/icons/icon-phone-blue.svg" },
+    { id: 2, title: "Е-Пошта", content: "contact@codelab.com.mk", link: "mailto:contact@codelab.com.mk", icon: "/assets/images/icons/icon-envelope-blue.svg" },
+    {
+      id: 3,
+      title: "Адреса",
+      content: "16-та Македонска Бригада 2/2, Скопје",
+      link: "https://maps.app.goo.gl/5mmaySuGb6DB12Z79",
+      icon: "/assets/images/icons/icon-location-blue.svg",
+    },
   ];
 
   const [beforeClose, setBeforeClose] = useState(false);
@@ -279,11 +254,11 @@ const Sidebar = ({ close, open }: { close: () => void; open: boolean }) => {
             <h3 className="ed-sidebar-widget-title">Contacts Us:</h3>
             {content.map((item) => (
               <div className="ed-contact__info-item" key={item.id}>
-                <div className="ed-contact__info-icon">
+                <div className="ed-contact__info-icon" style={{ gap: 10, display: "flex" }}>
                   <Image width={25} height={25} src={item.icon} alt="icon" />
+                  <span>{item.title}</span>
                 </div>
                 <div className="ed-contact__info-content">
-                  <span>{item.title}</span>
                   <a href={item.link}>{item.content}</a>
                 </div>
               </div>
@@ -299,173 +274,5 @@ const Sidebar = ({ close, open }: { close: () => void; open: boolean }) => {
       </div>
       {open && <div className={`offcanvas-backdrop fade ${beforeClose ? "show" : ""}`} onClick={handleClose} />}
     </Fragment>
-  );
-};
-
-// -----------------------------------
-// Login/Register Components
-// -----------------------------------
-const LoginRegisterButton = () => {
-  const [showRegisterModal, setShowRegisterModal] = useState(false);
-  const [showLoginModal, setShowLoginModal] = useState(false);
-
-  return (
-    <Fragment>
-      <button type="button" className="register-btn" onClick={() => setShowRegisterModal(true)}>
-        Register
-      </button>
-      <button type="button" className="login-btn" onClick={() => setShowLoginModal(true)}>
-        Log In
-      </button>
-      <RegisterModal show={showRegisterModal} onHide={() => setShowRegisterModal(false)} />
-      <LoginModal show={showLoginModal} onHide={() => setShowLoginModal(false)} />
-    </Fragment>
-  );
-};
-
-const RegisterModal = ({ show, onHide }: { show: boolean; onHide: () => void }) => {
-  return (
-    <Modal className="modal fade ed-auth__modal" show={show} onHide={onHide}>
-      <div className="ed-auth__modal-content ">
-        <button type="button" className="ed-auth__modal-close" onClick={onHide}>
-          <i className="fi-rr-cross" />
-        </button>
-        {/* Auth Head  */}
-        <div className="ed-auth__modal-head">
-          <Link href="/" className="ed-auth__modal-logo">
-            <Image width={140} height={34} src="/assets/codelab/logo/zolto.svg" alt="logo" />
-          </Link>
-          <h3 className="ed-auth__modal-title">Sign Up Now</h3>
-          <p className="ed-auth__modal-text">
-            already have an account?
-            <button type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
-              Sign In
-            </button>
-          </p>
-        </div>
-        {/* Auth Body  */}
-        <div className="ed-auth__modal-body">
-          <form action="#" method="post" className="ed-auth__modal-form">
-            <div className="form-group">
-              <input type="text" name="name" placeholder="Enter name" required />
-            </div>
-            <div className="form-group">
-              <input type="text" name="user name" placeholder="Enter user name" required />
-            </div>
-            <div className="form-group">
-              <input type="email" name="email" placeholder="Enter email" required />
-            </div>
-            <div className="form-group">
-              <input type="password" name="password" placeholder="Enter password" required />
-            </div>
-            <div className="form-check">
-              <label className="form-check-label" htmlFor="flexCheckDefault2">
-                <input className="form-check-input" type="checkbox" defaultChecked={true} id="flexCheckDefault2" />I agree with your <strong>Privacy Policy</strong>
-              </label>
-            </div>
-            <div className="ed-auth__form-btn">
-              <button type="submit" className="ed-btn">
-                Register Now
-                <i className="fi fi-rr-arrow-small-right" />
-              </button>
-            </div>
-          </form>
-        </div>
-        {/* Auth Footer  */}
-        <div className="ed-auth__modal-footer">
-          <div className="ed-auth__modal-third-party">
-            <p>Or Sign Up with</p>
-            <ul className="ed-auth__modal-third-party-list">
-              <li>
-                <a className="google-login" href="https://www.google.com/">
-                  <Image width={25} height={25} src="/assets/images/icons/icon-color-google.svg" alt="icon-color-google" />
-                </a>
-              </li>
-              <li>
-                <a className="facebook-login" href="https://facebook.com/">
-                  <Image width={25} height={25} src="/assets/images/icons/icon-color-facebook.svg" alt="icon-color-facebook" />
-                </a>
-              </li>
-              <li>
-                <a className="linkedin-login" href="https://www.linkedin.com/">
-                  <Image width={25} height={25} src="/assets/images/icons/icon-color-linkedin.svg" alt="icon-color-linkedin" />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </Modal>
-  );
-};
-
-const LoginModal = ({ show, onHide }: { show: boolean; onHide: () => void }) => {
-  return (
-    <Modal className="modal fade ed-auth__modal" show={show} onHide={onHide}>
-      <div className="ed-auth__modal-content">
-        <button type="button" className="ed-auth__modal-close" onClick={onHide}>
-          <i className="fi-rr-cross" />
-        </button>
-        {/* Auth Head  */}
-        <div className="ed-auth__modal-head">
-          <Link href="/" className="ed-auth__modal-logo">
-            <Image width={140} height={34} src="/assets/codelab/logo/zolto.svg" alt="logo" />
-          </Link>
-          <h3 className="ed-auth__modal-title">Sign In Now</h3>
-          <p className="ed-auth__modal-text">
-            Didn’t Create an account?
-            <button type="button" data-bs-toggle="modal" data-bs-target="#registerModal">
-              Sign Up
-            </button>
-          </p>
-        </div>
-        {/* Auth Body  */}
-        <div className="ed-auth__modal-body">
-          <form action="#" method="post" className="ed-auth__modal-form">
-            <div className="form-group">
-              <input type="text" name="name" placeholder="Enter user name" required />
-            </div>
-            <div className="form-group">
-              <input type="password" name="password" placeholder="Enter password" required />
-            </div>
-            <div className="form-check">
-              <label className="form-check-label" htmlFor="flexCheckDefault">
-                <input className="form-check-input" type="checkbox" defaultChecked={true} id="flexCheckDefault" />
-                Remember me
-              </label>
-            </div>
-            <div className="ed-auth__form-btn">
-              <button type="submit" className="ed-btn">
-                Sign In
-                <i className="fi fi-rr-arrow-small-right" />
-              </button>
-            </div>
-          </form>
-        </div>
-        {/* Auth Footer  */}
-        <div className="ed-auth__modal-footer">
-          <div className="ed-auth__modal-third-party">
-            <p>Or Sign In with</p>
-            <ul className="ed-auth__modal-third-party-list">
-              <li>
-                <a className="google-login" href="https://www.google.com/">
-                  <Image width={25} height={25} src="/assets/images/icons/icon-color-google.svg" alt="icon-color-google" />
-                </a>
-              </li>
-              <li>
-                <a className="facebook-login" href="https://facebook.com/">
-                  <Image width={25} height={25} src="/assets/images/icons/icon-color-facebook.svg" alt="icon-color-facebook" />
-                </a>
-              </li>
-              <li>
-                <a className="linkedin-login" href="https://www.linkedin.com/">
-                  <Image width={25} height={25} src="/assets/images/icons/icon-color-linkedin.svg" alt="icon-color-linkedin" />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </Modal>
   );
 };

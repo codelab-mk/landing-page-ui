@@ -1,6 +1,6 @@
 /* Base Why Choose */
 .edWhyChoose {
-  padding-bottom: 288px;
+  padding-bottom: 150px;
 }
 
 .edWChooseInfoHead {
@@ -99,7 +99,7 @@
 /* Style3 shapes and images */
 .edWChooseImagesStyle3 {
   z-index: 2;
-  margin-bottom: 170px;
+  /* margin-bottom: 170px; */
   position: relative;
 }
 

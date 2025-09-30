@@ -10,8 +10,8 @@
   z-index: 999;
 }
 .mobile-menu-modal .offcanvas-logo img {
-  max-width: 140px;
-  height: 34px;
+  max-width: 300px;
+  height: 80px;
   object-fit: contain;
 }
 .mobile-menu-offcanvas-toggler {
@@ -27,8 +27,8 @@
   line-height: 50px;
   background: transparent;
   z-index: 888;
-  float: right;
 }
+
 .mobile-menu-offcanvas-toggler .line {
   position: relative;
   display: block;
@@ -80,7 +80,6 @@
   background: var(--ed-offwhite-color);
 }
 .mobile-menu-modal .offcanvas-header .btn-close {
-  color: var(--ed-white-color);
   opacity: 1;
   width: 35px;
   height: 35px;
@@ -88,7 +87,6 @@
   border-radius: 100%;
   padding: 0;
   font-size: 13px;
-  background: #d73b3e;
   transition: all 0.4s ease;
   margin: 0;
   float: right;

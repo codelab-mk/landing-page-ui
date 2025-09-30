@@ -47,3 +47,13 @@ img.mfp-img {
 .breadcrumbs-bg {
   background-image: url("/assets/images/breadcrumbs-bg.png");
 }
+
+.hide-on-mobile {
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}

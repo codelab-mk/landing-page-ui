@@ -2,7 +2,7 @@
     Start Footer CSS
 ===================================================================================================*/
 .ed-footer__top {
-  padding: 288px 0px 110px;
+  padding: 100px 0px 110px;
 }
 .ed-footer__logo img {
   max-width: 300px;
@@ -129,11 +129,6 @@
   left: 0;
 }
 
-.ed-footer__shape-2 {
-  position: absolute;
-  right: 14%;
-  top: 37%;
-}
 .ed-footer__shape-3 {
   position: absolute;
   right: 0;

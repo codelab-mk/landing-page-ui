@@ -11,16 +11,11 @@ const page = () => {
   return (
     <CodeLabLayout>
       <Hero1 />
-      <div className="section-bg background-image section-bg-1">
-        <About1 />
-        <Category1 />
-      </div>
-      <Features1 />
+      <About1 />
+      <Category1 />
       <WhyChooseArea1 />
-      <div className="section-bg background-image section-bg-3">
-        <Blog1 />
-        <CallToAction1 />
-      </div>
+      <CallToAction1 />
+      <Features1 />
     </CodeLabLayout>
   );
 };

@@ -22,7 +22,7 @@ export const WhyChooseArea1 = () => {
   };
 
   return (
-    <section className={`${styles.edWhyChoose} section-gap background-image section-bg-2`}>
+    <section className={`${styles.edWhyChoose} section-gap background-image`}>
       <div className="container ed-container">
         <div className="row align-items-center">
           <div className="col-lg-6 col-12">

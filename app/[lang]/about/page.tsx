@@ -1,4 +1,4 @@
-import { About1 } from "@/components/About/About";
+import { AboutCodelab } from "@/components/About/About";
 import { Blog1 } from "@/components/Blog/Blog";
 import { CallToAction1 } from "@/components/CallToAction/CallToAction";
 import { Category1 } from "@/components/Category/Category";
@@ -10,12 +10,10 @@ const page = () => {
   return (
     <CodeLabLayout>
       <PageBanner pageName="About Us" />
-      <About1 />
-      <Category1 />
-      <Features1 />
+      <AboutCodelab />
       <Contact />
-      <Blog1 />
-      <CallToAction1 />
+      {/* <CallToAction1 />
+      <Features1 /> */}
     </CodeLabLayout>
   );
 };

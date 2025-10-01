@@ -16,7 +16,7 @@ const page = () => {
                 <div className="ed-course__details-img">
                   {/* <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src="/assets/images/course/course-details/details-img-1.png" alt="course-details-img-1" /> */}
                   <video controls autoPlay style={{ width: "100%", height: "400px", objectFit: "cover" }}>
-                    <source src="/assets/codelab/videos/video.mov" type="video/mp4" />
+                    {/* <source src="/assets/codelab/videos/video.mov" type="video/mp4" /> */}
                     Your browser does not support the video tag.
                   </video>
                 </div>

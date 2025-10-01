@@ -15,7 +15,7 @@ export const Hero1 = () => {
   if (!mounted) return null;
 
   return (
-    <div className={`${styles["section-bg"]} ${styles["hero-bg"]} ${styles["background-image"]}`} style={{ backgroundImage: 'url("/assets/images/hero/home-1/hero-bg.png")' }}>
+    <div className={`${styles["section-bg"]} ${styles["hero-bg"]}`}>
       <section className={styles["ed-hero"]}>
         <div className={`container ${styles["ed-container-expand"]}`}>
           <div className="row align-items-center">

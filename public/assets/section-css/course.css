@@ -298,12 +298,12 @@
 .ed-course.ed-course--style-5::before {
   top: 0;
   right: -70px;
-  background-image: url("../images/course/course-5/pattern-1.svg");
+  /* background-image: url("../images/course/course-5/pattern-1.svg"); */
 }
 .ed-course.ed-course--style-5::after {
   bottom: 0;
   left: 0;
-  background-image: url("../images/course/course-5/pattern-2.svg");
+  /* background-image: url("../images/course/course-5/pattern-2.svg"); */
 }
 
 .ed-course__shapes .shape-1 {
@@ -382,11 +382,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(9, 9, 9, 0) 28.19%,
-    rgba(9, 9, 9, 0.85) 89.46%
-  );
+  background: linear-gradient(180deg, rgba(9, 9, 9, 0) 28.19%, rgba(9, 9, 9, 0.85) 89.46%);
   border-radius: 100%;
 }
 
@@ -445,7 +441,7 @@
   font-weight: 700;
   line-height: 30px;
   margin-bottom: 10px;
-  display: block
+  display: block;
 }
 .ed-course--style-5 .ed-course__content a:hover {
   color: var(--ed-primary-color);

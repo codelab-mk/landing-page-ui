@@ -13,10 +13,10 @@ const NotFound = () => {
                   <Image src="/assets/images/error-img.svg" alt="error-img" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
                 </div>
                 <div className="ed-error__content">
-                  <p className="ed-error__content-text">Seems like you've landed on a page which has been archived or removed, let's take you back home?</p>
+                  <p className="ed-error__content-text">Изгледа дека слета на страница која е архивирана или отстранета. Ајде да те вратиме назад на почетната?</p>
                   <div className="ed-error__btn">
                     <Link href="/" className="ed-btn">
-                      Go to Homepage
+                      Оди на Почетна
                       <i className="fi fi-rr-arrow-small-right" />
                     </Link>
                   </div>

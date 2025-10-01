@@ -2,7 +2,11 @@
     Start Breadcrumbs CSS
 ===================================================================================================*/
 .ed-breadcrumbs {
-  padding: 90px 0px;
+  padding: 90px 0;
+  background-image: url("/assets/images/breadcrumbs-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .ed-breadcrumbs__content {
   text-align: center;

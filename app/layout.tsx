@@ -1,10 +1,4 @@
-import "@plugin_css/animate.min.css";
 import "@plugin_css/bootstrap.min.css";
-import "@plugin_css/icofont.css";
-import "@plugin_css/maginific-popup.min.css";
-import "@plugin_css/nice-select.min.css";
-import "@plugin_css/swiper-bundle.min.css";
-import "@plugin_css/uicons.css";
 import "@css/style.css";
 import "./globals.css";
 import Preloader from "@/components/Preloader";

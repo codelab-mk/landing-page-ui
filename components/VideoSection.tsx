@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const VideoSection1 = () => {
   return (
     <section className="ed-video">
@@ -6,28 +8,13 @@ const VideoSection1 = () => {
           className="ed-video__bg background-image ed-hobble position-relative"
           style={{
             backgroundImage: 'url("assets/images/video/video-1/bg-img.png")',
-          }}
-        >
+          }}>
           <div className="ed-video__shapes">
-            <img
-              className="ed-video__shape-1 rotate-ani"
-              src="/assets/images/video/video-1/shape-1.svg"
-              alt="shape-1"
-            />
-            <img
-              className="ed-video__shape-2 updown-ani"
-              src="/assets/images/video/video-1/shape-2.svg"
-              alt="shape-2"
-            />
+            <Image className="ed-video__shape-1 rotate-ani" src="/assets/images/video/video-1/shape-1.svg" alt="shape-1" />
+            <Image className="ed-video__shape-2 updown-ani" src="/assets/images/video/video-1/shape-2.svg" alt="shape-2" />
           </div>
-          <a
-            href="https://www.youtube.com/watch?v=gyGsPlt06bo"
-            className="ed-video__btn popup-video ed-hover-layer-2"
-          >
-            <img
-              src="/assets/images/icons/icon-play-yellow.svg"
-              alt="play-icon"
-            />
+          <a href="https://www.youtube.com/watch?v=gyGsPlt06bo" className="ed-video__btn popup-video ed-hover-layer-2">
+            <Image src="/assets/images/icons/icon-play-yellow.svg" alt="play-icon" />
           </a>
         </div>
       </div>
@@ -44,28 +31,13 @@ export const VideoSection2 = () => {
           className="ed-video__bg background-image ed-hobble position-relative"
           style={{
             backgroundImage: 'url("assets/images/video/video-2/bg-img.png")',
-          }}
-        >
+          }}>
           <div className="ed-video__shapes">
-            <img
-              className="ed-video__shape-1 rotate-ani"
-              src="assets/images/video/video-1/shape-1.svg"
-              alt="shape-1"
-            />
-            <img
-              className="ed-video__shape-2 updown-ani"
-              src="assets/images/video/video-1/shape-2.svg"
-              alt="shape-2"
-            />
+            <Image className="ed-video__shape-1 rotate-ani" src="assets/images/video/video-1/shape-1.svg" alt="shape-1" />
+            <Image className="ed-video__shape-2 updown-ani" src="assets/images/video/video-1/shape-2.svg" alt="shape-2" />
           </div>
-          <a
-            href="https://www.youtube.com/watch?v=gyGsPlt06bo"
-            className="ed-video__btn popup-video ed-hover-layer-2"
-          >
-            <img
-              src="assets/images/icons/icon-play-yellow.svg"
-              alt="play-icon"
-            />
+          <a href="https://www.youtube.com/watch?v=gyGsPlt06bo" className="ed-video__btn popup-video ed-hover-layer-2">
+            <Image src="assets/images/icons/icon-play-yellow.svg" alt="play-icon" />
           </a>
         </div>
       </div>

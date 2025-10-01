@@ -2,7 +2,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  disableDraftMode: true,
   // Enable CSS modules optimization
   experimental: {
     cssChunking: "strict",

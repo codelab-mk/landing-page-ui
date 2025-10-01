@@ -1,4 +1,5 @@
 import "@plugin_css/bootstrap.min.css";
+import "@plugin_css/uicons.css";
 import "@css/style.css";
 import "./globals.css";
 import Preloader from "@/components/Preloader";

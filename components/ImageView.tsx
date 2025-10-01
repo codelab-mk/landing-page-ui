@@ -1,26 +1,17 @@
 "use client";
 import useClickOutside from "@/utilities/useClickOutside";
+import Image from "next/image";
 import { useEffect, useState } from "react";
-const ImgViews = ({
-  close,
-  src,
-}: {
-  close: (value: boolean) => void;
-  src: string;
-}) => {
+const ImgViews = ({ close, src }: { close: (value: boolean) => void; src: string }) => {
   const ref = useClickOutside(() => close(false));
   return (
     <>
       <div className="mfp-bg mfp-ready" onClick={() => close(false)} />
-      <div
-        className="mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready"
-        tabIndex={-1}
-        style={{ overflow: "hidden auto" }}
-      >
+      <div className="mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready" tabIndex={-1} style={{ overflow: "hidden auto" }}>
         <div className="mfp-container mfp-s-ready mfp-iframe-holder mfp-img-container">
           <div className="mfp-content" ref={ref}>
             <div className="mfp-iframe-scaler">
-              <img className="mfp-img" src={src} alt="Preview" />
+              <Image className="mfp-img" src={src} alt="Preview" />
             </div>
           </div>
           <div className="mfp-preloader">Loading...</div>
@@ -41,10 +32,7 @@ const ImageView = () => {
       }
     };
     const links = document.querySelectorAll("a");
-    setTimeout(
-      () => links.forEach((a) => a.addEventListener("click", handler)),
-      1500
-    );
+    setTimeout(() => links.forEach((a) => a.addEventListener("click", handler)), 1500);
     return () => links.forEach((a) => a.removeEventListener("click", handler));
   }, []);
   return src && <ImgViews src={src} close={() => setSrc(null)} />;

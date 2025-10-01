@@ -1,11 +1,3 @@
-/* @import "../section-css/funfact.css"; */
-/* @import "../section-css/partner.css"; */
-
-/* @import "../section-css/event.css"; */
-/* @import "../section-css/product.css"; */
-/* @import "../section-css/checkout.css"; */
-/* @import "../section-css/auth-pages.css"; */
-
 /* MANDATORY GLOBAL CSS FILES */
 @import "../section-css/hero.css";
 @import "../section-css/header.css";
@@ -17,7 +9,6 @@
 @import "../section-css/team.css";
 @import "../section-css/faq.css";
 @import "../section-css/breadcrumbs.css";
-@import "../section-css/apply.css";
 @import "../section-css/sidebars.css";
 @import "../section-css/error.css";
 @import "../section-css/contact.css";

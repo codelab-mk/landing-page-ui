@@ -41,7 +41,7 @@ export const Category1 = ({ pt = "pt-0", titleCenter = false, findCourses = true
               {findCourses && (
                 <div className="ed-section-head__btn">
                   <Link href="/courses" className="ed-btn">
-                    Пронајди курсеви
+                    Пронајди курсеви {""}
                     <i className="fi fi-rr-arrow-small-right" />
                   </Link>
                 </div>

@@ -13,7 +13,7 @@ const CodeLabLayout = ({ children, header, footer }: { children: React.ReactNode
 
   return (
     <Fragment>
-      <Header header={header ?? 1} />
+      <Header />
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>{children}</main>

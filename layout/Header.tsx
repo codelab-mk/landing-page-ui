@@ -8,7 +8,7 @@ interface HeaderProps {
   header?: number;
 }
 
-export const Header = ({ header }: HeaderProps) => {
+export const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   useEffect(() => {

@@ -30,8 +30,7 @@ export const Hero1 = () => {
                 <p className={styles["ed-hero__content-text"]}>CodeLab ги воведува младите во светот на IT и кодирањето со креативни активности и инспиративен кадар.</p>
                 <div className={styles["ed-hero__btn"]}>
                   <Link href="/courses" className="ed-btn">
-                    Прегледај курсеви
-                    <i className="fi fi-rr-arrow-small-right" />
+                    Прегледај курсеви <i className="fi fi-rr-arrow-small-right" />
                   </Link>
                 </div>
               </div>

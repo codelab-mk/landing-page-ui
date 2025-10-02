@@ -1,4 +1,4 @@
-import PageBanner from "@/components/PageBanner";
+import PageBanner from "@/components/PageBanner/PageBanner";
 import CodeLabLayout from "@/layout/CodeLabLayout";
 
 const page = () => {

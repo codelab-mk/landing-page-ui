@@ -4,17 +4,11 @@ import ScrollTop from "@/components/ScrollTop";
 import VideoPopup from "@/components/VideoPopup";
 import { _config } from "@/utilities";
 import { Fragment, useEffect } from "react";
-// @ts-ignore
-import niceSelect from "react-nice-select";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Header from "./Header";
-const CodeLabLayout = ({ children, header, footer }: { children: React.ReactNode; header?: number | 1; footer?: number | 1 }) => {
+const CodeLabLayout = ({ children, header, footer }: { children: React.ReactNode; header?: number; footer?: number }) => {
   useEffect(() => {
-    _config.animation();
-    _config.movie_animation();
     _config.smooth_scroll();
-    _config.scroll_animation();
-    niceSelect();
   }, []);
   return (
     <Fragment>

@@ -1,7 +1,8 @@
 import { CallToAction1 } from "@/components/CallToAction/CallToAction";
-import PageBanner from "@/components/PageBanner";
+import PageBanner from "@/components/PageBanner/PageBanner";
 import CodeLabLayout from "@/layout/CodeLabLayout";
 import Image from "next/image";
+
 const page = () => {
   const contact = [
     {

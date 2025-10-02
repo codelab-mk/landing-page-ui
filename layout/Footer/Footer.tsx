@@ -3,7 +3,7 @@
 import { CallToAction1 } from "@/components/CallToAction/CallToAction";
 import Image from "next/image";
 import Link from "next/link";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 
 const Footer = ({ footer }: { footer: number }) => {
   switch (footer) {

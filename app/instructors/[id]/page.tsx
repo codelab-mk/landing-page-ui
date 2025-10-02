@@ -1,6 +1,6 @@
 "use client";
 import CodeLabLayout from "@/layout/CodeLabLayout";
-import PageBanner from "@/components/PageBanner";
+import PageBanner from "@/components/PageBanner/PageBanner";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { instructors } from "@/data/instructors";

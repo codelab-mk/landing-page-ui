@@ -1,20 +1,9 @@
-"use client";
-
-import { CallToAction1 } from "@/components/CallToAction/CallToAction";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 
-const Footer = ({ footer }: { footer: number }) => {
-  switch (footer) {
-    case 1:
-      return <Footer1 />;
-    case 2:
-      return <Footer2 />;
-
-    default:
-      return <Footer1 />;
-  }
+const Footer = () => {
+  return <Footer1 />;
 };
 export default Footer;
 
@@ -23,24 +12,6 @@ const Footer1 = () => {
     <footer className="ed-footer section-bg-color-1 position-relative">
       <FooterContent />
     </footer>
-  );
-};
-
-const Footer2 = () => {
-  return (
-    <div className="footer-bg position-relative">
-      <div className="footer-bg__img">
-        <Image width={1905} height={1032} sizes="100vw" style={{ width: "100%", height: "100%", objectFit: "cover" }} src="/assets/images/footer/footer-2/footer-bg.png" alt="footer-bg-img" />
-      </div>
-      {/* Start Call Action Area */}
-      <CallToAction1 />
-      {/* End Call Action Area */}
-      {/* Start Footer Area */}
-      <footer className="ed-footer position-relative">
-        <FooterContent />
-      </footer>
-      {/* End Footer Area  */}
-    </div>
   );
 };
 

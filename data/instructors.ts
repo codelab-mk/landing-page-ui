@@ -1,4 +1,3 @@
-// app/data/instructors.ts
 export const instructors = [
   {
     id: "goran-josifovski",

@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Counter from "../Counter";
 import styles from "./WhyChooseArea.module.css";

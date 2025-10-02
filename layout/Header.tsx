@@ -4,8 +4,6 @@ import Modal from "react-bootstrap/Modal";
 import { _config } from "@/utilities";
 import Link from "next/link";
 import { menuItems } from "@/constants/header";
-import { div } from "framer-motion/client";
-
 interface HeaderProps {
   header?: number;
 }

@@ -1,4 +1,4 @@
-"use client"; // for Next.js App Router
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 import CountUp from "react-countup";

@@ -1,10 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import CodeLabLayout from "@/layout/CodeLabLayout";
 import PageBanner from "@/components/PageBanner/PageBanner";
 import { instructors } from "../../data/instructors";
+import { useRouter } from "next/navigation";
 
 const InstructorsPage = () => {
+  const router = useRouter();
+
   return (
     <CodeLabLayout>
       <PageBanner pageTitle="Нашиот Тим" pageName="Нашиот Тим" />
@@ -16,17 +21,8 @@ const InstructorsPage = () => {
                 <div className="ed-team__card wow fadeInUp" data-wow-duration="1s">
                   <div className="ed-team__cover">
                     <div className="ed-team__img">
-                      <Image width={0} height={0} sizes="100vw" style={{ height: 500 }} src={instructor.image} alt={instructor.name} />
+                      <Image width={0} height={0} sizes="100vw" style={{ height: 500, cursor: "pointer" }} src={instructor.image} alt={instructor.name} onClick={() => router.push(`/team/${instructor.id}`)} /> {/* </Link> */}
                     </div>
-                    <ul className="ed-team__social">
-                      {instructor.social.map((social, index) => (
-                        <li key={index}>
-                          <a href={social.url} target="_blank">
-                            <Image width={20} height={20} src={social.icon} alt={social.url} />
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
                   <div className="ed-team__info">
                     <p className="ed-team__designation">{instructor.designation}</p>

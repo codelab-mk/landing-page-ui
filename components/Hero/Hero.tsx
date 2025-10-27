@@ -15,7 +15,7 @@ export const Hero1 = () => {
   if (!mounted) return null;
 
   return (
-    <div className={`${styles["section-bg"]} ${styles["hero-bg"]}`}>
+    <div>
       <section className={styles["ed-hero"]}>
         <div className={`container ${styles["ed-container-expand"]}`}>
           <div className="row align-items-center">

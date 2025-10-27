@@ -3,7 +3,7 @@ import styles from "./PageBanner.module.css";
 
 const PageBanner = ({ pageTitle, pageName = "" }: { pageTitle?: string; pageName?: string }) => {
   return (
-    <div className="section-bg hero-bg">
+    <div>
       {/* Start Breadcrumbs Area */}
       <section className={`${styles.breadcrumbs}`}>
         <div className="container">

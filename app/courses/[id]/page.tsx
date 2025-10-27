@@ -6,6 +6,7 @@ import { courses } from "@/data/courses";
 import CodeLabLayout from "@/layout/CodeLabLayout";
 import Image from "next/image";
 import { useParams } from "next/navigation";
+import { ICourse } from "@/types/course";
 
 const page = () => {
   const params = useParams();

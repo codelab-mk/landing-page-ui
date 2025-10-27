@@ -3,6 +3,12 @@ import PageBanner from "@/components/PageBanner/PageBanner";
 import CodeLabLayout from "@/layout/CodeLabLayout";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Контакт | CodeLab",
+  description: "Контактирајте не за информации околу курсевите за програмирање за деца во Скопје. Тел: +389 72 278 786",
+  keywords: ["курсеви за деца контакт", "програмирање скопје", "codelab контакт"],
+};
+
 const page = () => {
   const contact = [
     {

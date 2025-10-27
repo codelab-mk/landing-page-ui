@@ -14,8 +14,39 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "CodeLab",
-  description: "CodeLab App",
+  metadataBase: new URL("https://codelab.com.mk"),
+  title: {
+    default: "CodeLab – Курсови за Програмирање за Деца",
+    template: "%s | CodeLab",
+  },
+  description: "Програмирање за деца во Скопје. Практична едукација преку игра, креативност и технологија.",
+  keywords: ["програмирање за деца", "курсеви за деца", "Scratch курс", "роботика за деца", "CodeLab Skopje", "курсеви Скопје"],
+  authors: [{ name: "CodeLab" }],
+  creator: "CodeLab",
+  alternates: {
+    canonical: "https://codelab.com.mk",
+  },
+  openGraph: {
+    type: "website",
+    locale: "mk_MK",
+    url: "https://codelab.com.mk",
+    siteName: "CodeLab",
+    title: "CodeLab – Курсови за Програмирање за Деца",
+    description: "Програмирање за деца во Скопје. Практична едукација преку игра, креативност и технологија.",
+    images: [
+      {
+        url: "/assets/codelab/logo/codelab-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "CodeLab",
+      },
+    ],
+  },
+  icons: {
+    icon: "/assets/codelab/logo/codelab-logo.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

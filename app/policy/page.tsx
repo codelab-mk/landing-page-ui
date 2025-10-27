@@ -1,6 +1,12 @@
 import PageBanner from "@/components/PageBanner/PageBanner";
 import CodeLabLayout from "@/layout/CodeLabLayout";
 
+export const metadata = {
+  title: "Политика за Приватност | CodeLab",
+  description: "Политика за приватност и лични податоци.",
+  keywords: ["приватност", "лични податоци"],
+};
+
 const page = () => {
   return (
     <CodeLabLayout>

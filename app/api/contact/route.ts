@@ -12,23 +12,25 @@ const schema = z.object({
   message: z.string().min(10).max(5000),
 });
 
-const mailjet = new Mailjet({
-  apiKey: process.env.MAILJET_API_KEY!,
-  apiSecret: process.env.MAILJET_API_SECRET!,
-});
-
-function fromEnv(name: string) {
-  const v = process.env[name];
-  if (!v) throw new Error(`Missing env: ${name}`);
-  return v;
-}
-
 export async function POST(req: Request) {
   try {
+    const apiKey = process.env.MAILJET_API_KEY;
+    const apiSecret = process.env.MAILJET_API_SECRET;
+
+    if (!apiKey || !apiSecret) {
+      console.error("Mailjet API credentials missing. Email sending disabled.");
+      return NextResponse.json({ error: "Email temporarily unavailable" }, { status: 503 });
+    }
+
+    const mailjet = new Mailjet({
+      apiKey,
+      apiSecret,
+    });
+
     const json = await req.json().catch(() => ({}));
     const data = schema.parse(json);
 
-    // Optional super-light rate limit (per IP, in-memory). Replace with a proper store in prod.
+    // Optional rate limit protection
     const ip = req.headers.get("x-forwarded-for") ?? "unknown";
     // @ts-ignore
     globalThis.__rl ??= new Map<string, { t: number; c: number }>();
@@ -43,11 +45,11 @@ export async function POST(req: Request) {
     globalThis.__rl.set(ip, bucket);
     if (bucket.c > 5) return NextResponse.json({ error: "Too many requests" }, { status: 429 });
 
-    const SENDER = fromEnv("MAILJET_SENDER");
-    const TO = fromEnv("CONTACT_TO");
+    const SENDER = process.env.MAILJET_SENDER!;
+    const TO = process.env.CONTACT_TO!;
     const templateId = process.env.MAILJET_TEMPLATE_ID;
 
-    const payload = templateId
+    const payload: any = templateId
       ? {
           Messages: [
             {
@@ -61,9 +63,7 @@ export async function POST(req: Request) {
                 email: data.email,
                 message: data.message,
               },
-              Headers: {
-                "Reply-To": data.email,
-              },
+              Headers: { "Reply-To": data.email },
             },
           ],
         }
@@ -73,37 +73,35 @@ export async function POST(req: Request) {
               From: { Email: SENDER, Name: "Codelab - Website" },
               To: [{ Email: TO }],
               Subject: `New message from ${data.name}`,
-              TextPart: `From: ${data.name} <${data.email}>\n\n` + `Message:\n${data.message}`,
+              TextPart: `From: ${data.name} <${data.email}>\n\nMessage:\n${data.message}`,
               HTMLPart: `
                 <p><strong>From:</strong> ${data.name} &lt;${data.email}&gt;</p>
                 <p><strong>Message:</strong></p>
                 <p>${escapeHtml(data.message).replace(/\n/g, "<br/>")}</p>
               `,
-              Headers: {
-                "Reply-To": data.email,
-              },
+              Headers: { "Reply-To": data.email },
             },
           ],
         };
 
-    const result = await mailjet.post("send", { version: "v3.1" }).request(payload as any);
+    const result = await mailjet.post("send", { version: "v3.1" }).request(payload);
 
-    // Mailjet returns a 200 with a response body, check for MessageID or Status
     const status = result?.body?.Messages?.[0]?.Status ?? "unknown";
 
     if (status !== "success") {
-      console.error("Mailjet not success:", result?.body);
+      console.error("Mailjet send failed:", result?.body);
       return NextResponse.json({ error: "Email not sent" }, { status: 502 });
     }
 
     return NextResponse.json({ ok: true });
   } catch (err: any) {
     console.error(err);
-    // Zod errors are nice to surface
+
     if (err?.issues) {
       return NextResponse.json({ error: "Validation failed", details: err.issues }, { status: 400 });
     }
-    return NextResponse.json({ error: "Internal error" }, { status: 500 });
+
+    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
 

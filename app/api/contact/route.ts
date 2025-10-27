@@ -1,9 +1,10 @@
 // app/api/contact/route.ts
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
 import { NextResponse } from "next/server";
 import Mailjet from "node-mailjet";
 import { z } from "zod";
-
-export const runtime = "nodejs";
 
 const schema = z.object({
   name: z.string().min(1).max(100),

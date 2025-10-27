@@ -3,7 +3,7 @@ export const instructors = [
     id: "goran-josifovski",
     name: "Горан Јосифовски",
     designation: "Софтверски Инжинер",
-    image: "/assets/codelab/team/Goran.jpg",
+    image: "/assets/codelab/team/goran.jpg",
     phone: "+38972123456",
     email: "goran@codelab.com.mk",
     social: [
@@ -20,7 +20,7 @@ export const instructors = [
     id: "daniel-pop-ivanov",
     name: "Даниел Поп-Иванов",
     designation: "Економист",
-    image: "/assets/codelab/team/Daniel.jpg",
+    image: "/assets/codelab/team/daniel.jpg",
     phone: "+38972123459",
     email: "daniel@codelab.com.mk",
     social: [
@@ -37,7 +37,7 @@ export const instructors = [
     id: "ana-kostovska",
     name: "Ана Костовска",
     designation: "Маркетинг Специјалист",
-    image: "/assets/codelab/team/Ana.jpg",
+    image: "/assets/codelab/team/ana.jpg",
     phone: "+38972123460",
     email: "ana@codelab.com.mk",
     social: [
@@ -56,7 +56,7 @@ export const instructors = [
     id: "goran-blazhevski",
     name: "Горан Блажевски",
     designation: "Софтверски Инжинер",
-    image: "/assets/codelab/team/GoranB.jpg",
+    image: "/assets/codelab/team/goranB.jpg",
     phone: "+38972123457",
     email: "goranb@codelab.com.mk",
     social: [

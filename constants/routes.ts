@@ -2,7 +2,7 @@ export enum ERouteMap {
   Home = "/",
   Courses = "courses",
   About = "about",
-  Instructors = "instructors",
+  Team = "team",
   Contact = "contact",
   FAQ = "faq",
   Policy = "policy",

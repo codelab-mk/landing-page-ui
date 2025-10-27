@@ -18,7 +18,7 @@ export const menuItems: {
     url: `/${ERouteMap.About}`,
     subMenu: [
       { key: ERouteMap.About, label: "За CodeLab", url: `/${ERouteMap.About}` },
-      { key: ERouteMap.Instructors, label: "Нашииот Тим", url: `/${ERouteMap.Instructors}` },
+      { key: ERouteMap.Team, label: "Нашииот Тим", url: `/${ERouteMap.Team}` },
       { key: ERouteMap.FAQ, label: "ЧПП", url: `/${ERouteMap.FAQ}` },
       { key: ERouteMap.Policy, label: "Политика за приватност", url: `/${ERouteMap.Policy}` },
     ],

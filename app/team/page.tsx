@@ -16,7 +16,7 @@ const InstructorsPage = () => {
                 <div className="ed-team__card wow fadeInUp" data-wow-duration="1s">
                   <div className="ed-team__cover">
                     <div className="ed-team__img">
-                      <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src={instructor.image} alt={instructor.name} />
+                      <Image width={0} height={0} sizes="100vw" style={{ height: 500 }} src={instructor.image} alt={instructor.name} />
                     </div>
                     <ul className="ed-team__social">
                       {instructor.social.map((social, index) => (
@@ -30,7 +30,7 @@ const InstructorsPage = () => {
                   </div>
                   <div className="ed-team__info">
                     <p className="ed-team__designation">{instructor.designation}</p>
-                    <Link className="ed-team__name" href={`/instructors/${instructor.id}`}>
+                    <Link className="ed-team__name" href={`/team/${instructor.id}`}>
                       {instructor.name}
                     </Link>
                   </div>

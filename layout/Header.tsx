@@ -4,9 +4,6 @@ import Modal from "react-bootstrap/Modal";
 import { _config } from "@/utilities";
 import Link from "next/link";
 import { menuItems } from "@/constants/header";
-interface HeaderProps {
-  header?: number;
-}
 
 export const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);

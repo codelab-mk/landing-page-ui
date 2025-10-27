@@ -1,4 +1,5 @@
 "use client";
+import { useRef, useState } from "react";
 import { CallToAction1 } from "@/components/CallToAction/CallToAction";
 import PageBanner from "@/components/PageBanner/PageBanner";
 import { courses } from "@/data/courses";
@@ -10,7 +11,15 @@ const page = () => {
   const params = useParams();
   const id = Number(params.id);
 
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [isVideoPaused, setIsVideoPaused] = useState(true);
+
   const course = courses.find((c) => c.id === id);
+
+  const onVideoPlay = () => {
+    videoRef.current?.play();
+    setIsVideoPaused(false);
+  };
 
   function Price({ value }: { value: number }) {
     return (
@@ -35,12 +44,46 @@ const page = () => {
               {/* Course Details Content */}
               <div className="ed-course__details-content">
                 {/* Course Details Image */}
-                <div className="ed-course__details-img">
-                  <video controls style={{ width: "100%", height: "400px", objectFit: "cover", borderRadius: 10, boxShadow: "0 6px 25px rgba(0,0,0,0.55)" }}>
+                <div className="ed-course" style={{ position: "relative" }}>
+                  <video
+                    ref={videoRef}
+                    style={{
+                      width: "100%",
+                      height: "400px",
+                      objectFit: "cover",
+                      borderRadius: 10,
+                      boxShadow: "0 6px 25px rgba(0,0,0,0.55)",
+                    }}
+                    onPlay={() => setIsVideoPaused(false)}
+                    onPause={() => setIsVideoPaused(true)}
+                    controls>
                     <track kind="captions" />
                     <source src={course.video_url} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
+
+                  {isVideoPaused && (
+                    <button
+                      onClick={onVideoPlay}
+                      style={{
+                        position: "absolute",
+                        top: "50%",
+                        left: "50%",
+                        transform: "translate(-50%, -50%)",
+                        backgroundColor: "transparent",
+                        borderRadius: "50%",
+                        border: "none",
+                        cursor: "pointer",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        boxShadow: "0 8px 28px rgba(0,0,0,0.25)",
+                        zIndex: 10,
+                        padding: 0,
+                      }}>
+                      <Image width={100} height={100} src="/assets/images/icons/icon-play-blue.svg" alt="Play Button" />
+                    </button>
+                  )}
                 </div>
 
                 <h3>{course.title}</h3>

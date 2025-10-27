@@ -15,14 +15,4 @@ export const _config = {
       }
     });
   },
-
-  smooth_scroll() {
-    ScrollSmoother.create({
-      smooth: 0.5,
-      effects: true,
-      smoothTouch: 0.5,
-      normalizeScroll: false,
-      ignoreMobileResize: true,
-    });
-  },
 };

@@ -1,8 +1,30 @@
+"use client";
 import { CallToAction1 } from "@/components/CallToAction/CallToAction";
 import PageBanner from "@/components/PageBanner/PageBanner";
+import { courses } from "@/data/courses";
 import CodeLabLayout from "@/layout/CodeLabLayout";
 import Image from "next/image";
+import { useParams } from "next/navigation";
+
 const page = () => {
+  const params = useParams();
+  const id = Number(params.id);
+
+  const course = courses.find((c) => c.id === id);
+
+  function Price({ value }: { value: number }) {
+    return (
+      <>
+        {new Intl.NumberFormat("mk-MK", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        }).format(value)}{" "}
+        МКД
+      </>
+    );
+  }
+  if (!course) return <CodeLabLayout>❌ Курсот не е пронајден.</CodeLabLayout>;
+
   return (
     <CodeLabLayout>
       <PageBanner pageTitle="Course Details" />
@@ -14,69 +36,39 @@ const page = () => {
               <div className="ed-course__details-content">
                 {/* Course Details Image */}
                 <div className="ed-course__details-img">
-                  <video controls autoPlay style={{ width: "100%", height: "400px", objectFit: "cover" }}>
+                  <video controls style={{ width: "100%", height: "400px", objectFit: "cover", borderRadius: 10, boxShadow: "0 6px 25px rgba(0,0,0,0.55)" }}>
                     <track kind="captions" />
-                    {/* <source src="/assets/codelab/videos/video.mov" type="video/mp4" /> */}
+                    <source src={course.video_url} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
 
-                <h3>Starting SEO as your Home Based Business Online Courses</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectur adipisicing elit, sed do eiusmod tempor inc idid unt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud exerec tation ullamco laboris nis aliquip commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur enim ipsam.
-                </p>
+                <h3>{course.title}</h3>
+                <p>{course.description}</p>
                 <br />
-                <p>
-                  Lorem ipsum dolor sit amet consectur adipisicing elit, sed do eiusmod tempor inc idid unt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud exerec tation ullamco laboris nis aliquip commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur enim ipsam.
-                </p>
-                {/* Course Details Content List */}
+
                 <div className="ed-course__details-list">
-                  <h5>What You’ll Learn?</h5>
+                  <h5>🧩 Што содржи програмата?</h5>
                   <ul>
-                    <li>
-                      <Image width={18} height={18} sizes="100vw" style={{ width: "18px", height: "18px" }} src="/assets/images/icons/icon-check-blue.svg" alt="icon-check-blue" />
-                      Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis
-                    </li>
-                    <li>
-                      <Image width={18} height={18} sizes="100vw" style={{ width: "18px", height: "18px" }} src="/assets/images/icons/icon-check-blue.svg" alt="icon-check-blue" />
-                      Neque sodales ut etiam sit amet nisl purus non tellus orci ac auctor
-                    </li>
-                    <li>
-                      <Image width={18} height={18} sizes="100vw" style={{ width: "18px", height: "18px" }} src="/assets/images/icons/icon-check-blue.svg" alt="icon-check-blue" />
-                      Tristique nulla aliquet enim tortor at auctor urna. Sit amet aliquam id diam maer
-                    </li>
-                    <li>
-                      <Image width={18} height={18} sizes="100vw" style={{ width: "18px", height: "18px" }} src="/assets/images/icons/icon-check-blue.svg" alt="icon-check-blue" />
-                      Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis
-                    </li>
+                    {course.courseContents.map((item, index) => (
+                      <li key={index}>
+                        <Image width={18} height={18} sizes="100vw" style={{ width: "18px", height: "18px" }} src="/assets/images/icons/icon-check-blue.svg" alt="icon-check-blue" />
+                        {item}
+                      </li>
+                    ))}
                   </ul>
                 </div>
-                {/* Course Details Image Two */}
-                <div className="ed-course__details-img image-2">
-                  <Image width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} src="/assets/images/course/course-details/details-img-2.png" alt="course-details-img-2" />
-                </div>
+
                 {/* Course Details Content List */}
                 <div className="ed-course__details-list">
-                  <h5>Why choose you this course?</h5>
+                  <h5>🤔 Зошто да ја изберете оваа програма?</h5>
                   <ul>
-                    <li>
-                      <Image width={18} height={18} sizes="100vw" style={{ width: "18px", height: "18px" }} src="/assets/images/icons/icon-check-blue.svg" alt="icon-check-blue" />
-                      Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis
-                    </li>
-                    <li>
-                      <Image width={18} height={18} sizes="100vw" style={{ width: "18px", height: "18px" }} src="/assets/images/icons/icon-check-blue.svg" alt="icon-check-blue" />
-                      Neque sodales ut etiam sit amet nisl purus non tellus orci ac auctor
-                    </li>
-                    <li>
-                      <Image width={18} height={18} sizes="100vw" style={{ width: "18px", height: "18px" }} src="/assets/images/icons/icon-check-blue.svg" alt="icon-check-blue" />
-                      Tristique nulla aliquet enim tortor at auctor urna. Sit amet aliquam id diam maer
-                    </li>
-                    <li>
-                      <Image width={18} height={18} sizes="100vw" style={{ width: "18px", height: "18px" }} src="/assets/images/icons/icon-check-blue.svg" alt="icon-check-blue" />
-                      Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis
-                    </li>
+                    {course.whyChooseCourse.map((item, index) => (
+                      <li key={index}>
+                        <Image width={18} height={18} sizes="100vw" style={{ width: "18px", height: "18px" }} src="/assets/images/icons/icon-check-blue.svg" alt="icon-check-blue" />
+                        {item}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -85,65 +77,134 @@ const page = () => {
               {/* Course Details Sidebar */}
               <div className="ed-course__sidebar">
                 <div className="ed-course__sidebar-widget">
-                  <h4 className="ed-course__sidebar-title">Course Information:</h4>
+                  <h4 className="ed-course__sidebar-title">Информации за програмата</h4>
                   <ul>
                     <li>
-                      Price:<span className="price">$30</span>
+                      Цена:
+                      <span>
+                        <Price value={course.price} />
+                      </span>
                     </li>
                     <li>
-                      Instructor:<span>Laura Martinez</span>
+                      Наставник:<span>{course.teacher}</span>
                     </li>
                     <li>
-                      Certifications:<span>Yes</span>
+                      Часови:<span>{course.lessons}</span>
                     </li>
                     <li>
-                      Lessons:<span>17</span>
+                      Времетраење:<span>{course.duration} месеци</span>
                     </li>
                     <li>
-                      Duration:<span>15 weeks</span>
+                      Јазик:<span>Македонски</span>
                     </li>
                     <li>
-                      Language:<span>English</span>
+                      Студенти во група:<span>8</span>
                     </li>
                     <li>
-                      Students:<span>646</span>
+                      Диплома:<span>Да</span>
                     </li>
                   </ul>
                 </div>
                 <div className="ed-course__sidebar-widget">
-                  <h4 className="ed-course__sidebar-title">Contact Us</h4>
+                  <h5 className="text-center" style={{ marginBottom: 30 }}>
+                    Како изгледаат часовите во CodeLab
+                  </h5>
+
+                  <div className="row" style={{ gap: 20, justifyContent: "center" }}>
+                    {/* Card 1 */}
+                    <div
+                      className="ed-contact__info-item"
+                      style={{
+                        width: "300px",
+                        background: "#ffffff",
+                        padding: "20px 18px",
+                        borderRadius: 12,
+                        boxShadow: "0 6px 25px rgba(0,0,0,0.1)",
+                        textAlign: "center",
+                      }}>
+                      <div className="ed-contact__info-icon" style={{ marginBottom: 10 }}>
+                        <Image width={38} height={38} sizes="100vw" src="/assets/codelab/icons/business-presentation.png" alt="teacher" />
+                      </div>
+                      <h6 style={{ fontWeight: 600, marginBottom: 8 }}>Демонстрација од наставник</h6>
+                      <p style={{ fontSize: 14, margin: 0 }}>
+                        Секоја задача прво се објаснува
+                        <br />и се покажува чекор по чекор.
+                      </p>
+                    </div>
+
+                    {/* Card 2 */}
+                    <div
+                      className="ed-contact__info-item"
+                      style={{
+                        width: "300px",
+                        background: "#ffffff",
+                        padding: "20px 18px",
+                        borderRadius: 12,
+                        boxShadow: "0 6px 25px rgba(0,0,0,0.1)",
+                        textAlign: "center",
+                      }}>
+                      <div className="ed-contact__info-icon" style={{ marginBottom: 10 }}>
+                        <Image width={38} height={38} sizes="100vw" src="/assets/codelab/icons/talking.png" alt="interaction" />
+                      </div>
+                      <h6 style={{ fontWeight: 600, marginBottom: 8 }}>90% практична работа</h6>
+                      <p style={{ fontSize: 14, margin: 0 }}>Учиме преку градење, секоја лекција се применува на проект.</p>
+                    </div>
+
+                    {/* Card 3 */}
+                    <div
+                      className="ed-contact__info-item"
+                      style={{
+                        width: "300px",
+                        background: "#ffffff",
+                        padding: "20px 18px",
+                        borderRadius: 12,
+                        boxShadow: "0 6px 25px rgba(0,0,0,0.1)",
+                        textAlign: "center",
+                      }}>
+                      <div className="ed-contact__info-icon" style={{ marginBottom: 10 }}>
+                        <Image width={38} height={38} sizes="100vw" src="/assets/codelab/icons/computer.png" alt="project" />
+                      </div>
+                      <h6 style={{ fontWeight: 600, marginBottom: 8 }}>Креативни проекти</h6>
+                      <p style={{ fontSize: 14, margin: 0 }}>Децата создаваат свои апликации, анимации и ги презентираат со гордост.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="ed-course__sidebar-widget">
+                  <h4 className="ed-course__sidebar-title">Контактирајте Не</h4>
                   {/* Sigle Info  */}
-                  <div className="ed-contact__info-item">
+                  <div className="ed-contact__info-item" style={{ marginBottom: 10 }}>
                     <div className="ed-contact__info-icon">
                       <Image width={28} height={28} sizes="100vw" style={{ width: "28px", height: "28px" }} src="/assets/images/icons/icon-phone-blue.svg" alt="icon-phone-blue" />
                     </div>
                     <div className="ed-contact__info-content">
-                      <span>Phone</span> <br />
+                      <span>Телефонски броеви</span> <br />
                       <a href="tel:+389 ‭72 278 786‬">+389 ‭72 278 786‬</a>
                       <br />
                       <a href="tel:+389 ‭78 298 116‬">+389 ‭78 298 116‬</a>
                     </div>
                   </div>
                   {/* Sigle Info  */}
-                  <div className="ed-contact__info-item">
+                  <div className="ed-contact__info-item" style={{ marginBottom: 10 }}>
                     <div className="ed-contact__info-icon">
                       <Image width={28} height={28} sizes="100vw" style={{ width: "28px", height: "28px" }} src="/assets/images/icons/icon-envelope-blue.svg" alt="icon-envelope-blue" />
                     </div>
                     <div className="ed-contact__info-content">
-                      <span>Send Message</span>
+                      <span>Испратете ни порака</span>
                       <a href="mailto:contact@codelab.com.mk">contact@codelab.com.mk</a>
                     </div>
                   </div>
                   {/* Sigle Info  */}
-                  <div className="ed-contact__info-item">
+                  <div className="ed-contact__info-item" style={{ marginBottom: 10 }}>
                     <div className="ed-contact__info-icon">
                       <Image width={28} height={28} sizes="100vw" style={{ width: "28px", height: "28px" }} src="/assets/images/icons/icon-location-blue.svg" alt="icon-location-blue" />
                     </div>
                     <div className="ed-contact__info-content">
-                      <span>Our Location</span>
+                      <span>Нашата локација</span>
                       <a href="https://maps.app.goo.gl/5mmaySuGb6DB12Z79">16-та Македонска Бригада 2/2, Скопје</a>
                     </div>
                   </div>
+
+                  {/* Sigle Info  */}
                 </div>
               </div>
             </div>

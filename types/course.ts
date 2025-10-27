@@ -13,6 +13,10 @@ export interface ICourse {
   price: number;
   minAge: number;
   maxAge: number;
-  image: string;
   duration: number;
+  image_url: string;
+  video_url: string;
+  description: string;
+  whyChooseCourse: string[];
+  courseContents: string[];
 }
